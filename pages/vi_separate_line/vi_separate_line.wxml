@@ -1,0 +1,5 @@
+<!--pages/separate_line/vi.wxml-->
+<view class="font12">
+  <view>分割线</view>
+  <separate-line></separate-line>
+</view>

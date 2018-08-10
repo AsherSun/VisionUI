@@ -1,0 +1,8 @@
+<!--components/no_data_tips/no_data_tips.wxml-->
+<view class="noData no-data-class">
+  <view wx:if="{{!isIconSlot}}" class="icon-no-data-tips icon icon-no-data no-data-icon-class"></view>
+  <block wx:else>
+    <slot></slot>
+  </block>
+  <view class="noData-txt no-data-txt-class">{{tips || '暂无内容'}}</view>
+</view>

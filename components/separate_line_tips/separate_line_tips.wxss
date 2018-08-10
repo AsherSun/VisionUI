@@ -1,0 +1,27 @@
+/* components/separate_line_tips/separate_line_tips.wxss */
+
+.separateTips {
+  width: 100%;
+  font-size: 12px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+}
+
+.separateTips::after, .separateTips::before {
+  content: '';
+  height: 1px;
+  width: 20%;
+  background-color: #d9d9d9;
+  transform: scaleY(0.5);
+}
+
+.separateTips::after {
+  margin-left: 10px;
+}
+
+.separateTips::before {
+  margin-right: 10px;
+}

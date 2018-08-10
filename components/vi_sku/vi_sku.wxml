@@ -1,0 +1,23 @@
+<!--components/vi_sku/vi_sku.js.wxml-->
+<view class="sku-compnent sku-class">
+  <view class="a_sku">
+    <block wx:for="{{props}}" wx:key="{{index}}">
+      <view class="a_sku-item">
+        <view class="a_sku-title">{{item.name}}</view>
+        <view class="a_sku-btnBox">
+          <block wx:for="{{item.values}}" wx:for-item="btnItem" wx:for-index="btnIndex" wx:key="{{btnIndex}}">
+            <button 
+              class="{{classNameObj[index] === btnIndex? 'choosed' : ''}} {{ index && skuDisabled[index] ? (skuDisabled[index][btnIndex] ? 'skuDisabled':  '') : ''}}"
+              disabled="{{index && skuDisabled[index]? skuDisabled[index][btnIndex]: false}}"
+              data-ci="{{btnIndex}}"
+              data-pi="{{index}}"
+              data-btnId="{{btnItem.vid}}"
+              data-pid="{{item.pid}}"
+              bindtap="btnClickFn">{{btnItem.name}}
+            </button>
+          </block>
+        </view>
+      </view>
+    </block>
+  </view>  
+</view>

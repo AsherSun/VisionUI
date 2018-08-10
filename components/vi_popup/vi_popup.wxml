@@ -1,0 +1,7 @@
+<!--components/vi_popup/vi_popup.wxml-->
+<view class="vi-popup  {{animation ? 'animated' : '' }} {{ ishide ? popupShow : popupHide }}">
+  <view class="vi-popup-mask" bindtap='hide'></view> 
+  <view class="vi-popup-content {{direction ? 'row-direction' : 'column-direction'}}" style="{{ position }}:0;">
+    <slot></slot>
+  </view>
+</view>

@@ -1,0 +1,6 @@
+@import './common/block.wxss';
+@import './common/flex.wxss';
+@import './common/font.wxss';
+@import './common/font_color.wxss';
+@import './common/position.wxss';
+@import './common/padding.wxss';

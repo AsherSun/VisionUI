@@ -1,0 +1,18 @@
+/* pages/animate/animate.wxss */
+.animate-demo {
+  font-size: 24px;
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+}
+
+.animate-demo-area {
+  border: 1px solid #eee;
+  margin: 20px 25px;
+  padding: 10px;
+}
+ 
+.animate-demo-btn {
+  width: 130px;
+  margin-top: 10rpx;
+}

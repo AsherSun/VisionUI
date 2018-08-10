@@ -1,0 +1,41 @@
+/* components/vi_sku/vi_sku.js.wxss */
+.a_sku {
+  overflow-y: auto;
+  max-height: 700rpx;
+  width: 100%;
+}
+.a_sku-title {
+  padding: 12rpx 0 20rpx 0;
+  font-size: 32rpx;
+  color: #212121;
+  letter-spacing: 0;
+  line-height: 44rpx;
+}
+.a_sku-btnBox button {
+  padding: 3.3rpx 40rpx;
+  border: #f5f5f5 2px solid;
+  line-height: 50rpx;
+  border-radius: 0;
+  text-align: center;
+  vertical-align: middle;
+  display: inline-block;
+  margin-bottom: 16rpx;
+  margin-right: 24rpx;
+  color: #6d6e70;
+  background: #f5f5f5;
+  font-size: 32rpx;
+}
+.a_sku-btnBox button::after{
+  border: none;
+}
+.a_sku-btnBox button.choosed {
+  border: #c69746 2px solid;
+  color: #c69746;
+  font-size: 32rpx;
+  background-color: white;
+}
+.a_sku-btnBox button.skuDisabled {
+  border: none;
+  background: #f5f5f5;
+  color: #ccc;
+}

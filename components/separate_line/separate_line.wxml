@@ -1,0 +1,8 @@
+<!--components/separate_line/separate_line.wxml-->
+<view class="separateLine">
+  <view 
+    wx:for="{{arrS}}" 
+    wx:key="{{index}}" 
+    class="{{!(item % 2) ? 'separateLine-FFF' : ''}} {{!(item % 3) ? 'separateLine-7EBDC2' : ''}} {{(item % 2) && (item % 3) ? 'separateLine-BB4430' : '' }}"></view>
+  <view class="separateLine-BB4430"></view>
+</view>

@@ -1,0 +1,52 @@
+.row_column_center {
+  /*水平方向，水平居中，上下居中*/
+  display: flex;
+  align-items: center;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+
+.row_between_wrap_column_center {
+  /*水平方向，可换行, 项目垂直居中，项目两端对齐*/
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.row_between_nowrap_column_center {
+  /*水平方向，不可换行, 项目垂直居中，项目两端对齐*/
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.row_start_column_center { /* 水平方向，项目垂直居中，项目从左到右排列*/
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+.row_end_column_center { /* 水平方向，项目垂直居中，项目从右到左排列*/
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+.column_between_row_center {
+  /* 垂直方向，两端对齐 中间对齐 */
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.column_row_center {
+  /* 垂直方向，垂直居中 水平居中 */
+   display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+

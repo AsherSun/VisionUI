@@ -1,0 +1,44 @@
+<!--index.wxml-->
+<view class="column_row_center font12">
+  <image mode="aspectFit" src="/images/vision_logo_124.png" style="width: 100px; height: 100px;"></image>
+  <view>Vision Weapp</view>
+</view>
+<view class="abilityArea">
+  <view class="abilityArea-title font16">操作反馈</view>
+  <view class="abilityArea-contanier font14">
+    <navigator url="/pages/vi_popup/vi_popup" class="abilityArea-item row_between_nowrap_column_center">
+      <text class="abilityArea-item-title">vi-popup</text>
+      <text class="abilityArea-item-tips font12 row_between_nowrap_column_center">抽屉</text>
+    </navigator>
+    <navigator url="/pages/vi_count_down/vi_count_down" class="abilityArea-item row_between_nowrap_column_center">
+      <text class="abilityArea-item-title">count-down</text>
+      <text class="abilityArea-item-tips font12 row_between_nowrap_column_center">倒计时</text>
+    </navigator>
+    <navigator url="/pages/vi_no_data_tips/vi_no_data_tips" class="abilityArea-item row_between_nowrap_column_center">
+      <text class="abilityArea-item-title">no-data-tips</text>
+      <text class="abilityArea-item-tips font12 row_between_nowrap_column_center">无数据状态提示</text>
+    </navigator>
+    <navigator url="/pages/vi_address/vi_address" class="abilityArea-item row_between_nowrap_column_center">
+      <text class="abilityArea-item-title">vi-address</text>
+      <text class="abilityArea-item-tips font12 row_between_nowrap_column_center">地址三级联动选择</text>
+    </navigator>
+
+    <navigator url="/pages/vi_dialog/vi_dialog" class="abilityArea-item row_between_nowrap_column_center">
+      <text class="abilityArea-item-title">vi-dialog</text>
+      <text class="abilityArea-item-tips font12 row_between_nowrap_column_center">会话窗</text>
+    </navigator>
+  </view>
+</view>
+<view class="abilityArea">
+  <view class="abilityArea-title font16">业务层</view>
+  <view class="abilityArea-contanier font14">
+    <navigator url="/pages/vi_separate_line/vi_separate_line" class="abilityArea-item row_between_nowrap_column_center">
+      <text class="abilityArea-item-title">separate_line</text>
+      <text class="abilityArea-item-tips font12 row_between_nowrap_column_center">分割线</text>
+    </navigator>
+    <navigator url="/pages/vi_quantity/vi_quantity" class="abilityArea-item row_between_nowrap_column_center">
+      <text class="abilityArea-item-title">vi-quantity</text>
+      <text class="abilityArea-item-tips font12 row_between_nowrap_column_center">电商平台计数器</text>
+    </navigator>
+  </view>
+</view>

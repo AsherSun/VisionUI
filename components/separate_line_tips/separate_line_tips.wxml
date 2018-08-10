@@ -1,0 +1,5 @@
+<!--components/separate_line_tips/separate_line_tips.wxml-->
+<view class="separateTips separate-class">
+  <view wx:if="{{!txt}}">^ _ ^ 我是有底线的</view>
+  <slot></slot>
+</view>

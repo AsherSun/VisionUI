@@ -1,0 +1,13 @@
+<!--pages/about/about.wxml-->
+<view class="logo">
+  <!-- <image src="/images/logo.jpg"></image> -->
+  <view class="logo-description">魔法孵化实验室 - 前端开发团队</view>
+</view>
+
+<view class="about-main">
+  <view class="about-main-title">关于我们</view>
+  <view class="about-main-section">
+    <!-- <view>指尖舞动的是心中最美的梦</view> -->
+    <!-- <view></view> -->
+  </view>
+</view>

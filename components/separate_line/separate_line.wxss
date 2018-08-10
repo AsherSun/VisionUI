@@ -1,0 +1,26 @@
+/* components/separate_line/separate_line.wxss */
+.separateLine {
+  overflow: hidden;
+  width: 100%;
+  height: 5px;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.separateLine > view {
+  width: 3.7%;
+  height: inherit;
+  transform: skewX(-50deg);
+}
+
+.separateLine > view.separateLine-BB4430 {
+  background-color: #bb4430;
+}
+
+.separateLine > view.separateLine-FFF {
+  background-color: #fff;
+}
+
+.separateLine > view.separateLine-7EBDC2 {
+  background-color: #7ebdc2;
+} 

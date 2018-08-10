@@ -1,0 +1,33 @@
+{
+  "pages": [
+    "pages/vi_dialog/vi_dialog",
+    "pages/index/index",
+    "pages/animate/animate",
+    "pages/vi_popup/vi_popup",
+    "pages/vi_count_down/vi_count_down",
+    "pages/vi_no_data_tips/vi_no_data_tips",
+    "pages/vi_address/vi_address",
+    "pages/vi_quantity/vi_quantity",
+    "pages/vi_separate_line/vi_separate_line",
+    "pages/about/about"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#333",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "组件库"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "text": "About"
+      }
+    ]
+  }
+}

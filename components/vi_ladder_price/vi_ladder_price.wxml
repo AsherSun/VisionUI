@@ -1,0 +1,14 @@
+<!--components/vi_ladderPrice/vi_ladderPrice.wxml-->
+<view class="ladder-price">
+  <view class="ladder-price-title">发货时间</view>
+  <view class="ladder-price-main">
+    <block wx:for="{{ladderPrice}}" wx:key="index">
+      <view 
+        class="button-time {{activeIndex === index ? 'choosed': ''}}"
+        data-i="{{index}}"
+        catchtap="timeSelect">
+        {{item.label}}
+      </view>
+    </block>
+  </view>
+</view>

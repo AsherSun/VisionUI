@@ -1,0 +1,32 @@
+<!--pages/vi_no_data_tips/vi_no_data_tips.wxml-->
+<view class="pos_re noDataTips font12">
+  <view>无数据组件的默认显示效果</view>
+  <no-data-tips></no-data-tips>
+</view>
+
+<view class="pos_re noDataTips font12">
+  <view>替换组件中的文本提示</view>
+  <no-data-tips tips="该分类下暂无商品数据"></no-data-tips>
+</view>
+
+<view class="pos_re noDataTips font12">
+  <view>替换组件中icon</view>
+  <no-data-tips isIconSlot="{{isIconSlot}}">
+    <image class="noDataTips-img" mode="aspectFit" src="/styles/images/sad.png"></image>
+  </no-data-tips>
+</view>
+
+<view class="pos_re noDataTips font12">
+  <view>更改组件的 root 级别 样式</view>
+  <no-data-tips no-data-class="changeBgColor"></no-data-tips>
+</view>
+
+<view class="pos_re noDataTips font12">
+  <view>更改组件中icon的样式</view>
+  <no-data-tips no-data-icon-class="changeIconColor"></no-data-tips>
+</view>
+
+<view class="pos_re noDataTips font12">
+  <view>更改组件中文本提示样式</view>
+  <no-data-tips no-data-txt-class="changeTextColor"></no-data-tips>
+</view>

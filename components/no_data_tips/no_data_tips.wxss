@@ -1,0 +1,21 @@
+/* components/no_data_tips/no_data_tips.wxss */
+@import '/styles/iconfont.wxss';
+.noData {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-flow: column wrap;
+  text-align: center;
+  justify-content: center;
+}
+
+.noData .icon-no-data-tips {
+  font-size: 55px;
+}
+
+.noData-txt {
+  font-size: 12px;
+  margin-top: 10px;
+}

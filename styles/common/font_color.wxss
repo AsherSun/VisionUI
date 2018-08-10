@@ -1,0 +1,7 @@
+.color333 {
+  color: #333;
+}
+
+.color999 {
+  color: #999;
+}

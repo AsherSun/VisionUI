@@ -1,0 +1,22 @@
+<!--pages/vi_popup/vi_popup.wxml-->
+<view class="popup-demo font14">
+  <view class="popup-title" bindtap='popupBottom'>底部出现</view>
+  <view class="popup-title" bindtap='popupTop'>顶部出现</view>
+  <view class="popup-title" bindtap='popupLeft'>左侧出现</view>
+  <view class="popup-title" bindtap='popupRight'>右侧出现</view>
+</view>
+<vi-popup ishide="{{popupHide_bottom}}" bindpopuphide="popupBottom">
+  <view class="popup-bottom"></view>
+</vi-popup>
+
+<vi-popup ishide="{{popupHide_top}}" position="top" bindpopuphide="popupTop">
+  <view class="popup-top"></view>
+</vi-popup>
+
+<vi-popup ishide="{{popupHide_left}}" position="left" bindpopuphide="popupLeft">
+  <view class="popup-left"></view>
+</vi-popup>
+
+<vi-popup ishide="{{popupHide_right}}" position="right" bindpopuphide="popupRight">
+  <view class="popup-right"></view>
+</vi-popup>

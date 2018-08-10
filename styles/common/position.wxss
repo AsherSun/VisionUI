@@ -1,0 +1,13 @@
+.pos_ab {
+  position: absolute;
+}
+
+.pos_re {
+  position: relative;
+}
+
+.pos_center_row {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
