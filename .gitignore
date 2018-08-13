@@ -1,3 +1,5 @@
+project.config.json
+
 #node modules
 node_modules/
 package-lock.json
@@ -6,4 +8,3 @@ package-lock.json
 .tea/
 .DS_Store
 .idea/*
-project.config.json
