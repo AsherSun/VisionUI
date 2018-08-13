@@ -22,10 +22,13 @@
       <text class="abilityArea-item-title">vi-address</text>
       <text class="abilityArea-item-tips font12 row_between_nowrap_column_center">地址三级联动选择</text>
     </navigator>
-
     <navigator url="/pages/vi_dialog/vi_dialog" class="abilityArea-item row_between_nowrap_column_center">
       <text class="abilityArea-item-title">vi-dialog</text>
       <text class="abilityArea-item-tips font12 row_between_nowrap_column_center">会话窗</text>
+    </navigator>
+    <navigator url="/pages/vi_dialog_motion/vi_dialog_motion" class="abilityArea-item row_between_nowrap_column_center">
+      <text class="abilityArea-item-title">vi-dialog-motion</text>
+      <text class="abilityArea-item-tips font12 row_between_nowrap_column_center">会话窗-运动方式</text>
     </navigator>
   </view>
 </view>

@@ -1,0 +1,7 @@
+<!--components/vi_dialog_motion/vi_dialog_motion.wxml-->
+<view class="dialog-motion" wx:if="{{show}}">
+  <view class="dialog-motion-mask"></view>
+  <view class="dialog-motion-content">
+    <slot></slot>
+  </view>
+</view>

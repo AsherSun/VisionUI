@@ -12,7 +12,8 @@
 <view class="pos_re noDataTips font12">
   <view>替换组件中icon</view>
   <no-data-tips isIconSlot="{{isIconSlot}}">
-    <image class="noDataTips-img" mode="aspectFit" src="/styles/images/sad.png"></image>
+    <!-- <image class="noDataTips-img" mode="aspectFit" src="/styles/images/sad.png"></image> -->
+    <view>我是退换的内容</view>
   </no-data-tips>
 </view>
 

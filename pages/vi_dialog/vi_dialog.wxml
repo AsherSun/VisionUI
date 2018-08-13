@@ -1,14 +1,14 @@
 <!--pages/vi_dialog/vi_dialog.wxml-->
 <view class="vi-dialog">
-  <view class="button" bindtap="triggerToShowDefaultDialog">Default Dialog</view>
+  <!-- <view class="button" bindtap="triggerToShowDefaultDialog">Default Dialog</view> -->
   <view class="button" bindtap="triggerToShowConfirmDialog">Confirm Dialog</view>
   <view class="button" bindtap="triggerToShowAlertDialog">Alert Dialog</view>
   <view class="button" bindtap="triggerToShowCustomDialog">Custom Dialog</view>
 </view>
 
-<vi-dialog ishide="{{defaultIsHide}}" title="我是标题" bindcancel="triggerToShowDefaultDialog" bindconfirm="triggerToShowDefaultDialog">
+<!-- <vi-dialog ishide="{{defaultIsHide}}" title="我是标题" bindcancel="triggerToShowDefaultDialog" bindconfirm="triggerToShowDefaultDialog">
   <view style="color:#ddd;">我是默认Dialog会话弹窗</view>
-</vi-dialog>
+</vi-dialog> -->
 
 <vi-dialog ishide="{{confirmIsHide}}" type-confirm="{{true}}" bindcancel="triggerToShowConfirmDialog" bindconfirm="triggerToShowConfirmDialog">
   <view style="color:#ddd;">我是确认会话窗</view>

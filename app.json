@@ -1,7 +1,8 @@
 {
   "pages": [
-    "pages/vi_dialog/vi_dialog",
     "pages/index/index",
+    "pages/vi_dialog_motion/vi_dialog_motion",
+    "pages/vi_dialog/vi_dialog",
     "pages/animate/animate",
     "pages/vi_popup/vi_popup",
     "pages/vi_count_down/vi_count_down",
