@@ -1,3 +1,4 @@
 /**app.wxss**/
 @import './styles/reset.wxss';
 @import './styles/animate.min.wxss';
+@import './styles/theme.wxss';

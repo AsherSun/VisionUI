@@ -1,1 +1,3 @@
-/* pages/vi_button/vi_button.wxss */
+.button {
+  margin: 10px 5%;
+}

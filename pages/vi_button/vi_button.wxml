@@ -1,3 +1,7 @@
-<!--pages/vi_button/vi_button.wxml-->
-<view>button</view>
-<vi-button>default</vi-button>
+<vi-title>BUTTON</vi-title>
+<vi-button custom-class="button">default</vi-button>
+<vi-button custom-class="button" type="wran">wran</vi-button>
+<vi-button custom-class="button" type="info">info</vi-button>
+<vi-button custom-class="button" type="success">success</vi-button>
+<vi-button custom-class="button" type="wran" loading>loading</vi-button>
+<vi-button custom-class="button" type="wran" size="mini">size mini</vi-button>

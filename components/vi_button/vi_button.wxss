@@ -1,1 +1,18 @@
-/* components/vi_button/vi_button.wxss */
+button::after {
+  border-radius: 0;
+  border: none;
+}
+
+button {
+  border-radius: 0;
+}
+
+/* .button-wran {
+  background-color: red;
+  color: #FFF;
+}
+
+.button-info {
+  background-color: yellowgreen;
+  color: #FFF;
+} */

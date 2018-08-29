@@ -1,4 +1,25 @@
-<!--components/vi_button/vi_button.wxml-->
-<button>
+<button
+  class="button-{{type}} custom-class"
+  size="{{size}}"
+  plain="{{plain}}"
+  loading="{{loading}}"
+  form-type="{{formType}}"
+  openType="{{openType}}"
+  disabled="{{disabled}}"
+  lang="{{lang}}"
+  hover-class="{{hoverClass}}"
+  hover-stop-propagation="{{hoverStopPropagation}}"
+  hover-start-time="{{hoverStartTime}}"
+  hover-stay-time="{{hoverStayTime}}"
+  bindgetuserinfo="bindgetuserinfo"
+  session-from="{{sessionFrom}}"
+  send-message-title="{{sendMessageTitle}}"
+  send-message-path="{{sendMessagePath}}"
+  send-message-img="{{sendMessageImg}}"
+  show-message-card="{{showMessageCard}}"
+  bindcontact="bindcontact"
+  app-parameter="{{appParameter}}"
+  binderror="{{binderror}}"
+  bindopensetting="{{bindopensetting}}">
   <slot></slot>
 </button>
