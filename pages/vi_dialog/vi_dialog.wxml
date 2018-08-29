@@ -6,10 +6,6 @@
   <view class="button" bindtap="triggerToShowCustomDialog">Custom Dialog</view>
 </view>
 
-<!-- <vi-dialog ishide="{{defaultIsHide}}" title="我是标题" bindcancel="triggerToShowDefaultDialog" bindconfirm="triggerToShowDefaultDialog">
-  <view style="color:#ddd;">我是默认Dialog会话弹窗</view>
-</vi-dialog> -->
-
 <vi-dialog ishide="{{confirmIsHide}}" type-confirm="{{true}}" bindcancel="triggerToShowConfirmDialog" bindconfirm="triggerToShowConfirmDialog">
   <view style="color:#ddd;">我是确认会话窗</view>
 </vi-dialog>
@@ -18,8 +14,7 @@
   <view style="color:#ddd;">我是警告会话窗</view>
 </vi-dialog>
 
-<vi-dialog ishide="{{customIsHide}}" title="自定义弹窗按钮" type-custom="{{true}}">
-  <view style="color:#ddd;">我是警告会话窗</view>
+<vi-dialog>
   <view slot="customButton" style="text-align: center; width:100%;">
     <view bindtap="triggerToShowCustomDialog">我是自定义按钮</view>
   </view>
