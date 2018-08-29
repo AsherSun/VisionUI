@@ -1,0 +1,3 @@
+<!--pages/vi_button/vi_button.wxml-->
+<view>button</view>
+<vi-button>default</vi-button>

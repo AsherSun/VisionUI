@@ -33,6 +33,15 @@
   </view>
 </view>
 <view class="abilityArea">
+  <view class="abilityArea-title font16">表单组件</view>
+  <view class="abilityArea-contanier font14">
+    <navigator url="/pages/vi_button/vi_button" class="abilityArea-item row_between_nowrap_column_center">
+      <text class="abilityArea-item-title">vi-button</text>
+      <text class="abilityArea-item-tips font12 row_between_nowrap_column_center">button</text>
+    </navigator>
+  </view>
+</view>
+<view class="abilityArea">
   <view class="abilityArea-title font16">业务层</view>
   <view class="abilityArea-contanier font14">
     <navigator url="/pages/vi_separate_line/vi_separate_line" class="abilityArea-item row_between_nowrap_column_center">

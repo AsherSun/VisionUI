@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "vi-button": "/components/vi_button/vi_button",
+    "vi-title": "/components/vi_title/vi_title"
+  }
+}

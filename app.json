@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/vi_button/vi_button",
     "pages/vi_dialog_motion/vi_dialog_motion",
     "pages/vi_dialog/vi_dialog",
     "pages/animate/animate",

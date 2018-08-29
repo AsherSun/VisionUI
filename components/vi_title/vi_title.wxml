@@ -1,0 +1,4 @@
+<!--components/vi_title/vi_title.wxml-->
+<view class="title">
+  <slot></slot>
+</view>

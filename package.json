@@ -1,0 +1,28 @@
+{
+  "name": "vision-ui_wechat",
+  "version": "0.0.1",
+  "description": "UI component library based on WeChat applet",
+  "main": "app.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AsherSun/VisionUI.git"
+  },
+  "keywords": [
+    "wechat、UI、components、微信小程序组件库"
+  ],
+  "author": "AsherSun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AsherSun/VisionUI/issues"
+  },
+  "homepage": "https://github.com/AsherSun/VisionUI#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}

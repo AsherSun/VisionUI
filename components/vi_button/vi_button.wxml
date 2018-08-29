@@ -1,0 +1,4 @@
+<!--components/vi_button/vi_button.wxml-->
+<button>
+  <slot></slot>
+</button>

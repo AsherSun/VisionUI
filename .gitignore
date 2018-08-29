@@ -1,1 +1,11 @@
+#project config
 project.config.json
+
+#node modules
+node_modules/
+package-lock.json
+
+#files config
+.tea/
+.DS_Store
+.idea/*

@@ -1,0 +1,4 @@
+/* components/vi_title/vi_title.wxss */
+.title {
+  text-align: center;
+}

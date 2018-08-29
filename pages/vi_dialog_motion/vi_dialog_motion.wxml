@@ -1,7 +1,7 @@
 <!--pages/vi_dialog_motion/vi_dialog_motion.wxml-->
 <view class="font12">
   <view>vi-dialog-motion 虽然名字与 vi-dialog 相似，但它们处理的是不同的业务</view>
-  <view>vi-dialog-motion 只提供运动方式不会订制弹窗内容。它处理更加复杂化的弹窗业务。更这种更加复杂化的弹窗业务往往需要的是弹窗的运动方式</view>
+  <view>vi-dialog-motion 只提供运动方式不会订制弹窗内容。它处理更加复杂化的弹窗业务。</view>
 </view>
 <vi-dialog-motion>
   <view style="width: 600rpx; height: 300px; background-color: #FFF;"></view>
