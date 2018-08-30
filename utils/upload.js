@@ -3,9 +3,8 @@ export default function uploadImg (config) {
     count: 1,
     name: 'picture',
     url: '',
-    width: '',
-    height: '',
-    formData: {}
+    formData: {},
+    success: function () {}
   }
   let options = Object.assign(target, config)
   wx.chooseImage({
@@ -17,13 +16,13 @@ export default function uploadImg (config) {
           url: options.url,
           filePath: item,
           name: options.name,
-          formData: formData,
+          formData: options.formData,
           success: function (res) {
-            if (!(fn instanceof Function)) return false
-            if (typeof res.data === 'string') {
-              fn(JSON.parse(res.data))
+            if (!(options.success instanceof Function)) return false
+            if (typeof res.data === 'string') { // 视业务情况而定
+              options.success(JSON.parse(res.data))
             } else {
-              fn(res.data)
+              options.success(res.data)
             }
           }
         })

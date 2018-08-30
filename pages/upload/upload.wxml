@@ -1,1 +1,7 @@
-<vi-title>upload</vi-title>
+<vi-title>UPLOAD</vi-title>
+
+<view>封装了小程序的upload API</view>
+
+<vi-button custom-class="button" bindtap="triggerToUpload" loading="{{uploadLoading}}">图片上传</vi-button>
+
+<view>上传的数据：{{uploadImgSource}}</view>

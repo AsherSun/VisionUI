@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/upload/upload",
     "pages/index/index",
     "pages/vi_button/vi_button",
     "pages/vi_dialog_motion/vi_dialog_motion",
@@ -11,8 +12,7 @@
     "pages/vi_address/vi_address",
     "pages/vi_quantity/vi_quantity",
     "pages/vi_separate_line/vi_separate_line",
-    "pages/about/about",
-    "pages/upload/upload"
+    "pages/about/about"
   ],
   "window": {
     "backgroundTextStyle": "light",
