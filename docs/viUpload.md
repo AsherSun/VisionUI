@@ -1,11 +1,11 @@
 # 上传插件
 
-> + 在是阅读该文档之前请先具备微信上传API的相关知识
-> + 该插件封装了微信的图片上传与视频接口、其余文件类型并没有封装，如有需要，后续会添加。插件的config配置在基于微信提供的接口之上稍微添加了几个。config完全匹配微信的API接口
+> + 阅读该文档之前请先具备微信上传API的相关知识
+> + 该插件封装了微信的图片上传与视频上传接口、其余文件类型并没有封装，如有需要，后续会添加。插件的config配置是基于微信提供的接口之上稍微添加了几个。config完全匹配微信的API接口
 
 ## 使用
 
-> 将viUpload文件引入要使用上传功能的页面或者 app.js
+> 将viUpload文件引入要使用上传功能的页面
 
 > page JS
 
@@ -29,7 +29,7 @@ Page({
 ## Config Props
 
 | Props | Data Type | description | 选项 | default Value | file type | 是否扩展 |
-| :--: | :--: | :--: | :--: | :--: |
+| :--: | :--: | :--: | :--: | :--: | :--: | :--: |
 | count | Number | 上传图片数量 | 选填 | 1 | 用于图片上传 | 同微信图片上传接口count | 
 | name | String | 服务端用于接受数据的字段 | 选填 | picture | 用于图片与视频 | 同微信upload接口name |
 | fileType | String | 要上传的文件类型 | 选填 | img | 用于图片与视频 | 插件扩展接口 |
@@ -48,7 +48,7 @@ Page({
 | success | 上传成功方法 | 服务端返回值 |
 | fail | 上传失败方法，可能会在文件选择的时候取消上传、服务端出错都由该接口提供失败信息 | 失败信息 |
 
-## beforeUpload reutns
+## beforeUpload Returns Value
 
 | key | Data Type | description value |
 | :--: | :--: | :--: |
