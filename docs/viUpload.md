@@ -1,65 +1,59 @@
 # 上传插件
 
+> + 在是阅读该文档之前请先具备微信上传API的相关知识
+> + 该插件封装了微信的图片上传与视频接口、其余文件类型并没有封装，如有需要，后续会添加。插件的config配置在基于微信提供的接口之上稍微添加了几个。config完全匹配微信的API接口
+
 ## 使用
 
-> 将
+> 将viUpload文件引入要使用上传功能的页面或者 app.js
 
-*打开小程序页面的json配置.*
-**相对路径与绝对路径都可以**
-
-```json
-"usingComponents": {
-  "vi-address": "./../vi_address"
-}
-```
-
-> WXML结构
-
-```HTML
-<view class="font14" bindtap='selectAddress'>点击选择城市: {{address}}</view>
-
-<vi-address is-hide="{{isHide}}" bindhide="selectAddress" bindaddresschange="addressChange"></vi-address>
-```
-
-> js逻辑
+> page JS
 
 ```javascript
+import viUpload from './../../utils/viUpload'
 Page({
-  data: {
-    address: '',
-    isHide: false
-  },
-  selectAddress(e) {
-    this.setData({
-      isHide: !this.data.isHide
-    })
-  },
-  addressChange({ detail }) {
-    this.setData({
-      address: detail.addressConcat
+  viUpload,
+  data: {},
+  triggerToUpload() {
+    // config 
+    this.viUpload({
+      url: '',
+      success: function () {
+        // to do 
+      }
     })
   }
 })
 ```
 
-## 属性 Props
+## Config Props
 
-| 接口 | 数据类型 | 说明 | 选项 | 默认值 |
+| Props | Data Type | description | 选项 | default Value | file type | 是否扩展 |
 | :--: | :--: | :--: | :--: | :--: |
-| cityData | [ Array ] | 省市区的数据,建议使用组件内部数据 | 选填 | 组件内部省市区数据 |
-| isHide | [ Boolean ] | 控制组件的显示与隐藏, false 隐藏, true 显示 | 必填 | false |
+| count | Number | 上传图片数量 | 选填 | 1 | 用于图片上传 | 同微信图片上传接口count | 
+| name | String | 服务端用于接受数据的字段 | 选填 | picture | 用于图片与视频 | 同微信upload接口name |
+| fileType | String | 要上传的文件类型 | 选填 | img | 用于图片与视频 | 插件扩展接口 |
+| sizeType | StringArray | 要上传的图片大小 | 选填 | ['original', 'compressed'] | 适用于图片 | 同微信图片上传接口sizeType |
+| url | String | 上传路径 | 必填 | '' | 用于图片和视频 | 同微信upload接口url |
+| formData | String | 文件上传的额外信息 | 选填 | '' | 用于图片和视频 | 同微信upload接口formData |
+| sourceType | StringArray | 要上传的资源来源，是从相册中选择还是拍摄 | 选填 | ['album', 'camera'] | 用于图片和视频 | 同微信图片与视频上传接口sourceType |
+| compressed | Boolean | 是否压缩所选的视频源文件，默认值为true，需要压缩 | 选填 | true | 用于视频 | 同微信视频上传接口compressed |
+| maxDuration | NUmber | 拍摄视频最长拍摄时间，单位秒。最长支持 60 秒 | 选填 | 60 | 用于视频 | 同为视频上传接口 maxDuration |
 
-## 事件 Events
+## Config Handle
 
-| 事件方法 | 事件说明 | detail 返回值 |
+| 生命周期函数 | 方法说明 | 返回值 |
 | :--: | :--: | :--: |
-| cancel | 组件的取消按钮或者是点击的遮罩层 | 'cancel', 标识取消 |
-| confirm | 组件的确认按钮 | 'confirm', 标识确认 |
-| hide | 组件隐藏, cancel 与 confirm 都会触发该事件 | 返回值为触发的事件源, 如：取消按钮触发的事件, 则返回值为 cancel |
-| addresschange | 省市区选择事件 | 只要有选择便会触发该事件, 组件初始化时会默认触发一次, 返回值为：北京 - 北京市 - 东城区 |
+| beforeUpload | 用于视频上传，在视频上传之前会返回该视频的一些信息，返回值与微信视频chooseVideo接口返回值一致 | Object |
+| success | 上传成功方法 | 服务端返回值 |
+| fail | 上传失败方法，可能会在文件选择的时候取消上传、服务端出错都由该接口提供失败信息 | 失败信息 |
 
-## Bug&Tips
+## beforeUpload reutns
 
-+ 地址三级联动组件,显示与隐藏有默认动画,所以不需要给组件父级元素套一个处理动画的Propu组件
-+ 该组件使用的选择器为微信小程序的 picker-view 内置组件, 所以对用户体验可能会存在一定影响
-+ 由于是使用picker-view 内置组件，所以该组件暂无设置初始默认值的接口。目前没有想到解决方案
+| key | Data Type | description value |
+| :--: | :--: | :--: |
+| width | Number | 视频宽度信息 |
+| height | Number | 视频高度信息 |
+| thumbTempFilePath | String | 视频封面图 |
+| tempFilePath | String | 本地视频资源 |
+| duration | Number | 视频时长信息 |
