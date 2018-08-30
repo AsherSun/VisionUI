@@ -33,7 +33,6 @@ class FileUpload {
       sizeType: this.options.sizeType,
       sourceType: this.options.sourceType,
       success: function(res) {
-        console.log('img', res)
         var tempFilePaths = res.tempFilePaths
         tempFilePaths.forEach(item => {
           _this.upload(item)

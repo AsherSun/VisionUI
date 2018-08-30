@@ -8,6 +8,7 @@ Page({
     uploadVideoSource: '',
     videoInfo: {}
   },
+  
   triggerToUploadImg () {
     let _this = this
     this.setData({
@@ -23,6 +24,7 @@ Page({
       }
     })
   },
+
   triggerToUploadVideo() {
     let _this = this
     this.setData({

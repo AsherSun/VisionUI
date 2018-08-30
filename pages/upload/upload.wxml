@@ -13,6 +13,6 @@
   <view>高度：{{videoInfo.height}}</view>
   <view>视频封面图：{{videoInfo.thumbTempFilePath}}</view>
   <view>视频本地资源路径：{{videoInfo.tempFilePath}}</view>
-  <view>视频时长：{{videoInfo.tempFilePath}}</view>
+  <view>视频时长：{{videoInfo.duration}}</view>
 </view>
 <view>服务端返回的数据： {{uploadVideoSource}}</view>
