@@ -4,8 +4,13 @@ class FileUpload {
       count: 1,
       name: 'picture',
       fileType: 'img',
+      sizeType: ['original', 'compressed'],
       url: '',
       formData: {},
+      sourceType: ['album', 'camera'],
+      compressed: true,
+      maxDuration: 60,
+      beforeUpload: function () {},
       success: function() {},
       fail: function() {}
     }
@@ -17,7 +22,7 @@ class FileUpload {
     if (fileType === 'img') {
       this.chooseImage()
     } else {
-
+      this.chooseVideo()
     }
   }
 
@@ -25,11 +30,33 @@ class FileUpload {
     let _this = this
     wx.chooseImage({
       count: this.options.count,
+      sizeType: this.options.sizeType,
+      sourceType: this.options.sourceType,
       success: function(res) {
+        console.log('img', res)
         var tempFilePaths = res.tempFilePaths
         tempFilePaths.forEach(item => {
           _this.upload(item)
         })
+      },
+      fail: function (err) {
+        _this.options.fail(err)
+      }
+    })
+  }
+
+  chooseVideo() {
+    let _this = this
+    wx.chooseVideo({
+      sourceType: _this.options.sourceType,
+      compressed: _this.options.compressed,
+      maxDuration: _this.options.maxDuration,
+      success: function (res) {
+        _this.options.beforeUpload(res)
+        _this.upload(res.tempFilePath)
+      },
+      fail: function (err) {
+        _this.options.fail(err)
       }
     })
   }
