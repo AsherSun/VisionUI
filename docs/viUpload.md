@@ -35,7 +35,7 @@ Page({
 | fileType | String | 要上传的文件类型 | 选填 | img | 用于图片与视频 | 插件扩展接口 |
 | sizeType | StringArray | 要上传的图片大小 | 选填 | ['original', 'compressed'] | 适用于图片 | 同微信图片上传接口sizeType |
 | url | String | 上传路径 | 必填 | '' | 用于图片和视频 | 同微信upload接口url |
-| formData | String | 文件上传的额外信息 | 选填 | '' | 用于图片和视频 | 同微信upload接口formData |
+| formData | String | 文件上传的额外信息 | 选填 | {} | 用于图片和视频 | 同微信upload接口formData |
 | sourceType | StringArray | 要上传的资源来源，是从相册中选择还是拍摄 | 选填 | ['album', 'camera'] | 用于图片和视频 | 同微信图片与视频上传接口sourceType |
 | compressed | Boolean | 是否压缩所选的视频源文件，默认值为true，需要压缩 | 选填 | true | 用于视频 | 同微信视频上传接口compressed |
 | maxDuration | NUmber | 拍摄视频最长拍摄时间，单位秒。最长支持 60 秒 | 选填 | 60 | 用于视频 | 同为视频上传接口 maxDuration |
