@@ -1,4 +1,4 @@
-import viUpload from './../../utils/upload'
+import viUpload from './../../utils/viUpload'
 Page({
   viUpload,
   data: {
