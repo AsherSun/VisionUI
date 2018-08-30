@@ -1,8 +1,3 @@
-/*
-  *
-  *
-*/
-
 export default class CanvasPainting {
   constructor(obj, width) {
     this.ctx = obj

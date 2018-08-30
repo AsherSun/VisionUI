@@ -52,5 +52,9 @@
       <text class="abilityArea-item-title">vi-quantity</text>
       <text class="abilityArea-item-tips font12 row_between_nowrap_column_center">电商平台计数器</text>
     </navigator>
+    <navigator url="/pages/upload/upload" class="abilityArea-item row_between_nowrap_column_center">
+      <text class="abilityArea-item-title">upload</text>
+      <text class="abilityArea-item-tips font12 row_between_nowrap_column_center">上传插件</text>
+    </navigator>
   </view>
 </view>
