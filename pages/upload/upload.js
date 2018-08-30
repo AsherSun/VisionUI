@@ -1,6 +1,6 @@
-import upload from './../../utils/upload'
+import viUpload from './../../utils/upload'
 Page({
-  upload,
+  viUpload,
   data: {
     uploadLoading: false,
     uploadImgSource: ''
@@ -10,7 +10,7 @@ Page({
     this.setData({
       uploadLoading: true
     })
-    this.upload({
+    this.viUpload({
       url: 'https://api.maison-huis.com/huis-dev/img/upload.do',
       success (data) {
         _this.setData({
