@@ -56,5 +56,9 @@
       <text class="abilityArea-item-title">upload</text>
       <text class="abilityArea-item-tips font12 row_between_nowrap_column_center">上传插件</text>
     </navigator>
+    <navigator url="/pages/vi_painting/vi_painting" class="abilityArea-item row_between_nowrap_column_center">
+      <text class="abilityArea-item-title">draw poster</text>
+      <text class="abilityArea-item-tips font12 row_between_nowrap_column_center">海报绘制插件</text>
+    </navigator>
   </view>
 </view>

@@ -1,3 +1,4 @@
-<view class="">
- <canvas></canvas>
-</view>
+<view>海报生成功能由：wxa-plugin-canvas 提供。GITHUB地址：https://github.com/jasondu/wxa-plugin-canvas</view>
+<vi-poster config="{{jdConfig}}" bind:success="onPosterSuccess" bind:fail="onPosterFail">
+  <vi-button>生成海报</vi-button>
+</vi-poster>
