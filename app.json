@@ -12,7 +12,8 @@
     "pages/vi_address/vi_address",
     "pages/vi_quantity/vi_quantity",
     "pages/vi_separate_line/vi_separate_line",
-    "pages/about/about"
+    "pages/about/about",
+    "pages/vi_painting/vi_painting"
   ],
   "window": {
     "backgroundTextStyle": "light",
