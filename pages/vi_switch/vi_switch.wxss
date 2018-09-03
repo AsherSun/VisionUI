@@ -1,0 +1,30 @@
+page {
+  background: #f9f9f9;
+}
+
+.cell-group {
+  background: #FFF;
+}
+
+.cell {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  position: relative;
+  padding: 10px 15px;
+}
+
+.cell + .cell::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 15px;
+  height: 1px;
+  background: #d9d9d9;
+  transform: scaleY(0.5);
+}
+
+.icon-close {
+  font-size: 10px;
+}

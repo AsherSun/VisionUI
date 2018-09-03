@@ -33,6 +33,7 @@ Component({
       this.setData({
         checked: !this.data.checked
       })
+      this.triggerEvent('change', this.data.checked)
     }
   }
 })

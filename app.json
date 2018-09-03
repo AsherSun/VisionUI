@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/vi_switch/vi_switch",
     "pages/index/index",
+    "pages/vi_switch/vi_switch",
     "pages/poster_demo/poster_demo",
     "pages/vi_painting/vi_painting",
     "pages/upload/upload",

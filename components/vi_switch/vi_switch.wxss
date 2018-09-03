@@ -13,6 +13,7 @@
 .switch-wrap {
   min-width: 35px;
   display: inline-block;
+  line-height: 15px;
 }
 
 .switch-wrap::after {
@@ -64,6 +65,7 @@
 
 .switch__indicate {
   padding: 0 10px;
+  line-height: 15px;
 }
 
 .switch__indicate-open {

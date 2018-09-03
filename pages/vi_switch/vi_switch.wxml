@@ -1,15 +1,56 @@
 <vi-title>SWITCH</vi-title>
 
 <view class="cell-group">
-  <view class="cell"></view>
+  <view class="cell">
+    <view class="cell__title">基本用法</view>
+    <view class="cell__discription">
+      <vi-switch checked="{{checked}}" bind:change="tirggerToSwitchChange"></vi-switch>
+    </view>
+  </view>
+  <view class="cell">
+    <view class="cell__title">自定义内部内容</view>
+    <view class="cell__discription">
+      <vi-switch checked="{{checked}}" bind:change="tirggerToSwitchChange" active-text="开启" inactive-text="关闭"></vi-switch>
+    </view>
+  </view>
+  <view class="cell">
+    <view class="cell__title">内部图标</view>
+    <view class="cell__discription">
+      <vi-switch checked="{{checked}}" bind:change="tirggerToSwitchChange">
+        <view slot="activeText" class="icon icon-checked"></view>
+        <view slot="inactiveText" class="icon icon-close"></view>
+      </vi-switch>
+    </view>
+  </view>
+  <view class="cell">
+    <view class="cell__title">外部内容</view>
+    <view class="cell__discription">
+      <vi-switch checked="{{checked}}" bind:change="tirggerToSwitchChange" exterior active-text="开启" inactive-text="关闭"></vi-switch>
+    </view>
+  </view>
+  <view class="cell">
+    <view class="cell__title">外部图标</view>
+    <view class="cell__discription">
+      <vi-switch exterior checked="{{checked}}" bind:change="tirggerToSwitchChange">
+        <view slot="activeText"  class="icon icon-checked"></view>
+        <view slot="inactiveText"  class="icon icon-close"></view>
+      </vi-switch>
+    </view>
+  </view>
+  <view class="cell">
+    <view class="cell__title">选中时禁用</view>
+    <view class="cell__discription">
+      <vi-switch checked disable></vi-switch>
+    </view>
+  </view>
+  <view class="cell">
+    <view class="cell__title">未选中时禁用</view>
+    <view class="cell__discription">
+      <vi-switch disable ></vi-switch>
+    </view>
+  </view>
 </view>
 
-<vi-switch checked></vi-switch>
-<vi-switch disable></vi-switch>
-<vi-switch checked disable></vi-switch>
-<vi-switch active-text="开启" inactive-text="关闭"></vi-switch>
-<vi-switch>
-  <view slot="activeText">开启</view>
-  <view slot="inactiveText">关闭</view>
-</vi-switch>
-<vi-switch exterior active-text="开启" inactive-text="关闭"></vi-switch>
+<!-- <vi-switch disable></vi-switch>
+<vi-switch checked disable></vi-switch> -->
+<!-- <vi-switch exterior active-text="开启" inactive-text="关闭"></vi-switch> -->
