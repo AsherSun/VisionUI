@@ -1,0 +1,95 @@
+.switch {
+  display: inline-block;
+  min-width: 35px;
+  height: 15px;
+  background-color: #d9d9d9;
+  border-radius: 15px;
+  padding: 1px;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+}
+
+.switch-wrap {
+  min-width: 35px;
+  display: inline-block;
+}
+
+.switch-wrap::after {
+  content: '';
+  display: block;
+  height: 0;
+  width: 100%;
+  line-height: 0;
+  clear: both;
+}
+
+.switch::after {
+  content: '';
+  display: block;
+  clear: both;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  background: #FFF;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  transition: all .5s ease;
+}
+
+.switch_checked {
+  background: #7ab199;
+}
+
+.switch_checked::after {
+  left: 100%;
+  transform: translate(-100%, 0);
+}
+
+.switch_disable::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,.4);
+  z-index: 15px;
+}
+
+.switch_disable::after {
+  background: #e5e5e5;
+}
+
+.switch__indicate {
+  padding: 0 10px;
+}
+
+.switch__indicate-open {
+  float: left;
+  margin-right: 10px;
+  text-align: left;
+}
+
+.switch__indicate-close {
+  float: right;
+  margin-left: 10px;
+  text-align: right;
+}
+
+.switch-warp__indicate_active {
+  color: #7ab199;
+}
+
+.switch-warp__indicate-open {
+  float: right;
+  margin-left: 5px;
+  text-align: right;
+}
+
+.switch-warp__indicate-close {
+  float: left;
+  margin-right: 5px;
+  text-align: left;
+}

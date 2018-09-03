@@ -1,2 +1,15 @@
-<!--pages/vi_switch/vi_switch.wxml-->
-<text>pages/vi_switch/vi_switch.wxml</text>
+<vi-title>SWITCH</vi-title>
+
+<view class="cell-group">
+  <view class="cell"></view>
+</view>
+
+<vi-switch checked></vi-switch>
+<vi-switch disable></vi-switch>
+<vi-switch checked disable></vi-switch>
+<vi-switch active-text="开启" inactive-text="关闭"></vi-switch>
+<vi-switch>
+  <view slot="activeText">开启</view>
+  <view slot="inactiveText">关闭</view>
+</vi-switch>
+<vi-switch exterior active-text="开启" inactive-text="关闭"></vi-switch>
