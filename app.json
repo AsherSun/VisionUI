@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/poster_demo/poster_demo",
     "pages/index/index",
     "pages/vi_painting/vi_painting",
     "pages/upload/upload",
@@ -13,8 +14,7 @@
     "pages/vi_address/vi_address",
     "pages/vi_quantity/vi_quantity",
     "pages/vi_separate_line/vi_separate_line",
-    "pages/about/about",
-    "pages/poster_demo/poster_demo"
+    "pages/about/about"
   ],
   "window": {
     "backgroundTextStyle": "light",

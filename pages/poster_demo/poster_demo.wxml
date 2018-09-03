@@ -1,1 +1,3 @@
-
+<vi-canvas config="{{demoConfig}}">
+  <vi-button>生成图片</vi-button>
+</vi-canvas>

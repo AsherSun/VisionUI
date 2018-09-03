@@ -346,7 +346,7 @@ Component({
     },
     created() {
         const sysInfo = wx.getSystemInfoSync();
-        const screenWidth = sysInfo.screenWidth;
+        const screenWidth = sysInfo.screenWidth
         this.factor = screenWidth / 750;
     },
     methods: Object.assign({

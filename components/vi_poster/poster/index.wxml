@@ -1,4 +1,4 @@
 <view bindtap='onCreate'>
-    <slot/>
+  <slot/>
 </view>
-<we-canvas id="poster" bind:success="onCreateSuccess" bind:fail="onCreateFail"/>
+<we-canvas id="poster" bind:success="onCreateSuccess" bind:fail="onCreateFail" />

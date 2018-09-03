@@ -1,0 +1,4 @@
+<view bindtap="triggerToCreatedPoster">
+  <slot></slot>
+</view>
+<canvas id="canvasid"></canvas>
