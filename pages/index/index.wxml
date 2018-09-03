@@ -40,6 +40,18 @@
       <text class="abilityArea-item-tips font12 row_between_nowrap_column_center">button</text>
     </navigator>
   </view>
+  <view class="abilityArea-contanier font14">
+    <navigator url="/pages/vi_checkbox/vi_checkbox" class="abilityArea-item row_between_nowrap_column_center">
+      <text class="abilityArea-item-title">vi-checkbox</text>
+      <text class="abilityArea-item-tips font12 row_between_nowrap_column_center">checkbox</text>
+    </navigator>
+  </view>
+  <view class="abilityArea-contanier font14">
+    <navigator url="/pages/vi_switch/vi_switch" class="abilityArea-item row_between_nowrap_column_center">
+      <text class="abilityArea-item-title">vi-switch</text>
+      <text class="abilityArea-item-tips font12 row_between_nowrap_column_center">switch</text>
+    </navigator>
+  </view>
 </view>
 <view class="abilityArea">
   <view class="abilityArea-title font16">业务层</view>
