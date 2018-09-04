@@ -1,7 +1,19 @@
-<!--index.wxml-->
 <view class="column_row_center font12">
   <image mode="aspectFit" src="/images/vision_logo_124.png" style="width: 100px; height: 100px;"></image>
   <view>Vision Weapp</view>
+</view>
+<view class="abilityArea">
+  <view class="abilityArea-title font16">布局</view>
+  <view class="abilityArea-contanier font14">
+    <navigator url="/pages/vi_popup/vi_popup" class="abilityArea-item row_between_nowrap_column_center">
+      <text class="abilityArea-item-title">vi-cell-group</text>
+      <text class="abilityArea-item-tips font12 row_between_nowrap_column_center">cell-group</text>
+    </navigator>
+    <navigator url="/pages/vi_count_down/vi_count_down" class="abilityArea-item row_between_nowrap_column_center">
+      <text class="abilityArea-item-title">vi-cell</text>
+      <text class="abilityArea-item-tips font12 row_between_nowrap_column_center">cell</text>
+    </navigator>
+  </view>
 </view>
 <view class="abilityArea">
   <view class="abilityArea-title font16">操作反馈</view>

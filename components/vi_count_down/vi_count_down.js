@@ -1,8 +1,4 @@
-// components/count_down/count_down.js
 Component({
-  /**
-   * 组件的属性列表
-   */
   properties: {
     endTime: { // 结束时间
       type: [String, Number],
@@ -21,10 +17,6 @@ Component({
       value: '该订单已超过支付时间'
     }
   },
-
-  /**
-   * 组件的初始数据
-   */
   data: {
     days: null, // 天数
     hours: null, // 小时
@@ -34,10 +26,6 @@ Component({
     surplus: 0, // 时差
     countDownOver: false // 判断倒计时是否结束
   },
-
-  /**
-   * 组件的方法列表
-   */
   methods: {
     countDown() { // 倒计时逻辑
       this.setData({
@@ -50,11 +38,10 @@ Component({
           minutes: this.getHMS(parseInt((this.data.surplus % (60 * 60 * 24)) % (60 * 60) / 60)),
           seconds: this.getHMS(parseInt((this.data.surplus % (60 * 60 * 24)) % (60 * 60) % 60))
         })
-      } else { // 清楚定时器
+      } else { // 清除定时器
         this.setData({
           countDownOver: true
         })
-        this.countDownFn && this.countDownFn(false)
         clearInterval(this.data.timer)
       }
     },
@@ -69,6 +56,7 @@ Component({
     },
     _createdCountDown() { // 创建定时器
       this.data.surplus = (this.getTime().endTime - this.getTime().startTime) / 1000
+      this.countDown()
       this.data.timer = setInterval(() => {
         this.countDown()
       }, 1000)
