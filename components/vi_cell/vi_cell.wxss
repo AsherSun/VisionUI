@@ -44,6 +44,7 @@
 
 .cell__description {
   text-align: right;
+  color: #999;
 }
 
 .cell__direction-link {

@@ -27,15 +27,35 @@ Component({
     line: {
       type: String,
       value: ''
+    },
+    linkType: {
+      type: String,
+      value: ''
     }
   },
   options: {
     multipleSlots: true
   },
-  data: {
-
-  },
   methods: {
-
+    triggerToNavigateTo() {
+      if (typeof this.data.link !== 'string') {return false}
+      switch (this.data.linkType) {
+        case 'redirect':
+          wx.redirectTo({url: this.data.link})
+          break
+        case 'switchTab':
+          wx.switchTab({ url: this.data.link })
+          break
+        case 'reLaunch':
+          wx.reLaunch({url: this.data.link})
+          break
+        case 'navigateBack':
+          wx.navigateBack({ delta: this.data.link })
+          break
+        default:
+          wx.navigateTo({ url: this.data.link })
+      }
+      
+    }
   }
 })
