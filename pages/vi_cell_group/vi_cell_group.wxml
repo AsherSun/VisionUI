@@ -1,2 +1,6 @@
-<!--pages/vi_cell_group/vi_cell_group.wxml-->
-<text>pages/vi_cell_group/vi_cell_group.wxml</text>
+<vi-cell-group title="带标题的cell-group">
+  <vi-cell title="带Icon" line="group" iconName="setting"></vi-cell>
+  <vi-cell title="只显示箭头" line="group" iconName="setting" link="{{true}}"></vi-cell>
+  <vi-cell title="显示右侧描述信息" line="group" iconName="setting" link="{{true}}" desc="我是描述..."></vi-cell>
+  <vi-cell title="跳转到首页" line="group" iconName="carame" link="/pages/index/index"></vi-cell>
+</vi-cell-group>

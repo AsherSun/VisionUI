@@ -1,4 +1,3 @@
-// pages/vi_painting/vi_painting.js
 Page({
   data: {
     jdConfig: {

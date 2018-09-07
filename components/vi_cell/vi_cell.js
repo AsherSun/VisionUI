@@ -23,6 +23,10 @@ Component({
     desc: {
       type: String,
       value: ''
+    },
+    line: {
+      type: String,
+      value: ''
     }
   },
   options: {

@@ -1,0 +1,6 @@
+<view class="cell-group_wrap">
+  <view class="cell-group__title" wx:if="{{title}}">{{title}}</view>
+  <view class="cell-group__container">
+    <slot></slot>
+  </view>
+</view>
