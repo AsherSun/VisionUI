@@ -1,0 +1,3 @@
+<checkbox-group bindchange="selectChange">
+
+</checkbox-group>
