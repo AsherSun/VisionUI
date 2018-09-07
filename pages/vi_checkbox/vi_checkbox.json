@@ -1,5 +1,7 @@
 {
   "usingComponents": {
-    "vi-checkbox": "/components/vi_checkbox/vi_checkbox"
+    "vi-checkbox": "/components/vi_checkbox/vi_checkbox",
+    "vi-title": "/components/vi_title/vi_title",
+    "vi-cell": "/components/vi_cell/vi_cell"
   }
 }

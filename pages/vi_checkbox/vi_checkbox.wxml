@@ -1,3 +1,7 @@
-<vi-checkbox bindchange="triggerToSelectChange">
+<vi-title>CHECKBOX</vi-title>
 
+<vi-checkbox bindchange="triggerToSelectChange" list="{{checkboxList}}">
+  <vi-cell slot="label-{{index}}" wx:for="{{shoppingCartList}}" wx:key="{{index}}" title="{{item.cartId}}">
+  </vi-cell>
+  
 </vi-checkbox>

@@ -1,3 +1,6 @@
 <checkbox-group bindchange="selectChange">
-
+  <checkbox value="{{item.value}}" checked="{{item.checked}}" wx:for="{{list}}" wx:key="{{index}}">
+    <slot name="label-{{index}}"></slot>
+  </checkbox>
+  <slot name="container"></slot>
 </checkbox-group>
