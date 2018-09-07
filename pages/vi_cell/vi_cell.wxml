@@ -1,2 +1,6 @@
-<!--pages/vi_cell/vi_cell.wxml-->
-<text>pages/vi_cell/vi_cell.wxml</text>
+<vi-title>CELL</vi-title>
+<vi-cell title="默认 default"></vi-cell>
+<vi-cell title="带Icon" iconName="setting"></vi-cell>
+<vi-cell title="只显示箭头" iconName="setting" link="{{true}}"></vi-cell>
+<vi-cell title="显示右侧描述信息" iconName="setting" link="{{true}}" desc="我是描述..."></vi-cell>
+<vi-cell title="跳转到首页" iconName="carame" link="/pages/index/index"></vi-cell>

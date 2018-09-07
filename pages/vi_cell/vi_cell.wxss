@@ -1,1 +1,3 @@
-/* pages/vi_cell/vi_cell.wxss */
+page {
+  background: #F9f9f9;
+}

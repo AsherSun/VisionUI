@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/vi_cell/vi_cell",
     "pages/vi_switch/vi_switch",
     "pages/poster_demo/poster_demo",
     "pages/vi_painting/vi_painting",
@@ -17,7 +18,6 @@
     "pages/vi_separate_line/vi_separate_line",
     "pages/about/about",
     "pages/vi_checkbox/vi_checkbox",
-    "pages/vi_cell/vi_cell",
     "pages/vi_cell_group/vi_cell_group"
   ],
   "window": {
