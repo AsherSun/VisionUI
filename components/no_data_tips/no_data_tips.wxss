@@ -1,4 +1,3 @@
-/* components/no_data_tips/no_data_tips.wxss */
 @import '/styles/iconfont.wxss';
 .noData {
   position: absolute;
@@ -16,6 +15,19 @@
 }
 
 .noData-txt {
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+button::after {
+  border-radius: 0;
+  border: none;
+}
+
+button {
+  border-radius: 0;
+  padding:0;
+  margin: 0;
   font-size: 12px;
   margin-top: 10px;
 }

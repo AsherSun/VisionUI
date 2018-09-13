@@ -1,4 +1,3 @@
-<!--components/count_down/count_down.wxml-->
 <view class="countDown">
   <view>
     <view class="countDown-tiemr" wx:if="{{!countDownOver}}">

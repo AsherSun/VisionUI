@@ -1,9 +1,6 @@
-// components/vi_address/vi_address.js
+
 import cityData from './cityData.js'
 Component({
-  /**
-   * 组件的属性列表
-   */
   properties: {
     cityData: {
       type: Array,
@@ -19,14 +16,15 @@ Component({
         })
       }
     },
+    areaHide: {
+      type: Boolean,
+      value: false
+    },
     region: {
       type: Array,
       value: ['640000', '640500', '640501']
     }
   },
-  /**
-   * 组件的初始数据
-   */
   data: {
     provinces: [],
     addClassName: false,
@@ -35,27 +33,35 @@ Component({
     classNameStatus: false,
     provincesIndex: 0,
     citysIndex: 0,
-    areasIndex: 0
+    areasIndex: 0,
+    address: []
   },
   attached() {
     this._setInitCity()
   },
-  /**
-   * 组件的方法列表
-   */
   methods: {
-    tapBtn({ currentTarget: { dataset: { sign } } }) {
+    tapBtn({
+      currentTarget: {
+        dataset: {
+          sign
+        }
+      }
+    }) {
       if (sign === 'cancel' || sign === 'mask') {
         this.triggerEvent('cancel')
       } else {
-        this.triggerEvent('confirm')
+        this.triggerEvent('confirm', this.data.address)
       }
       this.setData({
         classNameStatus: !this.data.classNameStatus
       })
       this.triggerEvent('hide', sign)
     },
-    prickAddressChange({ detail: { value: [a, b, c] } }) {
+    prickAddressChange({
+      detail: {
+        value: [a, b, c]
+      }
+    }) {
       let provincesIndex = a
       let citysIndex = b
       let areasIndex = c
@@ -77,25 +83,22 @@ Component({
       this.setData({
         provinces: this.data.cityData,
         citys: this.data.cityData[this.data.provincesIndex].sub,
-        areas: this.data.cityData[this.data.provincesIndex].sub[this.data.citysIndex].sub
-      })
-      this.triggerEvent('addresschange', {
-        addressConcat: `${this.data.provinces[this.data.provincesIndex].name} - ${this.data.citys[this.data.citysIndex].name} - ${this.data.areas[this.data.areasIndex].name}`,
+        areas: this.data.cityData[this.data.provincesIndex].sub[this.data.citysIndex].sub,
         address: [{
-            code: this.data.provinces[this.data.provincesIndex].code,
-            name: this.data.provinces[this.data.provincesIndex].name
-          },
-          {
-            code: this.data.citys[this.data.citysIndex].code,
-            name: this.data.citys[this.data.citysIndex].name
-          },
-          {
-            code: this.data.areas[this.data.areasIndex].code,
-            name: this.data.areas[this.data.areasIndex].name
-          }
-        ],
-        codeArr: [this.data.provinces[this.data.provincesIndex].code, this.data.citys[this.data.citysIndex].code, this.data.areas[this.data.areasIndex].code]
+          code: this.data.cityData[this.data.provincesIndex].code,
+          name: this.data.cityData[this.data.provincesIndex].name
+        },
+        {
+          code: this.data.cityData[this.data.provincesIndex].sub[this.data.citysIndex].code,
+          name: this.data.cityData[this.data.provincesIndex].sub[this.data.citysIndex].name
+        },
+        {
+          code: this.data.cityData[this.data.provincesIndex].sub[this.data.citysIndex].sub[this.data.areasIndex].code,
+          name: this.data.cityData[this.data.provincesIndex].sub[this.data.citysIndex].sub[this.data.areasIndex].name
+        }
+        ]
       })
+      this.triggerEvent('addresschange', this.data.address)
     }
   }
 })
