@@ -10,7 +10,7 @@ Component({
     }
   },
   relations: {
-    '../vi_cell/index': {
+    '../vi-cell/index': {
       type: 'child',
       linked: function (target) {
         this._updateIsLastCell()
@@ -25,7 +25,7 @@ Component({
   },
   methods: {
     _updateIsLastCell() {
-      let cells = this.getRelationNodes('../vi_cell/index');
+      let cells = this.getRelationNodes('../vi-cell/index');
       const len = cells.length;
 
       if (len > 0) {

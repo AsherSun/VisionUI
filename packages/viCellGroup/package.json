@@ -1,7 +1,7 @@
 {
   "name": "vi-cell-group",
-  "version": "0.0.1",
-  "description": "",
+  "version": "0.0.7",
+  "description": "微信小程序vi-cell-group组件",
   "main": "miniprogram_dist/index.js",
   "scripts": {
     "dev": "gulp dev --develop",
@@ -15,6 +15,12 @@
     "lint": "eslint \"src/**/*.js\"",
     "lint-tools": "eslint \"tools/**/*.js\" --rule \"import/no-extraneous-dependencies: false\""
   },
+  "keywords": [
+    "miniprogram",
+    "vi-cell-group",
+    "weChat",
+    "微信小程序"
+  ],
   "miniprogram": "miniprogram_dist",
   "jest": {
     "testEnvironment": "jsdom",

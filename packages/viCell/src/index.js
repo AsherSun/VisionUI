@@ -66,7 +66,6 @@ Component({
       }
     },
     updateIsLastCell(isLastCell) {
-      console.log('isLastCell', isLastCell)
       this.setData({isLastCell, isHaveCellGroup: true})
     }
   }
