@@ -19,7 +19,8 @@
     "src/pages/vi_separate_line/vi_separate_line",
     "src/pages/about/about",
     "src/pages/vi_checkbox/vi_checkbox",
-    "src/pages/vi_cell_group/vi_cell_group"
+    "src/pages/vi_cell_group/vi_cell_group",
+    "packages/viCellGroup/miniprogram_dev/pages/index/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

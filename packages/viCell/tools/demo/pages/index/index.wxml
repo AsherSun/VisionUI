@@ -1,1 +1,31 @@
-<comp></comp>
+
+<vi-cell-group> 
+  <vi-cell title="默认 default"></vi-cell>
+</vi-cell-group>
+
+<view style="padding: 10px;"></view>
+
+<vi-cell title="显示边框" line></vi-cell>
+
+<view style="padding: 10px;"></view>
+
+<vi-cell title="带Icon" iconName="setting"></vi-cell>
+
+<view style="padding: 10px;"></view>
+
+<vi-cell title="只显示箭头" iconName="setting" link="{{true}}"></vi-cell>
+
+<view style="padding: 10px;"></view>
+
+<vi-cell title="显示右侧描述信息" iconName="setting" link="{{true}}" desc="我是描述..."></vi-cell>
+
+<view style="padding: 10px;"></view>
+
+<vi-cell title="跳转到首页" iconName="carame" desc="linkType为:switchTab" linkType="switchTab" link="/pages/index/index"></vi-cell>
+
+<vi-cell-group title="带标题的cell-group">
+  <vi-cell title="带Icon" iconName="setting"></vi-cell>
+  <vi-cell title="只显示箭头" iconName="setting" link="{{true}}"></vi-cell>
+  <vi-cell title="显示右侧描述信息" iconName="setting" link="{{true}}" desc="我是描述..."></vi-cell>
+  <vi-cell title="跳转到首页" desc="linkType为:navigateBack" linkType="navigateBack" iconName="carame" link="/pages/index/index"></vi-cell>
+</vi-cell-group>

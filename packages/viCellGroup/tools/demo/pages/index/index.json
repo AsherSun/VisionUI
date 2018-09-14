@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "vi-cell-group": "../../components/index",
+    "vi-cell": "/packages/viCell/minprogram_dev/components/index"
+  }
+}
