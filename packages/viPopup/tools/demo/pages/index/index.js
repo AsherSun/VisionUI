@@ -1,7 +1,4 @@
 Page({
-  /**
-   * 页面的初始数据
-   */
   data: {
     popupHide_bottom: false,
     popupHide_top: false,
@@ -28,11 +25,5 @@ Page({
     this.setData({
       popupHide_right: !this.data.popupHide_right
     })
-  },
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
   }
 })

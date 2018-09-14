@@ -1,5 +1,6 @@
 {
   "pages": [
+    "packages/viPopup/miniprogram_dev/pages/index/index",
     "src/pages/index/index",
     "src/pages/vi_cell/vi_cell",
     "src/pages/vi_switch/vi_switch",
