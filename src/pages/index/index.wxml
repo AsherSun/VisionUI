@@ -1,0 +1,32 @@
+<view class="column_row_center font12">
+  <image mode="aspectFit" src="/src/images/vision_logo_124.png" style="width: 100px; height: 100px;"></image>
+  <view>Vision Weapp</view>
+</view>
+
+<vi-cell-group title="布局">
+  <vi-cell title="vi-cell" line="group" desc="cell" link="/src/pages/vi_cell/vi_cell"></vi-cell>
+  <vi-cell title="no-data-tips" line="group" desc="无数据状态提示" link="/src/pages/vi_no_data_tips/vi_no_data_tips"></vi-cell>
+</vi-cell-group>
+
+<vi-cell-group title="操作反馈">
+  <vi-cell title="vi-popup" line="group" desc="抽屉" link="/src/pages/vi_popup/vi_popup"></vi-cell>
+  <vi-cell title="vi-address" line="group" desc="地址三级联动选择" link="/src/pages/vi_address/vi_address"></vi-cell>
+  <vi-cell title="count-down" line="group" desc="倒计时" link="/src/pages/vi_count_down/vi_count_down"></vi-cell>
+  <vi-cell title="vi-dialog" line="group" desc="会话窗" link="/src/pages/vi_dialog/vi_dialog"></vi-cell>
+  <vi-cell title="vi-dialog-motion" line="group" desc="会话窗-运动方式" link="/src/pages/vi_dialog_motion/vi_dialog_motion"></vi-cell>
+</vi-cell-group>
+
+
+<vi-cell-group title="表单组件">
+  <vi-cell title="vi-button" line="group" desc="button" link="/src/pages/vi_button/vi_button"></vi-cell>
+  <!-- <vi-cell title="vi-checkbox" line="group" desc="checkbox" link="/pages/vi_checkbox/vi_checkbox"></vi-cell> -->
+  <vi-cell title="vi-switch" line="group" desc="switch" link="/src/pages/vi_switch/vi_switch"></vi-cell>
+</vi-cell-group>
+
+
+<vi-cell-group title="业务层">
+  <vi-cell title="separate_line" line="group" desc="分割线" link="/src/pages/vi_separate_line/vi_separate_line"></vi-cell>
+  <vi-cell title="vi-quantity" line="group" desc="电商平台计数器" link="/src/pages/vi_quantity/vi_quantity"></vi-cell>
+  <vi-cell title="upload" line="group" desc="上传插件" link="/src/pages/upload/upload"></vi-cell>
+  <vi-cell title="draw poster" line="group" desc="海报绘制插件" link="/src/pages/vi_painting/vi_painting"></vi-cell>
+</vi-cell-group>

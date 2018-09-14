@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "没有数据的提示",
+  "usingComponents": {
+    "no-data-tips": "/src/components/no_data_tips/no_data_tips"
+  }
+}

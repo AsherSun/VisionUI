@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "vi-poster": "/src/components/vi_poster/poster/index",
+    "vi-button": "/src/components/vi_button/vi_button"
+  }
+}

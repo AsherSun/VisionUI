@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "vi-cell": "/src/components/vi_cell/vi_cell",
+    "vi-title": "/src/components/vi_title/vi_title",
+    "vi-cell-group": "/src/components/vi_cell_group/vi_cell_group"
+  }
+}

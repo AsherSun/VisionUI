@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "vi-address": "/src/components/vi_address/vi_address"
+  }
+}
