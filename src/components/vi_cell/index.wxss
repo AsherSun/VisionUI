@@ -9,6 +9,7 @@
   position: relative;
 }
 
+
 .cell_flex {
   display: flex;
   flex-flow: row nowrap;
@@ -19,6 +20,7 @@
 .cell-group::after {
   content: '';
   position: absolute;
+  z-index: 1;
   left: 15px;
   right: 0;
   height: 1px;

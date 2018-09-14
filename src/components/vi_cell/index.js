@@ -36,6 +36,14 @@ Component({
   options: {
     multipleSlots: true
   },
+  data: {
+    isLastCell: false
+  },
+  relations: {
+    '../vi_cell_group/vi_cell_group': {
+      type: 'parent'
+    }
+  },
   methods: {
     triggerToNavigateTo() {
       if (typeof this.data.link !== 'string' || !this.data.link) { return false }
@@ -55,6 +63,10 @@ Component({
         default:
           wx.navigateTo({ url: this.data.link })
       }
+    },
+    updateIsLastCell(isLastCell) {
+      console.log(isLastCell)
+      this.setData({ isLastCell })
     }
   }
 })
