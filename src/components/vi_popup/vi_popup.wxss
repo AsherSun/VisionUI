@@ -4,16 +4,17 @@
   top:0;
   bottom: 0;
   z-index: 80;
-
 }
 
 .vi-popup_hide {
   transform: translate3d(0, 100%, 0);
 }
+
 .vi-popup_animated {
   transition-property: transform;
   transition-delay: 0.5s;
 }
+
 .vi-popup-mask {
   width: 100%;
   position: fixed;

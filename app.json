@@ -1,8 +1,8 @@
 {
   "pages": [
-    "packages/viPopup/miniprogram_dev/pages/index/index",
     "src/pages/index/index",
     "src/pages/vi_cell/vi_cell",
+    "packages/viAddress/miniprogram_dev/pages/index/index",
     "src/pages/vi_switch/vi_switch",
     "src/pages/poster_demo/poster_demo",
     "src/pages/vi_painting/vi_painting",
