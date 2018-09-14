@@ -12,22 +12,120 @@
 }
 ```
 
-> 使用字符串形式的日期格式
+> 底部出现
 
 ```HTML
-<count-down endTime="2018/12/01></count-down>
+<vi-popup ishide="{{popupHide_bottom}}" bindpopuphide="popupBottom">
+  <view class="popup-bottom"></view>
+</vi-popup>
+
+<script>
+Page({
+  data: {
+    popupHide_bottom: false
+  }
+  popupBottom() {
+    this.setData({
+      popupHide_bottom: !this.data.popupHide_bottom
+    })
+  }
+})
+</script>
+
+<style>
+  .popup-bottom{
+    height: 400rpx;
+    background: #fff;
+  }
+</style>
 ```
 
-> 使用毫秒数的日期格式
+> 头部出现
 
 ```HTML
-<count-down end-time="{{1543593600000}}"></count-down>
+<vi-popup ishide="{{popupHide_top}}" position="top" bindpopuphide="popupTop">
+  <view class="popup-top"></view>
+</vi-popup>
+
+<script>
+Page({
+  data: {
+    popupHide_top: false
+  }
+  popupBottom() {
+    this.setData({
+      popupHide_top: !this.data.popupHide_top
+    })
+  }
+})
+</script>
+
+<style>
+  .popup-top{
+    height: 400rpx;
+    background: #fff;
+  }
+</style>
 ```
+
+> 左侧出现
+```HTML
+<vi-popup ishide="{{popupHide_left}}" position="left" bindpopuphide="popupLeft">
+  <view class="popup-left"></view>
+</vi-popup>
+
+<script>
+Page({
+  data: {
+    popupHide_left: false
+  }
+  popupBottom() {
+    this.setData({
+      popupHide_left: !this.data.popupHide_left
+    })
+  }
+})
+</script>
+
+<style>
+  .popup-left{
+    width: 100px;
+    height: 100%;
+    background: #FFF;
+  }
+</style>
+```
+
+> 右侧出现
+```HTML
+<vi-popup ishide="{{popupHide_right}}" position="right" bindpopuphide="popupRight">
+  <view class="popup-right"></view>
+</vi-popup>
+
+<script>
+Page({
+  data: {
+    popupHide_right: false
+  }
+  popupBottom() {
+    this.setData({
+      popupHide_right: !this.data.popupHide_right
+    })
+  }
+})
+</script>
+
+<style>
+  .popup-right{
+    width: 100px;
+    height: 100%;
+    background: #FFF;
+  }
+</style>
 
 ## 属性
 
 | 接口 | 数据类型 | 说明 | 选项 | 默认值 |
 | :--: | :--: | :--: | :--: | :--: |
-| endTime | [ String, Number  ] | 接收字符串形式的时间格式或者毫秒数 | 必填 | null |
-| startTime | [ String, Number  ] | 接收字符串形式的时间格式或者毫秒数 | 选填 | null |
-| endText | [ String ] | 接收字符串文本 | 选填 | 该订单已超过支付时间 |
+| ishide | Boolean | 控制数据popup显示隐藏 | 必填 | false |
+| position | string | popup出现的方向,值有：top、left、right、bottom | 选填 | bottom |
