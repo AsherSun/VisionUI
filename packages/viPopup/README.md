@@ -8,7 +8,7 @@
 
 ```json
 "usingComponents": {
-  "vi-popup": "/vi-popup" // 相对路劲
+  "vi-popup": "vi-popup"
 }
 ```
 
