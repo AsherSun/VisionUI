@@ -19,14 +19,13 @@
 
 <vi-cell-group title="表单组件">
   <vi-cell title="vi-button" line="group" desc="button" link="/src/pages/vi_button/vi_button"></vi-cell>
-  <!-- <vi-cell title="vi-checkbox" line="group" desc="checkbox" link="/pages/vi_checkbox/vi_checkbox"></vi-cell> -->
   <vi-cell title="vi-switch" line="group" desc="switch" link="/src/pages/vi_switch/vi_switch"></vi-cell>
 </vi-cell-group>
 
 
 <vi-cell-group title="业务层">
-  <vi-cell title="separate_line" line="group" desc="分割线" link="/src/pages/vi_separate_line/vi_separate_line"></vi-cell>
-  <vi-cell title="vi-quantity" line="group" desc="电商平台计数器" link="/src/pages/vi_quantity/vi_quantity"></vi-cell>
-  <vi-cell title="upload" line="group" desc="上传插件" link="/src/pages/upload/upload"></vi-cell>
-  <vi-cell title="draw poster" line="group" desc="海报绘制插件" link="/src/pages/vi_painting/vi_painting"></vi-cell>
+  <vi-cell title="separate_line" desc="分割线" link="/src/pages/vi_separate_line/vi_separate_line"></vi-cell>
+  <vi-cell title="vi-quantity" desc="电商平台计数器" link="/src/pages/vi_quantity/vi_quantity"></vi-cell>
+  <vi-cell title="upload" desc="上传插件" link="/src/pages/upload/upload"></vi-cell>
+  <vi-cell title="draw poster" desc="海报绘制插件" link="/src/pages/vi_painting/vi_painting"></vi-cell>
 </vi-cell-group>

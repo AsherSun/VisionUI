@@ -1,4 +1,4 @@
-<view class="cell cell_flex {{isLastCell ? '' : 'cell-group'}}" bindtap="triggerToNavigateTo">
+<view class="cell cell_flex {{isLastCell ? 'cell-group' : ''}} {{line && !isHaveCellGroup ? 'cell-line' : ''}}" bindtap="triggerToNavigateTo">
   <view class="cell__icon" wx:if="{{iconName}}">
     <block wx:if="{{iconName === true}}"><slot name="icon"></slot></block>
     <block wx:else><view class="icon icon-{{iconName}}" style="color: {{iconColor}}; font-size: {{iconSize}}px;"></view></block>

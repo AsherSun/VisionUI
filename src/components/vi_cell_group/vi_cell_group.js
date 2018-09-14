@@ -32,7 +32,7 @@ Component({
         let lastIndex = len - 1;
 
         cells.forEach((cell, index) => {
-          cell.updateIsLastCell(index === lastIndex);
+          cell.updateIsLastCell(index !== lastIndex);
         });
       }
     }

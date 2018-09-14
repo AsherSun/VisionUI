@@ -25,8 +25,8 @@ Component({
       value: ''
     },
     line: {
-      type: String,
-      value: ''
+      type: Boolean,
+      value: false
     },
     linkType: {
       type: String,
@@ -37,7 +37,8 @@ Component({
     multipleSlots: true
   },
   data: {
-    isLastCell: false
+    isLastCell: false,
+    isHaveCellGroup: false
   },
   relations: {
     '../vi_cell_group/vi_cell_group': {
@@ -65,8 +66,7 @@ Component({
       }
     },
     updateIsLastCell(isLastCell) {
-      console.log(isLastCell)
-      this.setData({ isLastCell })
+      this.setData({ isLastCell, isHaveCellGroup: true })
     }
   }
 })
