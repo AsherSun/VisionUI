@@ -1,4 +1,4 @@
-@import '/src/components/vi_checkbox/vi_checkbox.wxss';
+/* @import '/components/vi_checkbox/vi_checkbox.wxss'; */
 
 /* checkbox .wx-checkbox-input {
   border-radius: 50%;

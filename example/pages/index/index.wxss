@@ -1,0 +1,15 @@
+.header {
+  width: 100%;
+  height: 150px;
+}
+
+.header__logo-image {
+  width: 114px;
+  height: 114px;
+  margin: 0 auto;
+}
+
+.header__logo-name {
+  text-align: center;
+  font-size: 24px;
+}

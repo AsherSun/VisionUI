@@ -1,25 +1,24 @@
 {
   "pages": [
-    "src/pages/index/index",
-    "src/pages/vi_cell/vi_cell",
-    "src/pages/vi_switch/vi_switch",
-    "src/pages/poster_demo/poster_demo",
-    "src/pages/vi_painting/vi_painting",
-    "src/pages/upload/upload",
-    "src/pages/vi_button/vi_button",
-    "src/pages/vi_dialog_motion/vi_dialog_motion",
-    "src/pages/vi_dialog/vi_dialog",
-    "src/pages/animate/animate",
-    "src/pages/vi_popup/vi_popup",
-    "src/pages/vi_count_down/vi_count_down",
-    "src/pages/vi_no_data_tips/vi_no_data_tips",
-    "src/pages/vi_address/vi_address",
-    "src/pages/vi_quantity/vi_quantity",
-    "src/pages/vi_separate_line/vi_separate_line",
-    "src/pages/about/about",
-    "src/pages/vi_checkbox/vi_checkbox",
-    "src/pages/vi_cell_group/vi_cell_group",
-    "packages/viCell/miniprogram_dev/pages/index/index"
+    "pages/index/index",
+    "pages/vi_cell/vi_cell",
+    "pages/vi_switch/vi_switch",
+    "pages/poster_demo/poster_demo",
+    "pages/vi_painting/vi_painting",
+    "pages/upload/upload",
+    "pages/vi_button/vi_button",
+    "pages/vi_dialog_motion/vi_dialog_motion",
+    "pages/vi_dialog/vi_dialog",
+    "pages/animate/animate",
+    "pages/vi_popup/vi_popup",
+    "pages/vi_count_down/vi_count_down",
+    "pages/vi_no_data_tips/vi_no_data_tips",
+    "pages/vi_address/vi_address",
+    "pages/vi_quantity/vi_quantity",
+    "pages/vi_separate_line/vi_separate_line",
+    "pages/about/about",
+    "pages/vi_checkbox/vi_checkbox",
+    "pages/vi_cell_group/vi_cell_group"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -31,11 +30,11 @@
     "color": "#333",
     "list": [
       {
-        "pagePath": "src/pages/index/index",
+        "pagePath": "pages/index/index",
         "text": "组件库"
       },
       {
-        "pagePath": "src/pages/about/about",
+        "pagePath": "pages/about/about",
         "text": "About"
       }
     ]

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "vi-cell": "vi-cell",
+    "vi-cell-group": "vi-cell-group"
+  }
+}

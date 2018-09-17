@@ -1,6 +1,6 @@
 {
   "usingComponents": {
-    "vi-cell-group": "/src/components/vi_cell_group/vi_cell_group",
-    "vi-cell": "/src/components/vi_cell/index"
+    "vi-cell-group": "/components/vi_cell_group/vi_cell_group",
+    "vi-cell": "/components/vi_cell/index"
   }
 }

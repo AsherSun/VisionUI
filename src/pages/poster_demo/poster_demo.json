@@ -1,6 +1,6 @@
 {
   "usingComponents": {
     "vi-canvas": "./c_poster/c_poster",
-    "vi-button": "/src/components/vi_button/vi_button"
+    "vi-button": "/components/vi_button/vi_button"
   }
 }

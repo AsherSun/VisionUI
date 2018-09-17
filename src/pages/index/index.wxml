@@ -1,5 +1,5 @@
 <view class="column_row_center font12">
-  <image mode="aspectFit" src="/src/images/vision_logo_124.png" style="width: 100px; height: 100px;"></image>
+  <image mode="aspectFit" src="/images/vision_logo_114.png" style="width: 100px; height: 100px;"></image>
   <view>Vision Weapp</view>
 </view>
 
