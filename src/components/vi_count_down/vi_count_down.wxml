@@ -1,0 +1,12 @@
+<view class="countDown">
+  <block wx:if="{{!isSlot}}">
+    <view class="countDown-tiemr" wx:if="{{!countDownOver}}">
+      <text wx:if="{{days}}">{{days}}天</text>
+      <text>{{hours}}时</text>
+      <text>{{minutes}}分</text>
+      <text>{{seconds}}秒</text>
+    </view>
+    <span class="countDown-over" wx:else>{{endText}}</span>
+  </block>
+  <block wx:else><slot></slot></block>
+</view>

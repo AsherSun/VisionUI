@@ -1,0 +1,9 @@
+page {
+  font-size: 12px;
+  background: #f9f9f9;
+}
+
+image {
+  display: block;
+  font-size: 0;
+}

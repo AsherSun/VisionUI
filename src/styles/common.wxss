@@ -1,0 +1,22 @@
+@import './common/block.wxss';
+@import './common/flex.wxss';
+@import './common/font.wxss';
+@import './common/font_color.wxss';
+@import './common/position.wxss';
+@import './common/padding.wxss';
+
+.title {
+  padding: 10px 18px;
+  color: #2e2e2e;
+  position: relative;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  bottom: 5px;
+  width: 2px;
+  background: rgb(50, 165, 231);
+  left: 10px;
+}

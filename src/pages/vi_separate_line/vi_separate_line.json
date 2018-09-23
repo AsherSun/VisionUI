@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "separate-line": "/src/components/separate_line/separate_line"
+  }
+}

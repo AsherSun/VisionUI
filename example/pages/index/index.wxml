@@ -1,0 +1,17 @@
+<view class="header">
+  <image class="header__logo-image" src="/images/VisionUI_logo114.png"></image>
+  <view class="header__logo-name">VisionUI weapp</view>
+</view>
+
+<vi-cell-group title="布局组件">
+  <vi-cell title="vi-cell" desc="vi-cell" link="/pages/viCell/index"></vi-cell>
+</vi-cell-group>
+
+<vi-cell-group title="操作反馈">
+  <vi-cell title="vi-address" desc="地址选择" link="/pages/viAddress/index"></vi-cell>
+  <vi-cell title="vi-popup" desc="抽屉" link="/pages/viPopup/index"></vi-cell>
+</vi-cell-group>
+
+<vi-cell-group title="业务组件">
+  <vi-cell title="vi-count-down" desc="倒计时" link="/pages/viCountDown/index"></vi-cell>
+</vi-cell-group>

@@ -1,6 +1,0 @@
-{
-  "usingComponents": {
-    "vi-title": "/components/vi_title/vi_title",
-    "vi-switch": "/components/vi_switch/vi_switch"
-  }
-}

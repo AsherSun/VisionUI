@@ -1,4 +1,0 @@
-<!--pages/vi_address/vi_address.wxml-->
-<view class="font14" bindtap='selectAddress'>点击选择城市: {{address}}</view>
-
-<vi-address is-hide="{{isHide}}" bindhide="selectAddress" bindaddresschange="addressChange"></vi-address>

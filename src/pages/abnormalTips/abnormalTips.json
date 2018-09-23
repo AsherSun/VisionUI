@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "没有数据的提示",
+  "usingComponents": {
+    "abnormal-tips": "/components/abnormalTips/abnormalTips",
+    "vi-title": "/components/viTitle/viTitle"
+  }
+}
