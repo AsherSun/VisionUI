@@ -6,16 +6,6 @@
 </view>
 
 <view class="pos_re noDataTips font12">
-  <view class="title">extend: 断网刷新按钮</view>
-  <abnormal-tips
-    tips="{{networkTipsArr}}"
-    bind:click="triggerToRouter"
-    bind:network_change="networkChange"
-    bind:refresh="triggerToRefresh">
-  </abnormal-tips>
-</view>
-
-<view class="pos_re noDataTips font12">
   <view class="title">修改文本提示</view>
   <abnormal-tips tips="该分类下暂无商品数据"></abnormal-tips>
 </view>
@@ -50,20 +40,28 @@
 </view>
 
 <view class="pos_re noDataTips font12">
+  <view class="title">extend: 断网刷新按钮</view>
+  <abnormal-tips
+    tips="{{networkTipsArr}}"
+    bind:network_change="networkChange"
+    bind:refresh="triggerToRefresh">
+  </abnormal-tips>
+</view>
+
+<view class="pos_re noDataTips font12">
   <view class="title">extend: 提示按钮</view>
   <abnormal-tips
     button="返回首页" 
     tips="啊哦，该分类下暂无商品, 去其他分类下看看吧"
-    bind:click="triggerToRouter"
-    bind:refresh="triggerToRefresh"></abnormal-tips>
+    bind:refresh="triggerToRefresh">
+  </abnormal-tips>
 </view>
 
 <view class="pos_re noDataTips font12">
   <view class="title">extend: iconfont flee</view>
   <abnormal-tips
     icon-name="flee"
-    tips="啊哦，服务器走丢了"
-    bind:click="triggerToRouter"></abnormal-tips>
+    tips="啊哦，服务器走丢了"></abnormal-tips>
 </view>
 
 <view class="pos_re noDataTips font12">
