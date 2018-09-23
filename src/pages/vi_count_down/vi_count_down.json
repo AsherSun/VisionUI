@@ -1,5 +1,5 @@
 {
   "usingComponents": {
-    "vi-count-down": "/src/components/vi_count_down/vi_count_down"
+    "vi-count-down": "/components/vi_count_down/vi_count_down"
   }
 }

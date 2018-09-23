@@ -4,3 +4,15 @@
 
 <view>毫秒数日期格式</view>
 <vi-count-down end-time="{{1543593600000}}"></vi-count-down>
+
+
+<view>自定义DOM结构</view>
+
+<vi-count-down end-time="{{1543593600000}}" is-slot bind:countdown="triggerToCountdown">
+  <view>
+    <view>{{countDown.days}}</view>天
+    <view>{{countDown.hours}}</view>时
+    <view>{{countDown.minutes}}</view>分
+    <view>{{countDown.seconds}}</view>秒
+  </view>
+</vi-count-down>

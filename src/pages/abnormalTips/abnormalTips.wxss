@@ -1,4 +1,3 @@
-/* pages/vi_no_data_tips/vi_no_data_tips.wxss */
 .noDataTips {
   height: 200px;
 }

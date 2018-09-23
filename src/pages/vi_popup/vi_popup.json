@@ -1,5 +1,5 @@
 {
   "usingComponents": {
-    "vi-popup": "/src/components/vi_popup/vi_popup"
+    "vi-popup": "/components/vi_popup/vi_popup"
   }
 }

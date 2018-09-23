@@ -15,6 +15,10 @@ Component({
     endText: { // 倒计时结束要显示的提示语
       type: String,
       value: '该订单已超过支付时间'
+    },
+    isSlot: {
+      type: Boolean,
+      value: false
     }
   },
   data: {
@@ -32,12 +36,21 @@ Component({
         surplus: --this.data.surplus
       })
       if (this.data.surplus > 0) { // 处理倒计时逻辑
-        this.setData({
-          days: parseInt(this.data.surplus / (60 * 60 * 24)),
-          hours: this.getHMS(parseInt((this.data.surplus % (60 * 60 * 24)) / (60 * 60))),
-          minutes: this.getHMS(parseInt((this.data.surplus % (60 * 60 * 24)) % (60 * 60) / 60)),
-          seconds: this.getHMS(parseInt((this.data.surplus % (60 * 60 * 24)) % (60 * 60) % 60))
-        })
+        if (this.data.isSlot) {
+          this.triggerEvent('countdown', {
+            days: parseInt(this.data.surplus / (60 * 60 * 24)),
+            hours: this.getHMS(parseInt((this.data.surplus % (60 * 60 * 24)) / (60 * 60))),
+            minutes: this.getHMS(parseInt((this.data.surplus % (60 * 60 * 24)) % (60 * 60) / 60)),
+            seconds: this.getHMS(parseInt((this.data.surplus % (60 * 60 * 24)) % (60 * 60) % 60))
+          })
+        } else {
+          this.setData({
+            days: parseInt(this.data.surplus / (60 * 60 * 24)),
+            hours: this.getHMS(parseInt((this.data.surplus % (60 * 60 * 24)) / (60 * 60))),
+            minutes: this.getHMS(parseInt((this.data.surplus % (60 * 60 * 24)) % (60 * 60) / 60)),
+            seconds: this.getHMS(parseInt((this.data.surplus % (60 * 60 * 24)) % (60 * 60) % 60))
+          })
+        }
       } else { // 清除定时器
         this.setData({
           countDownOver: true

@@ -4,14 +4,14 @@
 </view>
 
 <vi-cell-group title="布局">
-  <vi-cell title="vi-cell" line="group" desc="cell" link="/src/pages/vi_cell/vi_cell"></vi-cell>
-  <vi-cell title="no-data-tips" line="group" desc="无数据状态提示" link="/src/pages/vi_no_data_tips/vi_no_data_tips"></vi-cell>
+  <vi-cell title="vi-cell" line="group" desc="cell" link="/pages/vi_cell/vi_cell"></vi-cell>
+  <vi-cell title="no-data-tips" line="group" desc="无数据状态提示" link="/pages/abnormalTips/abnormalTips"></vi-cell>
 </vi-cell-group>
 
 <vi-cell-group title="操作反馈">
-  <vi-cell title="vi-popup" line="group" desc="抽屉" link="/src/pages/vi_popup/vi_popup"></vi-cell>
-  <vi-cell title="vi-address" line="group" desc="地址三级联动选择" link="/src/pages/vi_address/vi_address"></vi-cell>
-  <vi-cell title="count-down" line="group" desc="倒计时" link="/src/pages/vi_count_down/vi_count_down"></vi-cell>
+  <vi-cell title="vi-popup" line="group" desc="抽屉" link="/pages/vi_popup/vi_popup"></vi-cell>
+  <vi-cell title="vi-address" line="group" desc="地址三级联动选择" link="/pages/vi_address/vi_address"></vi-cell>
+  <vi-cell title="count-down" line="group" desc="倒计时" link="/pages/vi_count_down/vi_count_down"></vi-cell>
   <vi-cell title="vi-dialog" line="group" desc="会话窗" link="/src/pages/vi_dialog/vi_dialog"></vi-cell>
   <vi-cell title="vi-dialog-motion" line="group" desc="会话窗-运动方式" link="/src/pages/vi_dialog_motion/vi_dialog_motion"></vi-cell>
 </vi-cell-group>

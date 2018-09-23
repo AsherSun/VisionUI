@@ -1,3 +1,5 @@
+<vi-title>VI-CELL</vi-title>
+
 <vi-cell-group margin-top="20"> 
   <vi-cell title="默认 default"></vi-cell>
 </vi-cell-group>

@@ -12,7 +12,7 @@
     "pages/animate/animate",
     "pages/vi_popup/vi_popup",
     "pages/vi_count_down/vi_count_down",
-    "pages/vi_no_data_tips/vi_no_data_tips",
+    "pages/abnormalTips/abnormalTips",
     "pages/vi_address/vi_address",
     "pages/vi_quantity/vi_quantity",
     "pages/vi_separate_line/vi_separate_line",

@@ -1,0 +1,59 @@
+<vi-title>ABNORMAL-TIPS</vi-title>
+
+<view class="pos_re noDataTips font12">
+  <view class="title">默认显示效果</view>
+  <abnormal-tips></abnormal-tips>
+</view>
+
+<view class="pos_re noDataTips font12">
+  <view class="title">extend: 断网刷新按钮</view>
+  <abnormal-tips
+    tips="{{networkTipsArr}}"
+    bind:click="triggerToRouter"
+    bind:network_change="networkChange"
+    bind:refresh="triggerToRefresh">
+  </abnormal-tips>
+</view>
+
+<view class="pos_re noDataTips font12">
+  <view class="title">修改文本提示</view>
+  <abnormal-tips tips="该分类下暂无商品数据"></abnormal-tips>
+</view>
+
+<view class="pos_re noDataTips font12">
+  <view class="title">换行文本提示</view>
+  <abnormal-tips tips="{{tipsArr}}"></abnormal-tips>
+</view>
+
+<view class="pos_re noDataTips font12">
+  <view class="title">style: 更改icon的样式</view>
+  <abnormal-tips no-data-icon-class="changeIconColor"></abnormal-tips>
+</view>
+
+<view class="pos_re noDataTips font12">
+  <view class="title">style：更改文本提示样式</view>
+  <abnormal-tips no-data-txt-class="changeTextColor"></abnormal-tips>
+</view>
+
+<view class="pos_re noDataTips font12">
+  <view class="title">slot：替换组件中icon</view>
+  <abnormal-tips is-icon-slot>
+    <view slot="icon">我是替换的ICON</view>
+  </abnormal-tips>
+</view>
+
+<view class="pos_re noDataTips font12">
+  <view class="title">slot: 替换组件的文案提示</view>
+  <abnormal-tips is-tips-slot>
+    <view slot="tips">我是替换的文案提示</view>
+  </abnormal-tips>
+</view>
+
+<view class="pos_re noDataTips font12">
+  <view class="title">extend: 提示按钮</view>
+  <abnormal-tips
+    button="返回首页" 
+    tips="啊哦，该分类下暂无商品, 去其他分类下看看吧"
+    bind:click="triggerToRouter"
+    bind:refresh="triggerToRefresh"></abnormal-tips>
+</view>

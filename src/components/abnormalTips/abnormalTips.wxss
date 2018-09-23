@@ -14,7 +14,7 @@
   font-size: 55px;
 }
 
-.noData-txt {
+.noData__txt {
   font-size: 12px;
   margin-top: 10px;
 }

@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    countDown: {}
   },
 
   /**
@@ -12,5 +13,11 @@ Page({
    */
   onLoad: function (options) {
 
+  },
+  triggerToCountdown({ detail }) {
+    this.setData({
+      countDown: detail
+    })
+    console.log(detail)
   }
 })
