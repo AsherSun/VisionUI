@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "vi-title": "/components/viTitle/index",
+    "abnormal-tips": "vi-abnormal-tips"
+  }
+}

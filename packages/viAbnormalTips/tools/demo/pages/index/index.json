@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "navigationBarTitleText": "异常信息提示组件",
+    "abnormal-tips": "../../components/index"
+  }
+}

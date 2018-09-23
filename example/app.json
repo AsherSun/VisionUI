@@ -4,12 +4,27 @@
     "pages/viPopup/index",
     "pages/viCountDown/index",
     "pages/viAddress/index",
-    "pages/viCell/index"
+    "pages/viCell/index",
+    "pages/viAbnormalTips/index",
+    "pages/aboult/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#333",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "组件库"
+      },
+      {
+        "pagePath": "pages/aboult/index",
+        "text": "About"
+      }
+    ]
   }
 }

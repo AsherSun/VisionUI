@@ -93,77 +93,85 @@ module.exports =
 
 
 Component({
-  properties: {
-    link: {
-      type: [String, Boolean],
-      value: ''
-    },
-    iconName: {
-      type: [String, Boolean],
-      value: ''
-    },
-    iconColor: {
-      type: String,
-      value: '#333'
-    },
-    iconSize: {
-      type: Number,
-      value: 16
-    },
-    title: {
-      type: String,
-      value: ''
-    },
-    desc: {
-      type: String,
-      value: ''
-    },
-    line: {
-      type: Boolean,
-      value: false
-    },
-    linkType: {
-      type: String,
-      value: ''
-    }
-  },
   options: {
     multipleSlots: true
   },
-  data: {
-    isLastCell: false,
-    isHaveCellGroup: false
-  },
-  relations: {
-    '../vi-cell-group/index': {
-      type: 'parent'
-    }
-  },
-  methods: {
-    triggerToNavigateTo: function triggerToNavigateTo() {
-      if (typeof this.data.link !== 'string' || !this.data.link) {
-        return false;
-      }
-      switch (this.data.linkType) {
-        case 'redirect':
-          wx.redirectTo({ url: this.data.link });
-          break;
-        case 'switchTab':
-          wx.switchTab({ url: this.data.link });
-          break;
-        case 'reLaunch':
-          wx.reLaunch({ url: this.data.link });
-          break;
-        case 'navigateBack':
-          wx.navigateBack({ delta: this.data.link });
-          break;
-        default:
-          wx.navigateTo({ url: this.data.link });
+  properties: {
+    tips: {
+      type: [String, Array],
+      value: '',
+      observer: function observer(newVal, odVal, changedPath) {
+        this._tipsChange(newVal);
       }
     },
-    updateIsLastCell: function updateIsLastCell(isLastCell) {
-      console.log('isLastCell', isLastCell);
-      this.setData({ isLastCell: isLastCell, isHaveCellGroup: true });
+    'isIconSlot': {
+      type: Boolean,
+      value: false
+    },
+    button: {
+      type: String,
+      value: ''
+    },
+    iconName: {
+      type: String,
+      value: 'noData'
+    },
+    isTipsSlot: {
+      type: Boolean,
+      value: false
+    }
+  },
+  lifetimes: {
+    created: function created() {
+      var _this = this;
+      wx.getNetworkType({
+        success: function success(res) {
+          var result = { networkType: 'none', isConnected: false };
+          if (res.networkType !== 'none') {
+            result.isConnected = true;
+            result.networkType = res.networkType;
+          } else {
+            result.isConnected = false;
+            result.networkType = res.networkType;
+          }
+          _this.triggerEvent('network_change', result);
+        },
+        fail: function fail(err) {
+          _this.triggerEvent('network_change', err);
+        }
+      });
+    },
+    attached: function attached() {
+      var _this2 = this;
+
+      wx.onNetworkStatusChange(function (result) {
+        _this2.setData({
+          isConnected: result.isConnected,
+          networkType: result.networkType
+        });
+        _this2.triggerEvent('network_change', result);
+      });
+    }
+  },
+  data: {
+    tipsIsArray: false,
+    isConnected: true,
+    networkType: null
+  },
+  externalClasses: ['abnormal-class', 'icon-class', 'tips-class'],
+  methods: {
+    triggerToTap: function triggerToTap() {
+      this.triggerEvent('click');
+    },
+    triggerToRefresh: function triggerToRefresh() {
+      this.triggerEvent('refresh', this.data.networkType);
+    },
+    _tipsChange: function _tipsChange(val) {
+      if (val instanceof Array) {
+        this.setData({
+          tipsIsArray: true
+        });
+      }
     }
   }
 });
