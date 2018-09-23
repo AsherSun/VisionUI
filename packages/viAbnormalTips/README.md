@@ -1,121 +1,232 @@
-# miniprogram-custom-component
+# 异常信息提示组件
 
-小程序自定义组件脚手架
+## 使用
 
-## 开发
+> + npm i vi-abnormal-tips
+> + 使用微信开发者工具构建NPM并使用NPM模块
 
-1. 安装依赖：
+* 打开小程序页面的json配置.
 
-```
-npm install
-```
-
-2. 执行命令：
-
-```
-npm run dev
+```json
+"usingComponents": {
+  "abnormal-tips": "vi-abnormal-tips"
+}
 ```
 
-默认会在包根目录下生成 miniprogram\_dev 目录，src 中的源代码会被构建并生成到 miniprogram\_dev/components 目录下。如果需要监听文件变化动态构建，则可以执行命令：
+* 默认显示效果
 
-```
-npm run watch
-```
-
-> ps: 如果 minirpogram\_dev 目录下已存在小程序 demo，执行`npm run dev`则不会再将 tools 下的 demo 拷贝到此目录下。而执行`npm run watch`则会监听 tools 目录下的 demo 变动并进行拷贝。
-
-3. 生成的 miniprogram\_dev 目录是一个小程序项目目录，以此目录作为小程序项目目录在开发者工具中打开即可查看自定义组件被使用的效果。
-
-4. 进阶：
-
-* 如果有额外的构建需求，可自行修改 tools 目录中的构建脚本。
-* 内置支持 less、sourcemap 等功能，默认关闭。如若需要可以自行修改 tools/config.js 配置文件中相关配置。
-* 内置支持多入口构建，如若需要可自行调整 tools/config.js 配置文件的 entry 字段。
-* 默认开启 eslint，可自行调整规则或在 tools/config.js 中注释掉 eslint-loader 行来关闭此功能。
-
-## 发布
-
-> ps: 发布前得确保已经执行构建，小程序 npm 包只有构建出来的目录是真正被使用到的。
-
-1. 如果还没有 npm 帐号，可以到[ npm 官网](https://www.npmjs.com/)注册一个 npm 帐号。
-2. 在本地登录 npm 帐号，在本地执行：
-
-```
-npm adduser
+```HTML
+<template>
+  <view style="position:relative;height: 200px; font-size">
+    <abnormal-tips></abnormal-tips>
+  </view>
+</template>
 ```
 
-或者
+* 修改tips提示文本
 
-```
-npm login
-```
-
-3. 在已完成编写的 npm 包根目录下执行：
-
-```
-npm publish
+```HTML
+<template>
+  <view style="position:relative;height: 200px; font-size">
+    <abnormal-tips tips="该分类下暂无商品数据"></abnormal-tips>
+  </view>
+</template>
 ```
 
-到此，npm 包就成功发布到 npm 平台了。
+* tips提示文本换行
 
-> PS：一些开发者在开发过程中可能修改过 npm 的源，所以当进行登录或发布时需要注意要将源切回 npm 的源。
-
-## 目录结构
-
-以下为推荐使用的目录结构，如果有必要开发者也可以自行做一些调整:
-
-```
-|--miniprogram_dev // 开发环境构建目录
-|--miniprogram_dist // 生产环境构建目录
-|--src // 源码
-|   |--common // 通用 js 模块
-|   |--components // 通用自定义组件
-|   |--images // 图片资源
-|   |--wxml // 通用 wxml 模版资源
-|   |--wxs // 通用 wxs 资源
-|   |--wxss // 通用 wxss 资源
-|   |
-|   |--xxx.js/xxx.wxml/xxx.json/xxx.wxss // 暴露的 js 模块/自定义组件入口文件
-|
-|--test // 测试用例
-|--tools // 构建相关代码
-|   |--demo // demo 小程序目录，开发环境下会被拷贝生成到 miniprogram_dev 目录中
-|   |--test // 测试工具相关目录
-|   |--config.js // 构建相关配置文件
-|
-|--gulpfile.js
+```HTML
+<template>
+  <view style="position:relative;height: 200px; font-size">
+    <abnormal-tips tips="{{tipsArr}}"></abnormal-tips>
+  </view>
+</template>
+<script>
+Page({
+  data: {
+    tipsArr: [
+      '啊哦，暂时还没有内容',
+      '联系下客服试试吧'
+    ],
+  }
+})
+</script>
 ```
 
-> PS：对外暴露的 js 模块/自定义组件请放在 src 目录下，不宜放置在过深的目录。另外新增的暴露模块需要在 tools/config.js 的 entry 字段中补充，不然不会进行构建。
+* style: 更改icon的样式
 
-## 测试
-
-* 执行测试用例：
-
-```
-npm run test
-```
-
-* 检测覆盖率：
-
-```
-npm run coverage
-```
-
-测试用例放在 test 目录下，其中 test/utils 是已封装好可在测试用例中使用的工具包，具体使用文档请[点击此处查看](./docs/test.md)。在测试中可能需要用到官方提供的一些接口（如`wx.getSystemInfo`），可在 test/utils 下自行模拟实现（里面已内置部分模拟接口）。
-
-> 目前测试框架仍有部分自定义组件的功能不支持（可参考测试工具包使用文档中的 TODO 列表），后续会逐步进行支持。
-
-## 其他命令
-
-* 清空 miniprogram_dist 目录：
-
-```
-npm run clean
+```HTML
+<template>
+  <view style="position:relative;height: 200px; font-size">
+    <abnormal-tips icon-class="changeIconColor"></abnormal-tips>
+  </view>
+</template>
+<style>
+  .changeIconColor {
+    color: #eee;
+  }
+</style>
 ```
 
-* 清空 miniprogam_dev 目录：
+* style：更改文本提示样式
 
+```HTML
+<template>
+  <view style="position:relative;height: 200px; font-size">
+    <abnormal-tips tips-class="changeTextColor"></abnormal-tips>
+  </view>
+</template>
+<style>
+  .changeIconColor {
+    color: blue;
+  }
+</style>
 ```
-npm run clean-dev
+
+* slot：替换组件中icon
+
+```HTML
+<template>
+  <view style="position:relative;height: 200px; font-size">
+    <abnormal-tips is-icon-slot>
+      <view slot="icon">我是替换的ICON</view>
+    </abnormal-tips>
+  </view>
+</template>
 ```
+
+* slot：替换组件的文案提示
+
+```HTML
+<template>
+  <view style="position:relative;height: 200px; font-size">
+    <abnormal-tips is-tips-slot>
+      <view slot="tips">我是替换的文案提示</view>
+    </abnormal-tips>
+  </view>
+</template>
+```
+
+* extend: 断网刷新按钮
+
+```HTML
+<template>
+  <view style="position:relative;height: 200px; font-size">
+    <abnormal-tips
+      tips="{{networkTipsArr}}"
+      bind:network_change="networkChange"
+      bind:refresh="triggerToRefresh">
+    </abnormal-tips>
+  </view>
+</template>
+<script>
+Page({
+  data: {
+    networkTipsArr: [
+      '请关闭手机网络链接,会出现按钮'
+    ],
+  },
+  triggerToRefresh({ detail }) {
+    /* 
+      // detail 表示 当前网络环境
+      // 值有：wifi、4G、3G、2G、none
+    */
+    console.log(detail)
+  },
+  networkChange({ detail }) {
+    this.data.networkTipsArr[1] = '当前网络环境：' + detail.networkType
+    this.setData({
+      networkTipsArr:this.data.networkTipsArr
+    })
+  }
+})
+</script>
+```
+
+* extend: 提示按钮
+
+```HTML
+<template>
+  <view style="position:relative;height: 200px; font-size">
+    <abnormal-tips
+      button="返回首页" 
+      tips="啊哦，该分类下暂无商品, 去其他分类下看看吧"
+      bind:refresh="triggerToRefresh">
+    </abnormal-tips>
+  </view>
+</template>
+<script>
+Page({
+  triggerToRouter() {
+    wx.switchTab({
+      url: '/pages/index/index',
+    })
+  },
+})
+</script>
+```
+
+* extend: iconfont flee
+
+```HTML
+<template>
+  <view style="position:relative;height: 200px; font-size">
+    <abnormal-tips
+      icon-name="flee"
+      tips="啊哦，服务器走丢了">
+    </abnormal-tips>
+  </view>
+</template>
+```
+
+* extend: iconfont offline
+
+```HTML
+<template>
+  <view style="position:relative;height: 200px; font-size">
+    <abnormal-tips
+      icon-name="offline"
+      tips="啊哦，网络连接失败"
+      bind:click="triggerToRouter">
+    </abnormal-tips>
+  </view>
+</template>
+```
+
+## 属性
+
+| 接口 | 数据类型 | 说明 | 选项 | 默认值 |
+| :--: | :--: | :--: | :--: | :--: |
+| tips | String | 组件的提示内容 | 选填 | 暂无内容 |
+| isIconSlot | Boolean | 是否使用外部ICON或图片 | 选填 | false |
+| button | String | 提示按钮的内容 | 选填 | '' |
+| iconName | String | 组件内置的iconfont, 详细内容见下方的iconfont解释 | 选填 | noData |
+| isTipsSlot | Boolean | 是否使用自定义tips提示内容 | 选填 | false |
+
+## 事件
+
+| 接口 | 说明 | 返回值 |
+| :--: | :--: | :--: |
+| click | tips button按钮点击事件 | undefined |
+| refresh | 刷新按钮事件 | 返回当前网络类型：wifi、4G、3G、2G、none |
+| network_change | 获取当前网络的变化 | 返回当前网络类型：wifi、4G、3G、2G、none |
+
+## externalClasses
+
+| 接口 | 说明 |
+| :--: | :--: |
+| abnormal-class | 组件Root级别的样式 |
+| icon-class | iconfont样式 |
+| tips-class | 提示文件样式 |
+
+## iconfont
+
+| 名称 | 说明 |
+| :--: | :--: |
+| noData | 无数据的iconfont |
+| flee | 服务器出错的iconfont |
+| offline | 断网的iconfont |
+
+## Bug&Tips
+
++ 由于小程序的限制，组件内部的样式作用不到 slot 插槽 上。所以如果自定义组件 icon 可能会导致样式不一致。

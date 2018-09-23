@@ -1,7 +1,19 @@
 {
   "name": "vi-abnormal-tips",
   "version": "0.0.1",
-  "description": "",
+  "description": "微信小程序异常流信息提示组件",
+  "keywords": [
+    "微信小程序",
+    "weChat",
+    "miniprogram",
+    "weChat miniprogram",
+    "提示",
+    "tips",
+    "components",
+    "abnormal-tips",
+    "no data",
+    "Error"
+  ],
   "main": "miniprogram_dist/index.js",
   "scripts": {
     "dev": "gulp dev --develop",
