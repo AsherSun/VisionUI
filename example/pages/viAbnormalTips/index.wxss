@@ -1,0 +1,23 @@
+.title {
+  padding: 10px 18px;
+  color: #2e2e2e;
+  position: relative;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  bottom: 5px;
+  width: 2px;
+  background: rgb(50, 165, 231);
+  left: 10px;
+}
+
+.changeIconColor {
+  color: #eee;
+}
+
+.changeTextColor {
+  color: blue;
+}

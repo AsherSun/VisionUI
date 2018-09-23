@@ -30,3 +30,7 @@
   <vi-cell title="显示右侧描述信息" iconName="setting" link="{{true}}" desc="我是描述..."></vi-cell>
   <vi-cell title="跳转到首页" desc="linkType为:navigateBack" linkType="navigateBack" iconName="carame" link="/pages/index/index"></vi-cell>
 </vi-cell-group>
+
+
+
+
