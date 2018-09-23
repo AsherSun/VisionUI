@@ -18,6 +18,10 @@ Component({
       type: String,
       value: ''
     },
+    iconName: {
+      type: String,
+      value: 'noData'
+    },
     isTipsSlot: {
       type: Boolean,
       value: false
@@ -58,7 +62,7 @@ Component({
     isConnected: true,
     networkType: null
   },
-  externalClasses: ['no-data-class', 'no-data-icon-class', 'no-data-txt-class'],
+  externalClasses: ['abnormal-class', 'icon-class', 'tips-class'],
   methods: {
     triggerToTap() {
       this.triggerEvent('click')

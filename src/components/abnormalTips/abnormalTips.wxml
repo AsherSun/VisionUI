@@ -1,5 +1,5 @@
-<view class="noData no-data-class">
-  <view wx:if="{{!isIconSlot}}" class="icon-no-data-tips icon icon-no-data no-data-icon-class"></view>
+<view class="noData abnormal-class">
+  <view wx:if="{{!isIconSlot}}" class="icon-{{iconName}} icon icon-class"></view>
 
   <block wx:else>
     <slot name="icon"></slot>
@@ -9,7 +9,7 @@
     <slot name="tips"></slot>
   </block>
 
-  <view wx:else class="noData__txt no-data-txt-class">
+  <view wx:else class="noData__txt tips-class">
     <block wx:if="{{tipsIsArray}}">
       <view class="" wx:for="{{tips}}" wx:key="{{index}}">{{item}}</view>
     </block>

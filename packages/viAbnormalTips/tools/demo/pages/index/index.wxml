@@ -25,12 +25,12 @@
 
 <view class="pos_re noDataTips font12">
   <view class="title">style: 更改icon的样式</view>
-  <abnormal-tips no-data-icon-class="changeIconColor"></abnormal-tips>
+  <abnormal-tips icon-class="changeIconColor"></abnormal-tips>
 </view>
 
 <view class="pos_re noDataTips font12">
   <view class="title">style：更改文本提示样式</view>
-  <abnormal-tips no-data-txt-class="changeTextColor"></abnormal-tips>
+  <abnormal-tips tips-class="changeTextColor"></abnormal-tips>
 </view>
 
 <view class="pos_re noDataTips font12">
@@ -54,4 +54,20 @@
     tips="啊哦，该分类下暂无商品, 去其他分类下看看吧"
     bind:click="triggerToRouter"
     bind:refresh="triggerToRefresh"></abnormal-tips>
+</view>
+
+<view class="pos_re noDataTips font12">
+  <view class="title">extend: iconfont flee</view>
+  <abnormal-tips
+    icon-name="flee"
+    tips="啊哦，服务器走丢了"
+    bind:click="triggerToRouter"></abnormal-tips>
+</view>
+
+<view class="pos_re noDataTips font12">
+  <view class="title">extend: iconfont offline</view>
+  <abnormal-tips
+    icon-name="offline"
+    tips="啊哦，网络连接失败"
+    bind:click="triggerToRouter"></abnormal-tips>
 </view>

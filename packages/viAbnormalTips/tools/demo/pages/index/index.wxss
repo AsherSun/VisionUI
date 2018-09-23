@@ -1,7 +1,3 @@
-.pos_re {
-  position: relative;
-}
-
 .noDataTips {
   height: 200px;
 }
