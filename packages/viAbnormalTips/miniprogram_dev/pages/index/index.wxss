@@ -1,0 +1,45 @@
+.pos_re {
+  position: relative;
+}
+
+.font12 {
+  font-size: 12px;
+}
+
+.title {
+  padding: 10px 18px;
+  color: #2e2e2e;
+  position: relative;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  bottom: 5px;
+  width: 2px;
+  background: rgb(50, 165, 231);
+  left: 10px;
+}
+
+.noDataTips {
+  height: 200px;
+}
+
+.changeBgColor {
+  background-color: #d9d9d9;
+  color: #FFF;
+}
+
+.changeIconColor {
+  color: #eee;
+}
+
+.changeTextColor {
+  color: blue;
+}
+
+.noDataTips-img {
+  width: 50px;
+  height: 50px;
+}
