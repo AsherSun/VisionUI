@@ -36,14 +36,22 @@ Component({
           if (res.networkType !== 'none') {
             result.isConnected = true
             result.networkType = res.networkType
+            _this.setData({
+              isConnected: true,
+              networkType: res.networkType
+            })
           } else {
             result.isConnected = false
             result.networkType = res.networkType
+            _this.setData({
+              isConnected: false,
+              networkType: res.networkType
+            })
           }
           _this.triggerEvent('network_change', result)
         },
         fail: function (err) {
-          _this.triggerEvent('network_change', err)
+          _this.triggerEvent('network_change', {isConnected: null, networkType: err})
         }
       })
     },
@@ -65,10 +73,16 @@ Component({
   externalClasses: ['abnormal-class', 'icon-class', 'tips-class'],
   methods: {
     triggerToTap() {
-      this.triggerEvent('click')
+      this.triggerEvent('click', {
+        networkType: this.data.networkType,
+        sign: 'click'
+      })
     },
     triggerToRefresh() {
-      this.triggerEvent('refresh', this.data.networkType)
+      this.triggerEvent('refresh', {
+        networkType: this.data.networkType,
+        sign: 'refresh'
+      })
     },
     _tipsChange(val) {
       if (val instanceof Array) {

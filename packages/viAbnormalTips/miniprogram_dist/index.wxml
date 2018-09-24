@@ -18,5 +18,5 @@
 
   <button bindtap="triggerToTap" wx:if="{{button && isConnected}}">{{button}}</button>
 
-  <button bindtap="triggerToRefresh" wx:if="{{!isConnected}}">{{isConnected}}刷新</button>
+  <button bindtap="triggerToRefresh" wx:if="{{!isConnected}}">刷新</button>
 </view>

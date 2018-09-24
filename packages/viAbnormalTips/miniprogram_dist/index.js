@@ -130,9 +130,17 @@ Component({
           if (res.networkType !== 'none') {
             result.isConnected = true;
             result.networkType = res.networkType;
+            _this.setData({
+              isConnected: true,
+              networkType: res.networkType
+            });
           } else {
             result.isConnected = false;
             result.networkType = res.networkType;
+            _this.setData({
+              isConnected: false,
+              networkType: res.networkType
+            });
           }
           _this.triggerEvent('network_change', result);
         },
@@ -161,7 +169,7 @@ Component({
   externalClasses: ['abnormal-class', 'icon-class', 'tips-class'],
   methods: {
     triggerToTap: function triggerToTap() {
-      this.triggerEvent('click');
+      this.triggerEvent('click', this.data.networkType);
     },
     triggerToRefresh: function triggerToRefresh() {
       this.triggerEvent('refresh', this.data.networkType);

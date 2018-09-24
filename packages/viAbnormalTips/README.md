@@ -207,7 +207,7 @@ Page({
 
 | 接口 | 说明 | 返回值 |
 | :--: | :--: | :--: |
-| click | tips button按钮点击事件 | undefined |
+| click | tips button按钮点击事件 | 返回当前网络类型：wifi、4G、3G、2G、none |
 | refresh | 刷新按钮事件 | 返回当前网络类型：wifi、4G、3G、2G、none |
 | network_change | 获取当前网络的变化 | 返回当前网络类型：wifi、4G、3G、2G、none |
 
