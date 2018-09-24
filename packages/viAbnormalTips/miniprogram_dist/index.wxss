@@ -45,12 +45,12 @@ font-size: 12px;
 margin-top: 10px;
 }
 
-button::after {
+.abnormal__button::after {
 border-radius: 0;
 border: none;
 }
 
-button {
+.abnormal__button {
 border-radius: 0;
 padding:0;
 margin: 0;

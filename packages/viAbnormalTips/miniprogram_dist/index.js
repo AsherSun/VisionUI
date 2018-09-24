@@ -145,7 +145,7 @@ Component({
           _this.triggerEvent('network_change', result);
         },
         fail: function fail(err) {
-          _this.triggerEvent('network_change', err);
+          _this.triggerEvent('network_change', { isConnected: null, networkType: err });
         }
       });
     },
@@ -169,10 +169,16 @@ Component({
   externalClasses: ['abnormal-class', 'icon-class', 'tips-class'],
   methods: {
     triggerToTap: function triggerToTap() {
-      this.triggerEvent('click', this.data.networkType);
+      this.triggerEvent('click', {
+        networkType: this.data.networkType,
+        sign: 'click'
+      });
     },
     triggerToRefresh: function triggerToRefresh() {
-      this.triggerEvent('refresh', this.data.networkType);
+      this.triggerEvent('refresh', {
+        networkType: this.data.networkType,
+        sign: 'refresh'
+      });
     },
     _tipsChange: function _tipsChange(val) {
       if (val instanceof Array) {

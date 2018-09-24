@@ -16,7 +16,7 @@
     <block wx:else>{{tips || '暂无内容'}}</block>
   </view>
 
-  <button bindtap="triggerToTap" wx:if="{{button && isConnected}}">{{button}}</button>
+  <button class="abnormal__button" bindtap="triggerToTap" wx:if="{{button && isConnected}}">{{button}}</button>
 
-  <button bindtap="triggerToRefresh" wx:if="{{!isConnected}}">刷新</button>
+  <button class="abnormal__button" bindtap="triggerToRefresh" wx:if="{{!isConnected}}">刷新</button>
 </view>
