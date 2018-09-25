@@ -1,4 +1,3 @@
-// components/vi_Dialog/vi_dialog.js
 Component({
   options: {
     multipleSlots: true
@@ -18,21 +17,42 @@ Component({
       type: String,
       value: '提示'
     },
-    typeConfirm: {
+    input: {
       type: Boolean,
       value: false
     },
-    typeAlert: {
+    confirm: {
       type: Boolean,
       value: false
     },
-    typeCustom: {
+    alert: {
       type: Boolean,
       value: false
+    },
+    custom: {
+      type: Boolean,
+      value: false
+    },
+    placeholder: {
+      type: String,
+      value: '请输入内容'
+    },
+    value: {
+      type: String,
+      value: ''
+    },
+    maxlength: {
+      type: Number,
+      value: 100
+    },
+    inputType: {
+      type: String,
+      value: ''
     }
   },
   data: {
-    animation: false
+    animation: false,
+    isFocus: false
   },
   methods: {
     triggerToCancel () {
@@ -40,6 +60,16 @@ Component({
     },
     triggerToConfirm () {
       this.triggerEvent('confirm', 'confirm')
+    },
+    triggerToInput(e) {
+      this.setData({
+      })
+    },
+    triggerToFocus() {
+      this.setData({
+        isFocus: true
+      })
+      this.triggerEvent('focus')
     }
   }
 })

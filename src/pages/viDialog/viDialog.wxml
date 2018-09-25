@@ -1,0 +1,35 @@
+<view class="vi-dialog">
+  <view class="button" bindtap="triggerToShowConfirmDialog">Confirm Dialog</view>
+  <view class="button" bindtap="triggerToShowAlertDialog">Alert Dialog</view>
+  <view class="button" bindtap="triggerToShowInputDialog">Input Dialog</view>
+  <view class="button" bindtap="triggerToShowCustomDialog">Custom Dialog</view>
+</view>
+
+<vi-dialog ishide="{{confirmIsHide}}"
+  title="确认消息框"
+  bind:cancel="triggerToShowConfirmDialog" 
+  bind:confirm="triggerToShowConfirmDialog">
+  <view style="color:#ddd;">我是确认会话窗</view>
+</vi-dialog>
+
+<vi-dialog 
+  ishide="{{alertIsHide}}" 
+  title="警告消息框" 
+  alert
+  bind:confirm="triggerToShowAlertDialog">
+  <view style="color:#ddd;">我是警告会话框</view>
+</vi-dialog>
+
+<vi-dialog 
+  ishide="{{inputIsHide}}" 
+  input
+  bind:cancel="triggerToShowInputDialog"
+  bind:confirm="triggerToShowInputDialog"
+  title="输入对话框">
+</vi-dialog>
+
+<vi-dialog ishide="{{customIsHide}}" custom>
+  <view slot="customButton" style="text-align: center; width:100%;">
+    <view bindtap="triggerToShowCustomDialog">我是自定义按钮</view>
+  </view>
+</vi-dialog>

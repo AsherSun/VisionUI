@@ -1,10 +1,10 @@
-// pages/vi_dialog/vi_dialog.js
 Page({
   data: {
     defaultIsHide: false,
     confirmIsHide: false,
     alertIsHide: false,
-    customIsHide: false
+    customIsHide: false,
+    inputIsHide: false
   },
   triggerToShowDefaultDialog () {
     this.setData({
@@ -24,6 +24,11 @@ Page({
   triggerToShowCustomDialog () {
     this.setData({
       customIsHide: !this.data.customIsHide
+    })
+  },
+  triggerToShowInputDialog() {
+    this.setData({
+      inputIsHide: !this.data.inputIsHide
     })
   }
 })

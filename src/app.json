@@ -8,7 +8,7 @@
     "pages/upload/upload",
     "pages/vi_button/vi_button",
     "pages/vi_dialog_motion/vi_dialog_motion",
-    "pages/vi_dialog/vi_dialog",
+    "pages/viDialog/viDialog",
     "pages/animate/animate",
     "pages/vi_popup/vi_popup",
     "pages/vi_count_down/vi_count_down",
