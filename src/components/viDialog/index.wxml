@@ -5,13 +5,20 @@
     <view class="vi-dialog-body">
       <block wx:if="{{input}}">
         <input 
-          :placeholder="{{placeholder}}" 
-          bindinput="triggerToInput" 
-          :value="{{value}}"
+          placeholder="{{placeholder}}"
+          value="{{value}}"
           type="{{inputType}}"
-          bindfocus='triggerToFocus'
-          :maxlength="{{maxlength}}"
-          class="dialog__input {{isFocus ? 'dialog__input-focus' : ''}}">
+          focus
+          type="{{inputType}}"
+          disabled="{{disabled}}"
+          maxlength="{{maxlength}}"
+          class="dialog__input {{ishide ? 'dialog__input-focus' : ''}}"
+          bindfocus="triggerToFocus"
+          confirm-type="{{confirmType}}"
+          password="{{password}}"
+          bindinput="triggerToInput"
+          bindblur="triggerToBlur"
+          bindconfirm="triggerToConfirm">
         </input>
       </block>
       <block wx:else>
@@ -25,7 +32,7 @@
       <slot name="customButton"></slot>
     </view>
     <view class="vi-dialog-footer" wx:else>
-      <view class="vi-dialog-btns" bindtap="triggerToCancel">取消</view>
+      <view class="vi-dialog-btns dialog__btns-cancel" bindtap="triggerToCancel">取消</view>
       <view class="vi-dialog-btns dialog__btns-confirm" bindtap="triggerToConfirm">确定</view>
     </view>
   </view>

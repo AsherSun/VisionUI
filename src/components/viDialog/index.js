@@ -41,18 +41,29 @@ Component({
       type: String,
       value: ''
     },
-    maxlength: {
-      type: Number,
-      value: 100
-    },
     inputType: {
       type: String,
-      value: ''
+      value: 'text'
+    },
+    maxlength: {
+      type: Number,
+      value: 140
+    },
+    disabled: {
+      type: Boolean,
+      value: false
+    },
+    confirmType: {
+      type: String,
+      value: 'done'
+    },
+    password: {
+      type: Boolean,
+      value: false
     }
   },
   data: {
-    animation: false,
-    isFocus: false
+    animation: false
   },
   methods: {
     triggerToCancel () {
@@ -62,14 +73,17 @@ Component({
       this.triggerEvent('confirm', 'confirm')
     },
     triggerToInput(e) {
-      this.setData({
-      })
+      this.data.value = e.detail.value
+      this.triggerEvent('input', e.detail)
     },
-    triggerToFocus() {
-      this.setData({
-        isFocus: true
-      })
-      this.triggerEvent('focus')
+    triggerToFocus(e) {
+      this.triggerEvent('focus', e.detail)
+    },
+    triggerToBlur(e) {
+      this.triggerEvent('blur', e.detail)
+    },
+    triggerToConfirm(e) {
+      this.triggerEvent('confirm', e.detail)
     }
   }
 })

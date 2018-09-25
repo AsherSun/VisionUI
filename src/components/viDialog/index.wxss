@@ -60,6 +60,11 @@
 .dialog__btns-confirm {
   color: #2BA3FB;
 }
+
+.dialog__btns-cancel {
+  color: #999;  
+}
+
 .vi-dialog-footer::before {
   content: '';
   position: absolute;
@@ -84,11 +89,11 @@
 }
 
 .fadeIn {
-  animation: fadeIn 0.5s ease-in forwards;
+  animation: fadeIn .3s ease-in forwards;
 }
 
 .fadeOut {
-  animation: fadeOut 0.5s ease-in forwards;
+  animation: fadeOut .3s ease-in forwards;
 }
 
 .dialog__input {
@@ -99,6 +104,7 @@
 .dialog__input-focus {
   border-color: #2BA3FB;
 }
+
 
 @keyframes fadeIn {
   0% {

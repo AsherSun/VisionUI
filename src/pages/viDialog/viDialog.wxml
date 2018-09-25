@@ -9,7 +9,7 @@
   title="确认消息框"
   bind:cancel="triggerToShowConfirmDialog" 
   bind:confirm="triggerToShowConfirmDialog">
-  <view style="color:#ddd;">我是确认会话窗</view>
+  <view >我是确认会话窗</view>
 </vi-dialog>
 
 <vi-dialog 
@@ -17,12 +17,13 @@
   title="警告消息框" 
   alert
   bind:confirm="triggerToShowAlertDialog">
-  <view style="color:#ddd;">我是警告会话框</view>
+  <view >我是警告会话框</view>
 </vi-dialog>
 
 <vi-dialog 
   ishide="{{inputIsHide}}" 
   input
+  placeholder="请输入内容"
   bind:cancel="triggerToShowInputDialog"
   bind:confirm="triggerToShowInputDialog"
   title="输入对话框">
