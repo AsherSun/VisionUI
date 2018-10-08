@@ -1,0 +1,32 @@
+.component-exhibition {
+  margin-top: 20px;
+}
+
+.component__description {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 10px 10px;
+  background: #f9f9f9;
+}
+
+.component__code {
+  padding: 10px;
+  background: #FFF;
+}
+
+.component__code--hidden {
+  display: none;
+}
+
+.component__code--show {
+  display: block;
+}
+
+.code-line {
+  color: #5e5e5e;
+  font-size: 14px;
+  line-height: 1.8;
+}

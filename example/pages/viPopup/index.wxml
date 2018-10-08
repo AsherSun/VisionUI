@@ -1,9 +1,26 @@
-<view class="popup-demo font14">
+<vi-title>VI-POPUP</vi-title>
+
+<component-exhibition code="{{codeArr[0]}}">
+  <vi-cell bind:click="popupBottom" title="底部出现" line></vi-cell>
+</component-exhibition>
+<component-exhibition code="{{codeArr[1]}}">
+  <vi-cell bind:click="popupTop" title="顶部出现" line></vi-cell>
+</component-exhibition>
+<component-exhibition code="{{codeArr[2]}}">
+  <vi-cell bind:click="popupLeft" title="左侧出现" line></vi-cell>
+</component-exhibition>
+<component-exhibition code="{{codeArr[3]}}">
+  <vi-cell bind:click="popupRight" title="右侧出现" line></vi-cell>
+</component-exhibition>
+
+<!-- <view class="popup-demo font14">
   <view class="popup-title" bindtap='popupBottom'>底部出现</view>
   <view class="popup-title" bindtap='popupTop'>顶部出现</view>
   <view class="popup-title" bindtap='popupLeft'>左侧出现</view>
   <view class="popup-title" bindtap='popupRight'>右侧出现</view>
-</view>
+</view> -->
+
+
 <vi-popup ishide="{{popupHide_bottom}}" bindpopuphide="popupBottom">
   <view class="popup-bottom"></view>
 </vi-popup>

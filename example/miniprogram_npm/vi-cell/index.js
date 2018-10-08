@@ -142,6 +142,7 @@ Component({
   methods: {
     triggerToNavigateTo: function triggerToNavigateTo() {
       if (typeof this.data.link !== 'string' || !this.data.link) {
+        this.triggerEvent('click')
         return false;
       }
       switch (this.data.linkType) {
@@ -162,7 +163,6 @@ Component({
       }
     },
     updateIsLastCell: function updateIsLastCell(isLastCell) {
-      console.log('isLastCell', isLastCell);
       this.setData({ isLastCell: isLastCell, isHaveCellGroup: true });
     }
   }

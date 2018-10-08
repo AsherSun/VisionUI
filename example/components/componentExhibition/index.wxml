@@ -1,0 +1,12 @@
+<view class="component-exhibition">
+  <view class="component__exhibition">
+    <slot></slot>
+  </view>
+  <view class="component__description" bindtap="triggerToShowCode">
+    <view class="component__txt">{{desc}}</view>
+    <view class="component__btn">show code</view>
+  </view>
+  <view class="component__code component__code--{{isShowCode}}">
+    <wemark md="{{code}}" highlight type="wemark"></wemark>
+  </view>
+</view>
