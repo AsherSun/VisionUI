@@ -51,3 +51,7 @@
 | desc | String | 列表的描述，右侧的文字内容 | 选填 | '' |
 | line | Boolean | 是否出现上、下边框，如果在vi-cell-group中，该接口无效 | 选填 | false |
 | linkType | String | 路由跳转的类型，同微信小程序路由跳转API | 选填 | 'navigateTo' |
+
+## 版本记录
+
++ v0.0.3 新增右侧内容插槽功能

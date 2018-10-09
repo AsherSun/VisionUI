@@ -14,5 +14,6 @@
   <view class="cell-right cell-right_flex">
     <view class="cell__description" wx:if="{{desc}}">{{desc}}</view>
     <view class="cell__direction-link" wx:if="{{link}}"></view>
+    <slot name="right"></slot>
   </view>
 </view>
