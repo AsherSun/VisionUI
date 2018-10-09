@@ -30,25 +30,40 @@ Component({
     surplus: 0, // 时差
     countDownOver: false // 判断倒计时是否结束
   },
+  lifetimes: {
+    detached() {
+      clearTimeout(this.data.timer)
+    },
+  },
   methods: {
     countDown() { // 倒计时逻辑
+      let days = null
+      let hours = null
+      let minutes = null
+      let seconds = null
       this.setData({
         surplus: --this.data.surplus
       })
       if (this.data.surplus > 0) { // 处理倒计时逻辑
+        days = this.getHMS(parseInt(this.data.surplus / 86400))
+        let lastTime = this.data.surplus % 86400;
+        hours = this.getHMS(parseInt(lastTime / 3600))
+        lastTime = lastTime % 3600;
+        minutes = this.getHMS(parseInt(lastTime / 60))
+        seconds = this.getHMS(parseInt(lastTime % 60))
         if (this.data.isSlot) {
           this.triggerEvent('countdown', {
-            days: parseInt(this.data.surplus / (60 * 60 * 24)),
-            hours: this.getHMS(parseInt((this.data.surplus % (60 * 60 * 24)) / (60 * 60))),
-            minutes: this.getHMS(parseInt((this.data.surplus % (60 * 60 * 24)) % (60 * 60) / 60)),
-            seconds: this.getHMS(parseInt((this.data.surplus % (60 * 60 * 24)) % (60 * 60) % 60))
+            days: days,
+            hours: hours,
+            minutes: minutes,
+            seconds: seconds
           })
         } else {
           this.setData({
-            days: parseInt(this.data.surplus / (60 * 60 * 24)),
-            hours: this.getHMS(parseInt((this.data.surplus % (60 * 60 * 24)) / (60 * 60))),
-            minutes: this.getHMS(parseInt((this.data.surplus % (60 * 60 * 24)) % (60 * 60) / 60)),
-            seconds: this.getHMS(parseInt((this.data.surplus % (60 * 60 * 24)) % (60 * 60) % 60))
+            days: days,
+            hours: hours,
+            minutes: minutes,
+            seconds: seconds
           })
         }
       } else { // 清除定时器
@@ -71,6 +86,7 @@ Component({
       this.data.surplus = (this.getTime().endTime - this.getTime().startTime) / 1000
       this.countDown()
       this.data.timer = setInterval(() => {
+        console.log('sdfsdf')
         this.countDown()
       }, 1000)
     }

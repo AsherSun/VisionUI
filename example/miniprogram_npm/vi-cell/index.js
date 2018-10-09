@@ -141,6 +141,7 @@ Component({
   },
   methods: {
     triggerToNavigateTo: function triggerToNavigateTo() {
+      this.triggerEvent('click');
       if (typeof this.data.link !== 'string' || !this.data.link) {
         return false;
       }
