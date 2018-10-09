@@ -78,6 +78,9 @@ module.exports = [
           link="{{true}}" 
           desc="我是描述...">
         </vi-cell>
+        <vi-cell title="姓名" iconName="setting">
+          <input slot="right" placeholder='请输入内容'></input>
+        </vi-cell>
         <vi-cell 
           title="跳转到首页" 
           desc="linkType为:navigateBack" 

@@ -142,7 +142,6 @@ Component({
   methods: {
     triggerToNavigateTo: function triggerToNavigateTo() {
       if (typeof this.data.link !== 'string' || !this.data.link) {
-        this.triggerEvent('click')
         return false;
       }
       switch (this.data.linkType) {

@@ -47,7 +47,10 @@ Component({
   },
   methods: {
     triggerToNavigateTo() {
-      if (typeof this.data.link !== 'string' || !this.data.link) { return false }
+      this.triggerEvent('click')
+      if (typeof this.data.link !== 'string' || !this.data.link) {
+        return false
+      }
       switch (this.data.linkType) {
         case 'redirect':
           wx.redirectTo({url: this.data.link})

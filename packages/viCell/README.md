@@ -52,6 +52,21 @@
 | line | Boolean | 是否出现上、下边框，如果在vi-cell-group中，该接口无效 | 选填 | false |
 | linkType | String | 路由跳转的类型，同微信小程序路由跳转API | 选填 | 'navigateTo' |
 
+## slot 插槽
+
+| slot name | 说明 |
+| :--: | :--: |
+| icon | 用于替换、显示图标，如果和内置的图标接口一起使用，都会出现 |
+| title | 用于替换、显示左侧内容，如果和title接口一起使用，都会出现 |
+| right | 用于替换、显示右侧内容，如果和desc接口一起使用，都会出现 |
+
+## event 事件
+
+| Event name | 说明 |
+| :--: | :--: |
+| click | vi-cell点击事件，受力面积为整个组件的真实宽度和真实高度 |
+
 ## 版本记录
 
++ v0.0.4 新增自定义事件click
 + v0.0.3 新增右侧内容插槽功能
