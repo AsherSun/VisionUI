@@ -6,3 +6,6 @@
 
 
 <vi-address is-hide="{{isHide}}" bindhide="selectAddress" bindaddresschange="addressChange"></vi-address>
+
+<component-exhibition show-code='' code="{{codeArr[1]}}">
+</component-exhibition>

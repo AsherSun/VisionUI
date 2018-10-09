@@ -122,6 +122,7 @@ Page({
     background: #FFF;
   }
 </style>
+```
 
 ## 属性
 
@@ -129,3 +130,9 @@ Page({
 | :--: | :--: | :--: | :--: | :--: |
 | ishide | Boolean | 控制数据popup显示隐藏 | 必填 | false |
 | position | string | popup出现的方向,值有：top、left、right、bottom | 选填 | bottom |
+
+## event
+
+| event name | description |
+| :--: | :--: |
+| popuphide | vi-popup组件的mask层点击事件，用于控制组件的隐藏 |

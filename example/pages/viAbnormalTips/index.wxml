@@ -99,4 +99,8 @@
 </component-exhibition>
 
 
+<component-exhibition code="{{codeArr[11]}}">
+  
+</component-exhibition>
+
 

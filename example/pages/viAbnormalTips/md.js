@@ -199,4 +199,27 @@ module.exports = [
   </script>
   \`\`\`
   `,
+  `
+  \`\`\`html
+  <template>
+    <view style="position:relative; height: 200px; background: #FFF; font-size: 12px;">
+      <abnormal-tips
+        icon-name="offline"
+        tips="啊哦，网络连接失败"
+        bind:refresh="triggerToRefresh">
+      </abnormal-tips>
+    </view>
+  </template>
+  \`\`\`
+  \`\`\`javascript
+  <script>
+    Page({
+      triggerToRefresh({ detail }) {
+        console.log(detail)
+      },
+    })
+  </script>
+  \`\`\`
+  `,
+  
 ]

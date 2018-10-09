@@ -136,5 +136,27 @@ module.exports = [
     }
   </style>
   \`\`\`
+  `,
+  `
+  # vi-popup
+
+  ## 使用
+
+  > * npm i vi-count-down
+  > * 使用微信开发者工具构建NPM并使用NPM模块
+
+
+  ## 属性
+
+  | 接口 | 数据类型 | 说明 | 选项 | 默认值 |
+  | :--: | :--: | :--: | :--: | :--: |
+  | ishide | Boolean | 控制数据popup显示隐藏 | 必填 | false |
+  | position | string | popup出现的方向,值有：top、left、right、bottom | 选填 | bottom |
+
+  ## event
+
+  | event name | description |
+  | :--: | :--: |
+  | popuphide | vi-popup组件的mask层点击事件，用于控制组件的隐藏 |
   `
 ]
