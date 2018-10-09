@@ -36,6 +36,6 @@
   </vi-cell-group>
 </component-exhibition>
 
-<component-exhibition show-code='' code="{{codeArr[7]}}">
-  
-</component-exhibition>
+<component-exhibition show-code='' code="{{codeArr[7]}}"></component-exhibition>
+
+<component-exhibition show-code='' code="{{codeArr[8]}}"></component-exhibition>

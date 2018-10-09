@@ -142,8 +142,19 @@ module.exports = [
 
   ## 使用
 
-  > * npm i vi-count-down
-  > * 使用微信开发者工具构建NPM并使用NPM模块
+  > npm i vi-count-down
+
+  > 使用微信开发者工具构建NPM并使用NPM模块
+  
+  > 打开小程序页面的json配置
+
+  \`\`\`json
+  {
+    "usingComponents": {
+      "vi-popup": "vi-popup"
+    }
+  }
+  \`\`\`
 
 
   ## 属性

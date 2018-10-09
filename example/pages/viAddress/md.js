@@ -41,10 +41,19 @@ module.exports = [
 
   ## 使用
 
-  > * npm i vi-address
-  > * 使用微信开发者工具构建NPM并勾选使用NPM模块
+  > npm i vi-address
 
-  *打开小程序页面的json配置.*
+  > 使用微信开发者工具构建NPM并勾选使用NPM模块
+
+  > 打开小程序页面的json配置.
+
+  \`\`\`json
+  {
+    "usingComponents": {
+      "vi-address": "vi-address"
+    }
+  }
+  \`\`\`
 
   ## 属性 Props
 

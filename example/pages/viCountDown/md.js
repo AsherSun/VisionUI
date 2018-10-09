@@ -55,11 +55,13 @@ module.exports = [
 
   > 在使用之前，请先用微信开发者工具构建NPM和使用NPM模块
 
-  *打开小程序页面的json配置.*
+  > 打开小程序页面的json配置.
 
   \`\`\`json
-  "usingComponents": {
-    "count-down": "vi-count-down"
+  {
+    "usingComponents": {
+      "count-down": "vi-count-down"
+    }
   }
   \`\`\`
 

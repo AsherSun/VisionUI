@@ -99,7 +99,7 @@
 </component-exhibition>
 
 
-<component-exhibition code="{{codeArr[11]}}">
+<component-exhibition show-code='' code="{{codeArr[11]}}">
   
 </component-exhibition>
 

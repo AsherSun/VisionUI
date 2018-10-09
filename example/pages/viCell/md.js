@@ -97,9 +97,22 @@ module.exports = [
 
   ## 使用
 
-  > * npm i vi-cell
-  > * npm i vi-cell-group
-  > * 使用微信开发者工具构建NPM并使用NPM模块
+  > npm i vi-cell
+
+  > npm i vi-cell-group
+
+  > 使用微信开发者工具构建NPM并使用NPM模块
+
+  > 打开小程序页面的json配置.
+
+  \`\`\`json
+  {
+    "usingComponents": {
+      "vi-cell": "vi-cell",
+      "vi-cell-group: "vi-cell-group"
+    }
+  }
+  \`\`\`
 
   ## 属性
 
@@ -131,5 +144,32 @@ module.exports = [
 
   + v0.0.5 新增自定义事件click
   + v0.0.3 新增右侧内容插槽功能
+  `,
+  `
+  # vi-cell-group
+
+  ## 使用
+
+  > **tips: 请和vi-cell组件配合使用**
+
+  > npm i vi-cell-group
+
+  > 使用微信开发者工具构建NPM并使用NPM模块
+
+
+  \`\`\`json
+  {
+    "usingComponents": {
+      "vi-cell-group": "vi-cell-group"
+    }
+  }
+  \`\`\`
+
+  ## 属性
+
+  | 接口 | 数据类型 | 说明 | 选项 | 默认值 |
+  | :--: | :--: | :--: | :--: | :--: |
+  | title | String | vi-cell-group的title | 选填 | '' |
+  | marginTop | Number | 上边距 | 选填 | 0 |
   `,
 ]

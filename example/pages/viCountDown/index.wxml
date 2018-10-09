@@ -13,7 +13,7 @@
 </component-exhibition>
 
 <component-exhibition code="{{mdArr[2]}}">
-  <vi-cell title="自定义DOM接口" line>
+  <vi-cell title="自定义DOM结构" line>
     <vi-count-down slot="right" is-slot bind:countdown="triggerToCountdown"  end-time="{{1543593600000}}">
       <view style="text-align:center;">
         <text 
