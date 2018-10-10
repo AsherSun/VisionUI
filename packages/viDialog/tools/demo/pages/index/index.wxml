@@ -28,3 +28,9 @@
   bind:confirm="triggerToShowInputDialog"
   title="输入对话框">
 </vi-dialog>
+
+<vi-dialog ishide="{{customIsHide}}" custom>
+  <view slot="customButton" style="text-align: center; width:100%;">
+    <view bindtap="triggerToShowCustomDialog">我是自定义按钮</view>
+  </view>
+</vi-dialog>
