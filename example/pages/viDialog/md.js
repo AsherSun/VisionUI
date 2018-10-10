@@ -131,7 +131,7 @@ module.exports = [
 
   ## 使用
 
-  > npm i vi-count-down
+  > npm i vi-dialog
 
   > 使用微信开发者工具构建NPM并使用NPM模块
   
@@ -140,7 +140,7 @@ module.exports = [
   \`\`\`json
   {
       "usingComponents": {
-        "vi-popup": "vi-popup"
+        "vi-dialog": "vi-dialog"
       }
     }
   \`\`\`
@@ -180,9 +180,13 @@ module.exports = [
   | default | 默认插槽，会话窗的提示内容 |
   | customButton | 自定义按钮的插槽，注意需要和组件的custom接口配合使用 |
 
+  ## Bug&&Tips
+
+  + 该组件的default形式与confirm形式是一样的
+
   ## 版本信息
 
   + v0.0.1 第一个版本
-  + v0.0.2 修改组件层级、更新文档
+  + v0.0.3 修改组件层级、更新文档
   `,
 ]

@@ -1,6 +1,6 @@
 {
   "name": "vi-dialog",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "微信小程序组件dialog",
   "main": "miniprogram_dist/index.js",
   "scripts": {

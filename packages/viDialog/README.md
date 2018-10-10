@@ -2,14 +2,14 @@
 
 ## 使用
 
-> * npm i vi-count-down
-> * 使用微信开发者工具构建NPM并使用NPM模块
+> npm i vi-dialog
+> 使用微信开发者工具构建NPM并使用NPM模块
 
 
 ```json
 {
   "usingComponents": {
-    "vi-popup": "vi-popup"
+    "vi-dialog": "vi-dialog"
   }
 }
 ```
@@ -56,4 +56,4 @@
 ## 版本信息
 
 + v0.0.1 第一个版本
-+ v0.0.2 修改组件层级、更新文档
++ v0.0.4 修改组件层级、更新文档
