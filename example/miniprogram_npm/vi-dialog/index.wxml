@@ -1,9 +1,9 @@
 <view class="vi-dialog" wx:if="{{animation}}">
   <view class="vi-dialog-mask" wx:if="{{ishide}}"></view>
-  <view class="vi-dialog-content {{ishide ? 'fadeIn' : 'fadeOut'}}">
+  <view class="vi-dialog-content {{input ? 'vi-dialog-content-input' : ''}} {{ishide ? 'fadeIn' : 'fadeOut'}}">
     <view class="vi-dialog-header">{{title}}</view>
     <view class="vi-dialog-body">
-      <block wx:if="{{input}}">
+      <view style="padding: 15px 0;" wx:if="{{input}}">
         <input 
           placeholder="{{placeholder}}"
           value="{{value}}"
@@ -20,7 +20,7 @@
           bindblur="triggerToBlur"
           bindconfirm="triggerToConfirm">
         </input>
-      </block>
+      </view>
       <block wx:else>
         <slot></slot>
       </block>

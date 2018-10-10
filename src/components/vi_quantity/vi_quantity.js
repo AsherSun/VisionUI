@@ -1,16 +1,4 @@
-// components/vi_quantity/vi_quantity.js
-/*
-  商品数量编辑组件：
-    @param { Boolean } hideTitle 是否隐藏头部
-    @param { Number } goodsnumber 默认的数量
-    @param { String | Number } quantity 默认的库存
-    @param { Number } editindex 正在编辑的索引、适用于购物车列表
-    @param { Function } change 数量改变触发的事件。如果用户输入的不是数字则返回1，如果用户输入的是 0 则返回 1, 如果为 空字符串，则返回 null, 其余情况返回的是用户正常输入的数字
-*/
 Component({
-  /**
-   * 组件的属性列表
-   */
   properties: {
     goodsnumber: {
       type: Number,
@@ -26,25 +14,22 @@ Component({
     }
   },
   externalClasses: ['quantity-class'],
-  /**
-   * 组件的方法列表
-   */
   methods: {
-    add() { // 累加
+    add() {
       if (this._maxNumber()) return false
       this.setData({
         goodsnumber: ++this.data.goodsnumber
       })
       this.triggerEvent('change', { num: this.data.goodsnumber, i: this.data.editindex })
     },
-    reduce() { // 减少
+    reduce() {
       if (this._minNumber()) return false
       this.setData({
         goodsnumber: --this.data.goodsnumber
       })
       this.triggerEvent('change', { num: this.data.goodsnumber, i: this.data.editindex })
     },
-    changeValue(e) { // 输入值改变
+    changeValue(e) {
       let detail = e.detail
       if (detail.value === '0') {
         wx.showToast({
@@ -74,15 +59,15 @@ Component({
       }
       this.triggerEvent('change', { num, i: this.data.editindex })
     },
-    blurFn(e) { // 失去焦点
+    blurFn(e) {
       let num = e.detail.value * 1
       this._blurAndConfirm(num)
     },
-    confirmValue(e) { // 点击完成按钮
+    confirmValue(e) {
       let num = e.detail.value * 1
       this._blurAndConfirm(num)
     },
-    _blurAndConfirm(num) { // 失去焦点或者点击完成按钮的逻辑
+    _blurAndConfirm(num) {
       if (!num) {
         this.setData({
           goodsnumber: 1

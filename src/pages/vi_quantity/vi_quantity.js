@@ -1,9 +1,4 @@
-// pages/vi_quantity/vi_quantity.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
     editIndex: 0,
     buyNum: 0,
@@ -27,19 +22,17 @@ Page({
   },
 
   numChange({ detail }) {
-    if (this.data.isEdit) {
-      this.setData({
-        editIndex: detail.i,
-        buyNum: detail.num,
-        stock: this.data.goodsList[detail.i].stock
-      })
-      return false
-    }
     this.setData({
       isEdit: true,
       editIndex: detail.i,
       buyNum: detail.num,
-      stock: this.data.goodsList[detail.i].stock
+      stock: this.data.goodsList[detail.i].stock,
+      goodsList: this.data.goodsList.map((item, i) => {
+        if (detail.i === i) {
+          item.num = detail.num
+        }
+        return item
+      })
     })
   },
 
@@ -48,11 +41,4 @@ Page({
       buyDetailNum: detail.num
     })
   },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
 })
