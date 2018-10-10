@@ -1,7 +1,7 @@
 {
-  "name": "vi-popup",
+  "name": "vi-upload",
   "version": "0.0.2",
-  "description": "微信小程序组件popup",
+  "description": "微信小程序上传插件 upload",
   "main": "miniprogram_dist/index.js",
   "scripts": {
     "dev": "gulp dev --develop",
@@ -16,9 +16,9 @@
     "lint-tools": "eslint \"tools/**/*.js\" --rule \"import/no-extraneous-dependencies: false\""
   },
   "keywords":[
-    "miniprogram",
-    "pupup",
-    "运动弹窗",
+    "upload",
+    "vi-upload",
+    "上传插件",
     "weChat",
     "微信小程序"
   ],

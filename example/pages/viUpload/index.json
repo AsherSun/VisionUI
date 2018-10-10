@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "vi-title": "/components/viTitle/index",
+    "component-exhibition": "/components/componentExhibition/index"
+  }
+}

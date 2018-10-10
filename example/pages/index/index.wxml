@@ -15,5 +15,6 @@
 
 <vi-cell-group title="业务组件">
   <vi-cell title="vi-count-down" desc="倒计时" link="/pages/viCountDown/index"></vi-cell>
+  <vi-cell title="vi-upload" desc="文件上传插件" link="/pages/viUpload/index"></vi-cell>
   <vi-cell title="vi-abnormal-tips" desc="异常流信息提示" link="/pages/viAbnormalTips/index"></vi-cell>
 </vi-cell-group>

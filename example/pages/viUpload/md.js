@@ -1,3 +1,94 @@
+module.exports = [
+`
+\`\`\`html
+<template>
+  <button bindtap="triggerToUploadImg" loading="{{uploadImgLoading}}" style="margin: 15px auto; font-size: 16px;background: #FFF;">图片上传</button>
+</template>
+\`\`\`
+\`\`\`javascript
+import viUpload from './../../miniprogram_npm/vi-upload/index.js'
+Page({
+  viUpload,
+  data: {
+    uploadImgLoading: false,
+    uploadImgSource: '',
+  },
+
+  triggerToUploadImg() {
+    let _this = this
+    this.setData({
+      uploadImgLoading: true
+    })
+    this.viUpload({
+      url: 'https://xxxx.com/huis-dev/img/upload.do',// 上传地址
+      success(data) {
+        _this.setData({
+          uploadImgSource: JSON.stringify(data),
+          uploadImgLoading: false
+        })
+      },
+      fail(err) {
+        _this.setData({
+          uploadImgSource: JSON.stringify(err),
+          uploadImgLoading: false
+        })
+      }
+    })
+  },
+})
+\`\`\`
+`,
+`
+\`\`\`html
+<template>
+  <button 
+    bindtap="triggerToUploadVideo" 
+    loading="{{uploadVideoLoading}}" 
+    style="margin: 15px auto; font-size: 16px;background: #FFF;">视频上传
+  </button>
+</template>
+\`\`\`
+\`\`\`javascript
+import viUpload from './../../miniprogram_npm/vi-upload/index.js'
+Page({
+  viUpload,
+  data: {
+    uploadVideoLoading: false,
+    uploadVideoSource: '',
+    videoInfo: {}
+  },
+
+  triggerToUploadVideo() {
+    let _this = this
+    this.setData({
+      uploadVideoLoading: true
+    })
+    this.viUpload({
+      fileType: 'video',
+      url: 'https://api.maison-huis.com/huis-dev/img/uploadVideo',
+      success(data) {
+        _this.setData({
+          uploadVideoLoading: false,
+          uploadVideoSource: JSON.stringify(data)
+        })
+      },
+      fail: err => {
+        _this.setData({
+          uploadVideoLoading: false,
+          uploadVideoSource: JSON.stringify(err)
+        })
+      },
+      beforeUpload(videoInfo) {
+        _this.setData({
+          videoInfo
+        })
+      }
+    })
+  }
+})
+\`\`\`
+`,
+`
 # vi-upload
 
 ## 使用
@@ -8,7 +99,7 @@
 
 > 在页面的js文件中引入
 
-```javascript
+\`\`\`javascript
 // 请使用相对路径
 import viUpload from './../../miniprogram_npm/vi-upload/index.js'
 Page({
@@ -24,7 +115,7 @@ Page({
     })
   }
 })
-```
+\`\`\`
 
 ## Config Props
 
@@ -68,3 +159,5 @@ Page({
 
 + v0.0.1 第一个beat版本
 + v0.0.2 编辑组件说明文档
+`,
+]

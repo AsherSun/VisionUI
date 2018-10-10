@@ -7,7 +7,8 @@
     "pages/viCell/index",
     "pages/viAbnormalTips/index",
     "pages/aboult/index",
-    "pages/viDialog/index"
+    "pages/viDialog/index",
+    "pages/viUpload/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
