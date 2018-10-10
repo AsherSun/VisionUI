@@ -1,29 +1,61 @@
+import viUpload from '../../components/index'
 Page({
+  viUpload,
   data: {
-    popupHide_bottom: false,
-    popupHide_top: false,
-    popupHide_left: false,
-    popupHide_right: false
+    uploadImgLoading: false,
+    uploadVideoLoading: false,
+    uploadImgSource: '',
+    uploadVideoSource: '',
+    videoInfo: {}
+  },
+  
+  triggerToUploadImg () {
+    let _this = this
+    this.setData({
+      uploadImgLoading: true
+    })
+    this.viUpload({
+      url: 'https://api.maison-huis.com/huis-dev/img/upload.do',
+      success (data) {
+        _this.setData({
+          uploadImgSource: JSON.stringify(data),
+          uploadImgLoading: false
+        })
+      },
+      fail(err) {
+        _this.setData({
+          uploadImgSource: JSON.stringify(err),
+          uploadImgLoading: false
+        })
+      }
+    })
   },
 
-  popupBottom() {
+  triggerToUploadVideo() {
+    let _this = this
     this.setData({
-      popupHide_bottom: !this.data.popupHide_bottom
+      uploadVideoLoading: true
     })
-  },
-  popupTop() {
-    this.setData({
-      popupHide_top: !this.data.popupHide_top
-    })
-  },
-  popupLeft() {
-    this.setData({
-      popupHide_left: !this.data.popupHide_left
-    })
-  },
-  popupRight() {
-    this.setData({
-      popupHide_right: !this.data.popupHide_right
+    this.viUpload({
+      fileType: 'video',
+      url: 'https://api.maison-huis.com/huis-dev/img/uploadVideo',
+      success (data) {
+        _this.setData({
+          uploadVideoLoading: false,
+          uploadVideoSource: JSON.stringify(data)
+        })
+      },
+      fail: err => {
+        _this.setData({
+          uploadVideoLoading: false,
+          uploadVideoSource: JSON.stringify(err)
+        })
+      },
+      beforeUpload (videoInfo) {
+        _this.setData({
+          videoInfo
+        })
+      }
     })
   }
 })
