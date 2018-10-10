@@ -26,6 +26,5 @@
 <vi-cell-group title="业务层">
   <vi-cell title="separate_line" desc="分割线" link="/src/pages/vi_separate_line/vi_separate_line"></vi-cell>
   <vi-cell title="vi-quantity" desc="电商平台计数器" link="/src/pages/vi_quantity/vi_quantity"></vi-cell>
-  <vi-cell title="upload" desc="上传插件" link="/src/pages/upload/upload"></vi-cell>
-  <vi-cell title="draw poster" desc="海报绘制插件" link="/src/pages/vi_painting/vi_painting"></vi-cell>
+  <vi-cell title="upload" desc="" link="/pages/upload/upload"></vi-cell>
 </vi-cell-group>
