@@ -42,6 +42,18 @@
 | triggerToFocus | input的聚焦事件 | Object | event.detail |
 | triggerToBlur | input的失焦事件 | Object | event.detail |
 
+## slot
+
+| slot name | description |
+| :--: | :--: |
+| default | 默认插槽，会话窗的提示内容 |
+| customButton | 自定义按钮的插槽，注意需要和组件的custom接口配合使用 |
+
+## Bug&&Tips
+
++ 该组件的default形式与confirm形式是一样的
+
 ## 版本信息
 
 + v0.0.1 第一个版本
++ v0.0.2 修改组件层级、更新文档

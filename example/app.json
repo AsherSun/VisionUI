@@ -6,7 +6,8 @@
     "pages/viAddress/index",
     "pages/viCell/index",
     "pages/viAbnormalTips/index",
-    "pages/aboult/index"
+    "pages/aboult/index",
+    "pages/viDialog/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

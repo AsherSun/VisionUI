@@ -1,6 +1,7 @@
 .vi-dialog {
   font-size: 14px;
   position: fixed;
+  z-index: 99999;
 }
 
 .vi-dialog-mask {
