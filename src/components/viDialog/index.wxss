@@ -28,6 +28,10 @@
   opacity: 0;
 }
 
+.vi-dialog-content-input {
+  top: 30%;
+}
+
 .vi-dialog-header {
   text-align: center;
   padding: 8px 16rpx 8px;
