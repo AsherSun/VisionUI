@@ -1,4 +1,7 @@
 Component({
+  options: {
+    multipleSlots: true
+  },
   properties: {
     ishide: {
       type: Boolean,
@@ -10,49 +13,77 @@ Component({
         })
       }
     },
-    position: {
+    title: {
       type: String,
-      value: 'bottom'
+      value: '提示'
+    },
+    input: {
+      type: Boolean,
+      value: false
+    },
+    confirm: {
+      type: Boolean,
+      value: false
+    },
+    alert: {
+      type: Boolean,
+      value: false
+    },
+    custom: {
+      type: Boolean,
+      value: false
+    },
+    placeholder: {
+      type: String,
+      value: '请输入内容'
+    },
+    value: {
+      type: String,
+      value: ''
+    },
+    inputType: {
+      type: String,
+      value: 'text'
+    },
+    maxlength: {
+      type: Number,
+      value: 140
+    },
+    disabled: {
+      type: Boolean,
+      value: false
+    },
+    confirmType: {
+      type: String,
+      value: 'done'
+    },
+    password: {
+      type: Boolean,
+      value: false
     }
   },
   data: {
-    animation: false,
-    popupShow: 'bottomShow',
-    popupHide: 'bottomHide',
-    direction: false // false 为 top 和 bottom 方向 反之
-  },
-  attached() {
-    switch (this.data.position) {
-      case 'top':
-        this.setData({
-          popupShow: 'topShow',
-          popupHide: 'topHide'
-        })
-        break
-      case 'right':
-        this.setData({
-          popupShow: 'rightShow',
-          popupHide: 'rightHide',
-          direction: true
-        })
-        break
-      case 'left':
-        this.setData({
-          popupShow: 'leftShow',
-          popupHide: 'leftHide',
-          direction: true
-        })
-        break
-      default:
-        this.setData({
-          popupShow: 'bottomShow',
-          popupHide: 'bottomHide'
-        })
-    }
+    animation: false
   },
   methods: {
-    hide() {
-      this.triggerEvent('popuphide')
+    triggerToCancel () {
+      this.triggerEvent('cancel', 'cancel')
+    },
+    triggerToConfirm () {
+      this.triggerEvent('confirm', 'confirm')
+    },
+    triggerToInput(e) {
+      this.data.value = e.detail.value
+      this.triggerEvent('input', e.detail)
+    },
+    triggerToFocus(e) {
+      this.triggerEvent('focus', e.detail)
+    },
+    triggerToBlur(e) {
+      this.triggerEvent('blur', e.detail)
+    },
+    triggerToConfirm(e) {
+      this.triggerEvent('confirm', e.detail)
     }
   }
 })
