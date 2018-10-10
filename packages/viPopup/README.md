@@ -2,13 +2,15 @@
 
 ## 使用
 
-> * npm i vi-count-down
-> * 使用微信开发者工具构建NPM并使用NPM模块
+> npm i vi-popup
+> 使用微信开发者工具构建NPM并使用NPM模块
 
 
 ```json
-"usingComponents": {
-  "vi-popup": "vi-popup"
+{
+  "usingComponents": {
+    "vi-popup": "vi-popup"
+  }
 }
 ```
 
@@ -136,3 +138,7 @@ Page({
 | event name | description |
 | :--: | :--: |
 | popuphide | vi-popup组件的mask层点击事件，用于控制组件的隐藏 |
+
+## 版本记录
+
++ v0.0.2 更新文档说明
