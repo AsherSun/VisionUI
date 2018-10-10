@@ -1,29 +1,34 @@
 Page({
   data: {
-    popupHide_bottom: false,
-    popupHide_top: false,
-    popupHide_left: false,
-    popupHide_right: false
+    defaultIsHide: false,
+    confirmIsHide: false,
+    alertIsHide: false,
+    customIsHide: false,
+    inputIsHide: false
   },
-
-  popupBottom() {
+  triggerToShowDefaultDialog () {
     this.setData({
-      popupHide_bottom: !this.data.popupHide_bottom
+      defaultIsHide: !this.data.defaultIsHide
     })
   },
-  popupTop() {
+  triggerToShowConfirmDialog () {
     this.setData({
-      popupHide_top: !this.data.popupHide_top
+      confirmIsHide: !this.data.confirmIsHide
     })
   },
-  popupLeft() {
+  triggerToShowAlertDialog () {
     this.setData({
-      popupHide_left: !this.data.popupHide_left
+      alertIsHide: !this.data.alertIsHide
     })
   },
-  popupRight() {
+  triggerToShowCustomDialog () {
     this.setData({
-      popupHide_right: !this.data.popupHide_right
+      customIsHide: !this.data.customIsHide
+    })
+  },
+  triggerToShowInputDialog() {
+    this.setData({
+      inputIsHide: !this.data.inputIsHide
     })
   }
 })

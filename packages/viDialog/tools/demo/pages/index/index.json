@@ -1,5 +1,5 @@
 {
   "usingComponents": {
-    "vi-popup": "../../components/index"
+    "vi-dialog": "../../components/index"
   }
 }

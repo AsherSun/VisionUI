@@ -1,19 +1,18 @@
-.popup-demo {
-  padding: 20px 25px;
+page {
+  background: #eFeFeF;
 }
 
-.popup-title {
-  height: 45px;
-  line-height: 45px;
+.vi-dialog {
+  margin-top: 50px;
 }
 
-.popup-left, .popup-right {
-  width: 100px;
-  height: 100%;
+.button {
+  font-size: 12px;
+  margin: 10px auto 0;
+  border-radius: 3px;
+  width: 90%;
+  height: 40px;
+  line-height: 40px;
   background: #FFF;
-}
-
-.popup-bottom, .popup-top {
-  height: 400rpx;
-  background: #fff;
+  text-align: center;
 }

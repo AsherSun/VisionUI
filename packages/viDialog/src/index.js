@@ -66,11 +66,15 @@ Component({
     animation: false
   },
   methods: {
-    triggerToCancel () {
+    triggerToCancel() {
       this.triggerEvent('cancel', 'cancel')
     },
-    triggerToConfirm () {
-      this.triggerEvent('confirm', 'confirm')
+    triggerToConfirm(e) {
+      if (this.data.input) {
+        this.triggerEvent('confirm', e.detail)
+      } else {
+        this.triggerEvent('confirm', 'confirm')
+      }
     },
     triggerToInput(e) {
       this.data.value = e.detail.value
@@ -81,9 +85,6 @@ Component({
     },
     triggerToBlur(e) {
       this.triggerEvent('blur', e.detail)
-    },
-    triggerToConfirm(e) {
-      this.triggerEvent('confirm', e.detail)
     }
   }
 })
