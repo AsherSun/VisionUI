@@ -2,6 +2,7 @@
   "usingComponents": {
     "vi-title": "/components/viTitle/index",
     "component-exhibition": "/components/componentExhibition/index",
+    "vi-quantity": "vi-quantity",
     "vi-paragraph": "/components/viParagraph/index"
   }
 }

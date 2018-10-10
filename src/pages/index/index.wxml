@@ -18,8 +18,8 @@
 
 
 <vi-cell-group title="表单组件">
-  <vi-cell title="vi-button" line="group" desc="button" link="/src/pages/vi_button/vi_button"></vi-cell>
-  <vi-cell title="vi-switch" line="group" desc="switch" link="/src/pages/vi_switch/vi_switch"></vi-cell>
+  <vi-cell title="vi-button" line="group" desc="button" link="/pages/vi_button/vi_button"></vi-cell>
+  <vi-cell title="vi-switch" line="group" desc="switch" link="/pages/vi_switch/vi_switch"></vi-cell>
 </vi-cell-group>
 
 

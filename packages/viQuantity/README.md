@@ -8,104 +8,28 @@
 
 ## 使用
 
-> 小程序组件的引用
+> npm i vi-quantity
 
-*打开小程序页面的json配置.*
-**在页面中引用组件，可以使用相对路径也可以使用绝对路径**
+> 使用微信开发工具构建NPM
+
+> 打开小程序页面的json配置.
+
 
 ```json
-"usingComponents": {
-  "vi-quantity": "./../vi_quantity"
-}
-```
-
-> 情景一：商品详情页对商品数量进行编辑
-
-```HTML
-<view class="quantity-demo">
-  <view class="font12 quantity-demo-title">请选择商品数量</view>
-  <vi-quantity goodsnumber="{{buyDetailNum}}" quantity="{{100}}" bindchange="detailNumChange"></vi-quantity>
-  <view class="font12" style="margin-top: 14px;">你已选择<text class="quantity-demo-tips">{{buyDetailNum}}</text>件商品</view>
-</view>
-```
-> js中的逻辑
-
-```javascript
-detailNumChange({ detail }) {
-  this.setData({
-    buyDetailNum: detail.num
-  })
-}
-```
-
-> 情景二：购物车列表，对商品数量进行编辑
-
-```HTML
-<view class="quantity-demo">
-  <view class="font16">情景二：购物车列表，对商品数量进行编辑</view>
-  <block wx:for="{{goodsList}}" wx:key="{{index}}">
-    <view class="font12 quantity-demo-goodsList quantity-demo-title">购物车商品 -- {{index + 1}}</view>
-    <vi-quantity bindchange="numChange" editindex="{{index}}" goodsnumber="{{item.num}}" quantity="{{item.stock}}"></vi-quantity>
-  </block>
-</view>
-
-<view wx:if="{{isEdit}}" class="quantity-demo font12">
-  您正在对购物车中的第 <text class="quantity-demo-tips">{{ editIndex + 1}}</text> 件商品编辑, 
-  你准备要购买 <text class="quantity-demo-tips">{{buyNum}}</text> 件 
-  该商品的最大库存为 <text class="quantity-demo-tips">{{stock}}</text>件
-</view>
-```
-
-> js中的逻辑
-
-```javascript
-Page({
-  data: {
-    editIndex: 0,
-    buyNum: 0,
-    stock: 0,
-    isEdit: false,
-    goodsList: [ // mock的数据
-      {
-        num: 1,
-        stock: 2344
-      },
-      {
-        num: 80,
-        stock: 12123123
-      },
-      {
-        num: 7,
-        stock: 79823
-      }
-    ]
-  },
-  numChange({ detail }) {
-    if (this.data.isEdit) {
-      this.setData({
-        editIndex: detail.i,
-        buyNum: detail.num,
-        stock: this.data.goodsList[detail.i].stock
-      })
-      return false
-    }
-    this.setData({
-      isEdit: true,
-      editIndex: detail.i,
-      buyNum: detail.num,
-      stock: this.data.goodsList[detail.i].stock
-    })
+{
+  "usingComponents": {
+    "vi-quantity": "vi-quantity"
   }
-})
+}
 ```
 
 ## 属性
 
 | 接口 | 数据类型 | 说明 | 选项 | 默认值 |
 | :--: | :--: | :--: | :--: | :--: |
-| goodsnumber | [ String, [ Number ] ] | 输入框中默认显示的数量 | 选填 | 1 |
-| quantity | [ Number ] | 编辑的最大值 | 选填 | 0 |
-| editindex | [ Number ] | 当前编辑的索引, 适用于购物车列表等场景 | 选填 | 0 |
+| goodsnumber | String, Number | 输入框中默认显示的数量 | 选填 | 1 |
+| quantity | Number | 编辑的最大值 | 选填 | 0 |
+| editindex | Number | 当前编辑的索引, 适用于购物车列表等场景 | 选填 | 0 |
 
 ## Events
 

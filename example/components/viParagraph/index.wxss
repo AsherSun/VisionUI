@@ -1,0 +1,17 @@
+.paragraph {
+  margin-top:1em;
+  margin-bottom:1em;
+  padding:10px 0 10px 1em;
+  font-size:28rpx;
+  background:#f0f0f0;
+  border-left:5px solid #e0e0e0;
+}
+
+.paragraph-tips {
+  border-left-color: aquamarine;
+  background: #FFF;
+}
+
+.paragraph__text {
+  word-wrap:break-word;
+}
