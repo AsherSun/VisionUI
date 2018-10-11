@@ -93,19 +93,92 @@ module.exports =
 
 
 Component({
+  options: {
+    multipleSlots: true
+  },
   properties: {
-    ishide: {
-      type: Boolean,
-      value: false
+    animationDuration: {
+      type: Number,
+      value: 0.5
     },
-    animateName: {
+    animationTimingFn: {
       type: String,
-      value: 'bounce'
+      value: 'ease-in'
+    },
+    menuWidth: { // 单位rpx
+      type: Number,
+      value: 0
+    },
+    triggerSliderNum: {
+      type: Number,
+      value: 30
+    },
+    sliderNum: {
+      type: Number,
+      value: 0
     }
   },
+  data: {
+    startX: 0,
+    moveX: 0,
+    endX: 0
+  },
   methods: {
-    triggerToHide: function triggerToHide(e) {
-      this.triggerEvent('hide', this.data.ishide);
+    triggerToTouchStart: function triggerToTouchStart(_ref) {
+      var changedTouches = _ref.changedTouches;
+
+      if (changedTouches.length > 1) {
+        return false;
+      }
+      var clientX = changedTouches[0].clientX;
+
+      this.getXcoordinate('startX', clientX);
+      this.triggerEvent("tap", clientX);
+    },
+    triggerToTouchMove: function triggerToTouchMove(_ref2) {
+      var changedTouches = _ref2.changedTouches;
+
+      if (changedTouches.length > 1) {
+        return false;
+      }
+      var clientX = changedTouches[0].clientX;
+
+      this.getXcoordinate('moveX', clientX);
+      var sliderNum = this.data.startX - this.data.moveX;
+      if (sliderNum >= this.data.menuWidth) {
+        this.setData({
+          sliderNum: this.data.menuWidth
+        });
+        return false;
+      }
+      this.setData({
+        sliderNum: sliderNum
+      });
+      if (sliderNum > this.data.maxSliderNum) {
+        // 开始滑动
+        this.setData({
+          sliderNum: this.data.menuWidth
+        });
+      }
+    },
+    triggerToTouchEnd: function triggerToTouchEnd(_ref3) {
+      var changedTouches = _ref3.changedTouches;
+
+      if (changedTouches.length > 1) {
+        return false;
+      }
+      var clientX = changedTouches[0].clientX;
+
+      this.getXcoordinate('endX', clientX);
+      var sliderNum = this.data.startX - this.data.endX;
+      if (sliderNum < this.data.maxSliderNum) {
+        this.setData({
+          sliderNum: 0
+        });
+      }
+    },
+    getXcoordinate: function getXcoordinate(name, clientX) {
+      this.data[name] = clientX;
     }
   }
 });
