@@ -15,7 +15,7 @@ Component({
       type: Number,
       value: 0
     },
-    maxSliderNum: {
+    triggerSliderNum: {
       type: Number,
       value: 30
     },

@@ -1,7 +1,7 @@
 {
-  "name": "vi-upload",
-  "version": "0.0.2",
-  "description": "微信小程序上传插件 upload",
+  "name": "vi-slider-menu",
+  "version": "0.0.1",
+  "description": "微信小程序滑动菜单组件",
   "main": "miniprogram_dist/index.js",
   "scripts": {
     "dev": "gulp dev --develop",
