@@ -1,87 +1,74 @@
-class FileUpload {
-  constructor(config) {
-    let optionsTarget = {
-      count: 1,
-      name: 'picture',
-      fileType: 'img',
-      sizeType: ['original', 'compressed'],
-      url: '',
-      formData: {},
-      sourceType: ['album', 'camera'],
-      compressed: true,
-      maxDuration: 60,
-      beforeUpload: function () {},
-      success: function() {},
-      fail: function() {}
-    }
-    this.options = Object.assign(optionsTarget, config)
-    this.init(this.options.fileType)
-  }
-
-  init(fileType) {
-    if (fileType === 'img') {
-      this.chooseImage()
-    } else {
-      this.chooseVideo()
-    }
-  }
-
-  chooseImage() {
-    let _this = this
-    wx.chooseImage({
-      count: this.options.count,
-      sizeType: this.options.sizeType,
-      sourceType: this.options.sourceType,
-      success: function(res) {
-        var tempFilePaths = res.tempFilePaths
-        tempFilePaths.forEach(item => {
-          _this.upload(item)
+Component({
+  options: {
+    multipleSlots: true
+  },
+  properties: {
+    animationDuration: {
+      type: Number,
+      value: 0.5
+    },
+    animationTimingFn: {
+      type: String,
+      value: 'ease-in'
+    },
+    menuWidth: { // 单位rpx
+      type: Number,
+      value: 0
+    },
+    triggerSliderNum: {
+      type: Number,
+      value: 30
+    },
+    sliderNum: {
+      type: Number,
+      value: 0
+    },
+  },
+  data: {
+    startX: 0,
+    moveX: 0,
+    endX: 0,
+  },
+  methods: {
+    triggerToTouchStart({ changedTouches }) {
+      if (changedTouches.length > 1 ) { return false }
+      let { clientX } = changedTouches[0]
+      this.getXcoordinate('startX', clientX)
+      this.triggerEvent("tap", clientX)
+    },
+    triggerToTouchMove({ changedTouches }) {
+      if (changedTouches.length > 1) { return false }
+      let { clientX } = changedTouches[0]
+      this.getXcoordinate('moveX', clientX)
+      let sliderNum = this.data.startX - this.data.moveX
+      if (sliderNum >= this.data.menuWidth) {
+        this.setData({
+          sliderNum: this.data.menuWidth
         })
-      },
-      fail: function (err) {
-        _this.options.fail(err)
+        return false
       }
-    })
-  }
-
-  chooseVideo() {
-    let _this = this
-    wx.chooseVideo({
-      sourceType: _this.options.sourceType,
-      compressed: _this.options.compressed,
-      maxDuration: _this.options.maxDuration,
-      success: function (res) {
-        _this.options.beforeUpload(res)
-        _this.upload(res.tempFilePath)
-      },
-      fail: function (err) {
-        _this.options.fail(err)
+      this.setData({
+        sliderNum: sliderNum
+      })
+      if (sliderNum > this.data.maxSliderNum) { // 开始滑动
+        this.setData({
+          sliderNum: this.data.menuWidth
+        })
       }
-    })
-  }
-
-  upload(item) {
-    let _this = this
-    wx.uploadFile({
-      url: this.options.url,
-      filePath: item,
-      name: this.options.name,
-      formData: this.options.formData,
-      success: function(res) {
-        if (!(_this.options.success instanceof Function)) return false
-        if (typeof res.data === 'string') { // 视业务情况而定
-          _this.options.success(JSON.parse(res.data))
-        } else {
-          _this.options.success(res.data)
-        }
-      },
-      fail: function (err) {
-        _this.options.success(err)
+    },
+    triggerToTouchEnd({ changedTouches }) {
+      if (changedTouches.length > 1) { return false }
+      let { clientX } = changedTouches[0]
+      this.getXcoordinate('endX', clientX)
+      let sliderNum = this.data.startX - this.data.endX
+      if (sliderNum < this.data.maxSliderNum) {
+        this.setData({
+          sliderNum: 0
+        })
       }
-    })
+    },
+    getXcoordinate(name, clientX) {
+      this.data[name] = clientX
+    }
   }
-}
-
-export default function viUpload(config) {
-  new FileUpload(config)
-}
+})

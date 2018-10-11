@@ -16,9 +16,10 @@
     "lint-tools": "eslint \"tools/**/*.js\" --rule \"import/no-extraneous-dependencies: false\""
   },
   "keywords":[
-    "upload",
-    "vi-upload",
-    "上传插件",
+    "slider-menu",
+    "vi-slider-menu",
+    "slider",
+    "menu",
     "weChat",
     "微信小程序"
   ],
