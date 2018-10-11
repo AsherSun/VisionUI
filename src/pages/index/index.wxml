@@ -11,6 +11,7 @@
 
 <vi-cell-group title="操作反馈">
   <vi-cell title="vi-popup" line="group" desc="抽屉" link="/pages/vi_popup/vi_popup"></vi-cell>
+  <vi-cell title="vi-slider-box"  desc="滑动盒子" link="/pages/viSliderBox/index"></vi-cell>
   <vi-cell title="vi-address" line="group" desc="地址三级联动选择" link="/pages/vi_address/vi_address"></vi-cell>
   <vi-cell title="count-down" line="group" desc="倒计时" link="/pages/vi_count_down/vi_count_down"></vi-cell>
   <vi-cell title="vi-dialog" line="group" desc="会话窗" link="/pages/viDialog/viDialog"></vi-cell>

@@ -1,0 +1,19 @@
+.slider {
+  width: 100%;
+  overflow: hidden;
+  height: auto;
+  display: flex;
+  flex-flow:row nowrap;
+  justify-content: flex-start;
+}
+
+.slider__section {
+  width: 100%;
+  flex-shrink: 0;
+  height: inherit;
+}
+
+.slider__menu {
+  flex-shrink: 0;
+  height: inherit;
+}

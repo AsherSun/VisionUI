@@ -18,7 +18,8 @@
     "pages/vi_separate_line/vi_separate_line",
     "pages/about/about",
     "pages/vi_checkbox/vi_checkbox",
-    "pages/vi_cell_group/vi_cell_group"
+    "pages/vi_cell_group/vi_cell_group",
+    "pages/viSliderBox/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
