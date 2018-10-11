@@ -1,17 +1,11 @@
 <!--pages/animate/animate.wxml-->
 <view class="pad_20_25 font16">
   <view>animate是一个CSS3动画库</view>
-  <!-- <view>github: <image src="/images/animate.png"></image></view> -->
 </view>
 <view class="animated {{animateName}} animate-demo">Animate.css</view>
 
 
 
 <view class="animate-demo-area font14">
-  <!-- <button bindtap='tapAnimate' data-i="{{index}}" wx:key="{{index}}" class="font12 animate-demo-btn" wx:for="{{animateNameList}}">{{item}}</button> -->
-  <picker bindchange="bindPickerChange" value="{{index}}" range="{{animateNameList}}">
-    <view class="picker">
-      当前选择：{{animateNameList[index]}}
-    </view>
-  </picker>
+ 
 </view>

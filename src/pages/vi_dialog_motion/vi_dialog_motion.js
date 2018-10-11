@@ -1,66 +1,104 @@
-// pages/vi_dialog_motion/vi_dialog_motion.js
+const animateNameList = [
+  'bounce',
+  'flash',
+  'pulse',
+  'rubberBand',
+  'shake',
+  'headShake',
+  'swing',
+  'tada',
+  'wobble',
+  'jello',
+  'bounceIn',
+  'bounceInDown',
+  'bounceInLeft',
+  'bounceInRight',
+  'bounceInUp',
+  'fadeIn',
+  'fadeInDown',
+  'fadeInDownBig',
+  'fadeInLeft',
+  'fadeInLeftBig',
+  'fadeInRight',
+  'fadeInRightBig',
+  'fadeInUp',
+  'fadeInUpBig',
+  'flipInX',
+  'flipInY',
+  'lightSpeedIn',
+  'rotateIn',
+  'rotateInDownLeft',
+  'rotateInDownRight',
+  'rotateInUpLeft',
+  'rotateInUpRight',
+  'jackInTheBox',
+  'rollIn',
+  'zoomIn',
+  'zoomInDown',
+  'zoomInLeft',
+  'zoomInRight',
+  'zoomInUp',
+  'slideInDown',
+  'slideInLeft',
+  'slideInRight',
+  'slideInUp'
+]
+
+let out = [
+  'hinge',
+  'bounceOut',
+  'bounceOutDown',
+  'bounceOutLeft',
+  'bounceOutRight',
+  'bounceOutUp',
+  'fadeOut',
+  'fadeOutDown',
+  'fadeOutDownBig',
+  'fadeOutLeft',
+  'fadeOutLeftBig',
+  'fadeOutRight',
+  'fadeOutRightBig',
+  'fadeOutUp',
+  'fadeOutUpBig',
+  'flipOutX',
+  'flipOutY',
+  'lightSpeedOut',
+  'rotateOut',
+  'rotateOutDownLeft',
+  'rotateOutDownRight',
+  'rotateOutUpLeft',
+  'rotateOutUpRight',
+  'rollOut',
+  'zoomOut',
+  'zoomOutDown',
+  'zoomOutLeft',
+  'zoomOutRight',
+  'zoomOutUp',
+  'slideOutDown',
+  'slideOutLeft',
+  'slideOutRight',
+  'slideOutUp'
+]
+
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-  
+    showMotion: false,
+    animateNameList,
+    animateName: '',
+    index: 0,
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-  
+  onLoad() {
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
+  bindPickerChange({ detail: { value } }) {
+    this.setData({
+      animateName: animateNameList[value],
+      index: value,
+      showMotion: true
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
+  triggerToHideDialog() {
+    this.setData({
+      showMotion: false
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
-  }
 })

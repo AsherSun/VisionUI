@@ -1,7 +1,7 @@
-<!--components/vi_dialog_motion/vi_dialog_motion.wxml-->
-<view class="dialog-motion" wx:if="{{show}}">
-  <view class="dialog-motion-mask"></view>
-  <view class="dialog-motion-content">
+<view wx:if="{{ishide}}" class="vi-dialog">
+  <view class="vi-dialog-mask" data-sign="mask" capture-catch:tap="triggerToHide"></view>
+  <view class="vi-dialog-content animated {{animateName}}">
     <slot></slot>
   </view>
 </view>
+
