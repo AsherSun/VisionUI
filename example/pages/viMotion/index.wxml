@@ -9,7 +9,7 @@
   <view class="animate-demo-area font14">
     <picker bindchange="bindPickerChange" value="{{index}}" range="{{animateNameList}}">
       <view class="picker">
-        请选择运动方式：{{animateNameList[index]}}
+        运动方式：{{animateNameList[index]}}
       </view>
     </picker>
   </view>
@@ -20,6 +20,6 @@
 <vi-motion ishide="{{showMotion}}" animate-name="{{animateName}}" catch:hide="triggerToHideDialog">
   <view 
     style="margin:50vh auto;background:#FFF;transform:translateY(-50%);width: 300px;height: 30vh;border-radius:5px;text-align: center;line-height: 30vh;">
-    弹窗运动方式为：<text style="color:aquamarine;">{{animateName}}</text>
+    运动方式为：<text style="color:aquamarine;">{{animateName}}</text>
   </view>
 </vi-motion>

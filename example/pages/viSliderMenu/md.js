@@ -1,3 +1,34 @@
+module.exports = [
+`
+\`\`\`html
+<template>
+<vi-slider-menu menu-width="200">
+  <view slot="section" class="section"></view>
+  <view slot="menu" class="menu"></view>
+</vi-slider-menu>
+</template>
+\`\`\`
+\`\`\`javascript
+<script>
+
+</script>
+\`\`\`
+\`\`\`css
+<style>
+.section, .menu{
+  height: 100px;
+  margin-top: 10px;
+  width: 100%;
+  background: #FFF;
+}
+
+.menu {
+  border-left: 1px solid #d9d9d9;
+}
+</style>
+\`\`\`
+`,
+`
 # vi-slider-menu
 
 ## 使用
@@ -8,13 +39,13 @@
 
 > 在页面的js文件中引入
 
-```json
+\`\`\`json
 {
-  "usingComponents": {
-    "vi-slider-menu": "vi-slider-menu"
+    "usingComponents": {
+      "vi-slider-menu": "vi-slider-menu"
+    }
   }
-}
-```
+\`\`\`
 
 ## Config Props
 
@@ -35,3 +66,5 @@
 ## 版本信息
 
 + v0.0.1 初始版本
+`,
+]

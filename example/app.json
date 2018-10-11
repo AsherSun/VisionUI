@@ -10,7 +10,8 @@
     "pages/viDialog/index",
     "pages/viUpload/index",
     "pages/viQuantity/index",
-    "pages/viMotion/index"
+    "pages/viMotion/index",
+    "pages/viSliderMenu/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
