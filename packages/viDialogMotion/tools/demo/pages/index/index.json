@@ -1,4 +1,5 @@
 {
   "usingComponents": {
+    "vi-dialog-motion": "../../components/index"
   }
 }

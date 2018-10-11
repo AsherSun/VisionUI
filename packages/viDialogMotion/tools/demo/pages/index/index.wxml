@@ -1,18 +1,19 @@
-
-
-<view>封装了小程序的upload API, 目前支持图片上传与视频上传，其余不常见的文件类型还没有做</view>
-
-<button custom-class="button" bindtap="triggerToUploadImg" loading="{{uploadImgLoading}}">图片上传</button>
-
-<view>服务端返回的数据：{{uploadImgSource}}</view>
-
-<button custom-class="button" bindtap="triggerToUploadVideo" loading="{{uploadVideoLoading}}">视频上传</button>
-<view>
-  上传之前视频的信息：
-  <view>宽度：{{videoInfo.width}}</view>
-  <view>高度：{{videoInfo.height}}</view>
-  <view>视频封面图：{{videoInfo.thumbTempFilePath}}</view>
-  <view>视频本地资源路径：{{videoInfo.tempFilePath}}</view>
-  <view>视频时长：{{videoInfo.duration}}</view>
+<view class="font12">
+  <view>vi-dialog-motion 虽然名字与 vi-dialog 相似，但它们处理的是不同的业务</view>
+  <view>vi-dialog-motion 只提供运动方式不会订制弹窗内容。它处理更加复杂化的弹窗业务。</view>
 </view>
-<view>服务端返回的数据： {{uploadVideoSource}}</view>
+
+<view class="animate-demo-area font14">
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{animateNameList}}">
+    <view class="picker">
+      当前选择：{{animateNameList[index]}}
+    </view>
+  </picker>
+</view>
+
+<vi-dialog-motion ishide="{{showMotion}}" animate-name="{{animateName}}" catch:hide="triggerToHideDialog">
+  <view 
+    style="margin:50vh auto;background:#FFF;transform:translateY(-50%);width: 300px;height: 30vh;border-radius:5px;text-align: center;line-height: 30vh;">
+    弹窗运动方式为：<text style="color:aquamarine;">{{animateName}}</text>
+  </view>
+</vi-dialog-motion>

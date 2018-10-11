@@ -82,12 +82,11 @@ let out = [
 
 Page({
   data: {
+    codeArr: require('./md.js'),
     showMotion: false,
     animateNameList,
     animateName: '',
     index: 0,
-  },
-  onLoad() {
   },
   bindPickerChange({ detail: { value } }) {
     this.setData({

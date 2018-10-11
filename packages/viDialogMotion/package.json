@@ -1,7 +1,7 @@
 {
-  "name": "vi-upload",
+  "name": "vi-motion",
   "version": "0.0.2",
-  "description": "微信小程序上传插件 upload",
+  "description": "微信小程序运动弹窗",
   "main": "miniprogram_dist/index.js",
   "scripts": {
     "dev": "gulp dev --develop",
@@ -16,9 +16,9 @@
     "lint-tools": "eslint \"tools/**/*.js\" --rule \"import/no-extraneous-dependencies: false\""
   },
   "keywords":[
-    "upload",
-    "vi-upload",
-    "上传插件",
+    "motion",
+    "animate",
+    "运动",
     "weChat",
     "微信小程序"
   ],

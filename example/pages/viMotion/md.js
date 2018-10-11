@@ -1,3 +1,41 @@
+module.exports = [
+`
+\`\`\`html
+<template>
+<vi-motion ishide="{{showMotion}}" animate-name="{{animateName}}" catch:hide="triggerToHideDialog">
+  <view 
+    style="margin:50vh auto;background:#FFF;transform:translateY(-50%);width: 300px;height: 30vh;border-radius:5px;text-align: center;line-height: 30vh;">
+    弹窗运动方式为：<text style="color:aquamarine;">{{animateName}}</text>
+  </view>
+</vi-motion>
+</template>
+\`\`\`
+\`\`\`javascript
+<script>
+Page({
+  data: {
+    showMotion: false,
+    animateNameList,
+    animateName: '',
+    index: 0,
+  },
+  bindPickerChange({ detail: { value } }) {
+    this.setData({
+      animateName: animateNameList[value],
+      index: value,
+      showMotion: true
+    })
+  },
+  triggerToHideDialog() {
+    this.setData({
+      showMotion: false
+    })
+  },
+})
+</script>
+\`\`\`
+`,
+`
 # vi-motion
 
 ## 使用
@@ -8,13 +46,13 @@
 
 > 在页面的json文件中引入
 
-```json
+\`\`\`json
 {
-  "usingComponents": {
-    "dialo-motion": "vi-motion"
+    "usingComponents": {
+      "dialo-motion": "vi-motion"
+    }
   }
-}
-```
+\`\`\`
 
 ## Config Props
 
@@ -42,13 +80,9 @@
 | zoomInRight | zoomInUp | slideInDown |
 | slideInLeft | slideInRight | slideInUp |
 
-## Bug&&Tips
-
-+ 阅读该文档之前请先具备微信上传API的相关知识
-+ 该插件封装了微信的图片上传与视频上传接口、其余文件类型并没有封装，如有需要，后续会添加。
-+ 插件的config配置是基于微信提供的接口之上稍微添加了几个。config完全匹配微信的API接口
-
 ## 版本信息
 
 + v0.0.1 初始版本
 + v0.0.2 修改组件名称
+`,
+]
