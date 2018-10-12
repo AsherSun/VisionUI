@@ -116,6 +116,10 @@ Component({
     sliderNum: {
       type: Number,
       value: 0
+    },
+    line: {
+      type: String,
+      value: ''
     }
   },
   data: {
@@ -132,8 +136,8 @@ Component({
       }
       var clientX = changedTouches[0].clientX;
 
+      this.triggerEvent("touchStart", clientX);
       this.getXcoordinate('startX', clientX);
-      this.triggerEvent("tap", clientX);
     },
     triggerToTouchMove: function triggerToTouchMove(_ref2) {
       var changedTouches = _ref2.changedTouches;
@@ -143,6 +147,7 @@ Component({
       }
       var clientX = changedTouches[0].clientX;
 
+      this.triggerEvent("touchMove", clientX);
       this.getXcoordinate('moveX', clientX);
       var sliderNum = this.data.startX - this.data.moveX;
       if (sliderNum >= this.data.menuWidth) {
@@ -169,11 +174,16 @@ Component({
       }
       var clientX = changedTouches[0].clientX;
 
+      this.triggerEvent("touchEnd", clientX);
       this.getXcoordinate('endX', clientX);
       var sliderNum = this.data.startX - this.data.endX;
-      if (sliderNum < this.data.maxSliderNum) {
+      if (sliderNum < this.data.triggerSliderNum) {
         this.setData({
           sliderNum: 0
+        });
+      } else {
+        this.setData({
+          sliderNum: this.data.menuWidth
         });
       }
     },
