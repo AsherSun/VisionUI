@@ -1,0 +1,23 @@
+<view style="text-align: center;font-size: 16px;line-height: 40px;background:#FFF;">购物车</view>
+<vi-slider-box
+  wx:key="{{index}}"
+  wx:for="{{shoppingCart}}"
+  menu-width="130" 
+  line="bottomLine">
+  <view slot="section" class="shopping__section">
+    <navigator url="/pages/index/index" class="section__wrap">
+      <image class="section__img" src="{{item.img}}"></image>
+      <view class="section__goodsInfo">
+        <view class="goodsInfo__name">{{item.name}}</view>
+        <view class="goodsInfo__skuDesc">{{item.skuDesc}}</view>
+        <view class="goodsInfo__info">
+          <text class="price__info">￥ {{item.price}}</text>
+          <text class="number__info">x {{item.number}}</text>
+        </view>
+      </view>
+    </navigator>
+  </view>
+  <view slot="menu" class="shopping__menu">
+    <text class="icon icon-delete"></text>
+  </view>
+</vi-slider-box>

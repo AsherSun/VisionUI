@@ -23,6 +23,10 @@ Component({
       type: Number,
       value: 0
     },
+    line: {
+      type: String,
+      value: ''
+    }
   },
   data: {
     startX: 0,
@@ -33,12 +37,13 @@ Component({
     triggerToTouchStart({ changedTouches }) {
       if (changedTouches.length > 1 ) { return false }
       let { clientX } = changedTouches[0]
+      this.triggerEvent("touchStart", clientX)
       this.getXcoordinate('startX', clientX)
-      this.triggerEvent("tap", clientX)
     },
     triggerToTouchMove({ changedTouches }) {
       if (changedTouches.length > 1) { return false }
       let { clientX } = changedTouches[0]
+      this.triggerEvent("touchMove", clientX)
       this.getXcoordinate('moveX', clientX)
       let sliderNum = this.data.startX - this.data.moveX
       if (sliderNum >= this.data.menuWidth) {
@@ -59,11 +64,16 @@ Component({
     triggerToTouchEnd({ changedTouches }) {
       if (changedTouches.length > 1) { return false }
       let { clientX } = changedTouches[0]
+      this.triggerEvent("touchEnd", clientX)
       this.getXcoordinate('endX', clientX)
       let sliderNum = this.data.startX - this.data.endX
-      if (sliderNum < this.data.maxSliderNum) {
+      if (sliderNum < this.data.triggerSliderNum) {
         this.setData({
           sliderNum: 0
+        })
+      } else {
+        this.setData({
+          sliderNum: this.data.menuWidth
         })
       }
     },
