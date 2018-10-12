@@ -1,6 +1,6 @@
 {
   "name": "vi-slider-menu",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "微信小程序滑动菜单组件",
   "main": "miniprogram_dist/index.js",
   "scripts": {
