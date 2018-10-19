@@ -1,0 +1,11 @@
+<view class="quantity quantity-class">
+  <text class="icon icon-reduce" bindtap='reduce'></text>
+  <input 
+    class="inventory"
+    type="number"
+    bindinput="changeValue"
+    bindblur="blurFn"
+    bindconfirm="confirmValue"
+    value="{{goodsnumber}}"></input>
+  <text class="icon icon-add" bindtap='add'></text>
+</view>

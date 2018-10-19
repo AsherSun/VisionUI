@@ -1,0 +1,134 @@
+.vi-dialog {
+  font-size: 14px;
+  position: fixed;
+  z-index: 99999;
+}
+
+.vi-dialog-mask {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.vi-dialog-content {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 50%;
+  z-index: 1000;
+  width: 75%;
+  background: #FFF;
+  margin: auto;
+  border-radius: 5px;
+  transform: translate3d(0, -50%, 0) scale3d(0, 0, 0);
+  opacity: 0;
+}
+
+.vi-dialog-content-input {
+  top: 30%;
+}
+
+.vi-dialog-header {
+  text-align: center;
+  padding: 8px 16rpx 8px;
+  font-size: 16px;
+  color: #333;
+}
+
+.vi-dialog-body {
+  padding:0 16rpx 10px;
+  max-height: 30vh;
+  box-sizing: border-box;
+  overflow-y: auto;
+  text-align: center;
+}
+
+.vi-dialog-footer {
+  display: flex;
+  flex-flow: row nowrap;
+  position: relative;
+}
+
+.vi-dialog-btns {
+  position: relative;
+  flex: 1;
+  text-align: center;
+  font-size: 16px;
+  height: 40px;
+  line-height: 40px;
+}
+
+.dialog__btns-confirm {
+  color: #2BA3FB;
+}
+
+.dialog__btns-cancel {
+  color: #999;  
+}
+
+.vi-dialog-footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #d9d9d9;
+  height: 1px;
+  transform: scaleY(0.5);
+}
+
+.vi-dialog-btns +  .vi-dialog-btns::before{
+  content: '';
+  position: absolute;
+  z-index: 111;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 1px;
+  background: #d9d9d9;
+ transform: scale3d(0.5, 1, 1);
+}
+
+.fadeIn {
+  animation: fadeIn .3s ease-in forwards;
+}
+
+.fadeOut {
+  animation: fadeOut .3s ease-in forwards;
+}
+
+.dialog__input {
+  border-bottom: 1px solid #d9d9d9;
+  text-align: left;
+}
+
+.dialog__input-focus {
+  border-color: #2BA3FB;
+}
+
+
+@keyframes fadeIn {
+  0% {
+    transform: translate3d(0, -50%, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0, -50%, 0) scale3d(1, 1, 1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    transform: translate3d(0, -50%, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(0, -50%, 0) scale3d(0, 0, 0);
+    opacity: 0;
+  }
+}
