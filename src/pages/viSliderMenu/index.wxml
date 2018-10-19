@@ -1,0 +1,32 @@
+<view style="text-align: center;font-size: 16px;line-height: 40px;background:#FFF;">购物车</view>
+<checkbox-group>
+  <vi-slider-box
+    bind:touchstart="triggerToTap"
+    data-i="{{index}}"
+    wx:key="{{index}}"
+    wx:for="{{shoppingCart}}"
+    slider-num="{{item.sliderNum}}"
+    menu-width="{{item.menuWidth}}" 
+    line="bottomLine">
+    <view slot="section" class="shopping__section">
+      <checkbox value="{{item.cartId}}" checked='{{item.checked}}'></checkbox>
+      <navigator url="/pages/index/index" class="section__wrap">
+        <image class="section__img" src="{{item.img}}"></image>
+        <view class="section__goodsInfo">
+          <view class="goodsInfo__name">{{item.name}}</view>
+          <view class="goodsInfo__skuDesc">{{item.skuDesc}}</view>
+          <view class="goodsInfo__info">
+            <text class="price__info">￥ {{item.price}}</text>
+            <text class="number__info">x {{item.number}}</text>
+          </view>
+        </view>
+      </navigator>
+    </view>
+    <view slot="menu" class="shopping__menu">
+      <view class="menu__delete-btn icon icon-delete"></view>
+    </view>
+  </vi-slider-box>
+</checkbox-group>
+
+<view style="height: 50px;width: 100%;"></view>
+

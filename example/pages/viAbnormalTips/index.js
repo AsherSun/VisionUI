@@ -6,7 +6,8 @@ Page({
     ],
     networkTipsArr: [
       '请关闭手机网络链接,会出现按钮'
-    ]
+    ],
+    codeArr: require('./md.js')
   },
   triggerToRouter() {
     console.log('triggerToRouter')

@@ -1,0 +1,34 @@
+<vi-title>VI-UPLOAD</vi-title>
+<view style="padding: 10px;box-sizing: border-box;">
+  <vi-paragraph tips='tips'>该插件封装了小程序的upload</vi-paragraph>
+  <vi-paragraph tips='tips'>目前支持图片上传与视频上传，其余不常见的文件类型还没有兼容</vi-paragraph>
+  <component-exhibition code="{{codeArr[0]}}">
+    <button bindtap="triggerToUploadImg" loading="{{uploadImgLoading}}" style="margin: 15px auto; font-size: 16px;background: #FFF;">图片上传</button>
+    <view class="paragraph">
+      <text class="paragraph__text">服务端返回的数据：{{uploadImgSource}}</text>
+    </view>
+  </component-exhibition>
+  
+  <component-exhibition code="{{codeArr[1]}}">
+    <button 
+      bindtap="triggerToUploadVideo" 
+      loading="{{uploadVideoLoading}}" 
+      style="margin: 15px auto; font-size: 16px;background: #FFF;">视频上传
+    </button>
+    <view>
+      上传之前视频的信息：
+      <vi-paragraph>宽度：{{videoInfo.width}}</vi-paragraph>
+      <vi-paragraph>高度：{{videoInfo.height}}</vi-paragraph>
+      <vi-paragraph>视频封面图：{{videoInfo.thumbTempFilePath}}</vi-paragraph>
+      <vi-paragraph>视频本地资源路径：{{videoInfo.tempFilePath}}</vi-paragraph>
+      <vi-paragraph>视频时长：{{videoInfo.duration}}</vi-paragraph>
+      视频上传成功的信息：
+      <vi-paragraph>服务端返回的数据：{{uploadVideoSource}}</vi-paragraph>
+    </view>
+  </component-exhibition>
+</view>
+
+
+
+
+<component-exhibition show-code='' code="{{codeArr[2]}}"></component-exhibition>

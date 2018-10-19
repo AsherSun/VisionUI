@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "vi-title": "/components/viTitle/index",
+    "component-exhibition": "/components/componentExhibition/index",
+    "vi-motion": "vi-motion",
+    "vi-paragraph": "/components/viParagraph/index"
+  }
+}

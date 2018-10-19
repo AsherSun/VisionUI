@@ -1,0 +1,5 @@
+
+<vi-slider-menu menu-width="200">
+  <view slot="section" class="section"></view>
+  <view slot="menu" class="menu"></view>
+</vi-slider-menu>

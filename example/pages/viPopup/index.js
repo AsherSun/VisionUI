@@ -3,7 +3,8 @@ Page({
     popupHide_bottom: false,
     popupHide_top: false,
     popupHide_left: false,
-    popupHide_right: false
+    popupHide_right: false,
+    codeArr: require('./md.js')
   },
 
   popupBottom() {

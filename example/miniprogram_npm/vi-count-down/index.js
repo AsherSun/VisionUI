@@ -109,6 +109,10 @@ Component({
     endText: { // 倒计时结束要显示的提示语
       type: String,
       value: '该订单已超过支付时间'
+    },
+    isSlot: {
+      type: Boolean,
+      value: false
     }
   },
   data: {
@@ -120,20 +124,44 @@ Component({
     surplus: 0, // 时差
     countDownOver: false // 判断倒计时是否结束
   },
+  lifetimes: {
+    detached: function detached() {
+      clearTimeout(this.data.timer);
+    }
+  },
   methods: {
     countDown: function countDown() {
       // 倒计时逻辑
+      var days = null;
+      var hours = null;
+      var minutes = null;
+      var seconds = null;
       this.setData({
         surplus: --this.data.surplus
       });
       if (this.data.surplus > 0) {
         // 处理倒计时逻辑
-        this.setData({
-          days: parseInt(this.data.surplus / (60 * 60 * 24)),
-          hours: this.getHMS(parseInt(this.data.surplus % (60 * 60 * 24) / (60 * 60))),
-          minutes: this.getHMS(parseInt(this.data.surplus % (60 * 60 * 24) % (60 * 60) / 60)),
-          seconds: this.getHMS(parseInt(this.data.surplus % (60 * 60 * 24) % (60 * 60) % 60))
-        });
+        days = this.getHMS(parseInt(this.data.surplus / 86400));
+        var lastTime = this.data.surplus % 86400;
+        hours = this.getHMS(parseInt(lastTime / 3600));
+        lastTime = lastTime % 3600;
+        minutes = this.getHMS(parseInt(lastTime / 60));
+        seconds = this.getHMS(parseInt(lastTime % 60));
+        if (this.data.isSlot) {
+          this.triggerEvent('countdown', {
+            days: days,
+            hours: hours,
+            minutes: minutes,
+            seconds: seconds
+          });
+        } else {
+          this.setData({
+            days: days,
+            hours: hours,
+            minutes: minutes,
+            seconds: seconds
+          });
+        }
       } else {
         // 清除定时器
         this.setData({

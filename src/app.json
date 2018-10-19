@@ -7,8 +7,8 @@
     "pages/vi_painting/vi_painting",
     "pages/upload/upload",
     "pages/vi_button/vi_button",
-    "pages/vi_dialog_motion/vi_dialog_motion",
-    "pages/vi_dialog/vi_dialog",
+    "pages/viMotion/vi-motion",
+    "pages/viDialog/viDialog",
     "pages/animate/animate",
     "pages/vi_popup/vi_popup",
     "pages/vi_count_down/vi_count_down",
@@ -18,7 +18,8 @@
     "pages/vi_separate_line/vi_separate_line",
     "pages/about/about",
     "pages/vi_checkbox/vi_checkbox",
-    "pages/vi_cell_group/vi_cell_group"
+    "pages/vi_cell_group/vi_cell_group",
+    "pages/viSliderMenu/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

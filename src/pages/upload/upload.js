@@ -21,6 +21,12 @@ Page({
           uploadImgSource: JSON.stringify(data),
           uploadImgLoading: false
         })
+      },
+      fail(err) {
+        _this.setData({
+          uploadImgSource: JSON.stringify(err),
+          uploadImgLoading: false
+        })
       }
     })
   },
@@ -37,6 +43,12 @@ Page({
         _this.setData({
           uploadVideoLoading: false,
           uploadVideoSource: JSON.stringify(data)
+        })
+      },
+      fail: err => {
+        _this.setData({
+          uploadVideoLoading: false,
+          uploadVideoSource: JSON.stringify(err)
         })
       },
       beforeUpload (videoInfo) {

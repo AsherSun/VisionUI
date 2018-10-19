@@ -2,13 +2,15 @@
 
 ## 使用
 
-> * npm i vi-count-down
-> * 使用微信开发者工具构建NPM并使用NPM模块
+> npm i vi-popup
+> 使用微信开发者工具构建NPM并使用NPM模块
 
 
 ```json
-"usingComponents": {
-  "vi-popup": "vi-popup"
+{
+  "usingComponents": {
+    "vi-popup": "vi-popup"
+  }
 }
 ```
 
@@ -122,6 +124,7 @@ Page({
     background: #FFF;
   }
 </style>
+```
 
 ## 属性
 
@@ -129,3 +132,13 @@ Page({
 | :--: | :--: | :--: | :--: | :--: |
 | ishide | Boolean | 控制数据popup显示隐藏 | 必填 | false |
 | position | string | popup出现的方向,值有：top、left、right、bottom | 选填 | bottom |
+
+## event
+
+| event name | description |
+| :--: | :--: |
+| popuphide | vi-popup组件的mask层点击事件，用于控制组件的隐藏 |
+
+## 版本记录
+
++ v0.0.2 更新文档说明

@@ -24,9 +24,6 @@ Component({
   options: {
     multipleSlots: true
   },
-  data: {
-  },
-
   methods: {
     triggerToChange() {
       if (this.data.disable) return false

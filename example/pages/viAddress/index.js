@@ -1,7 +1,8 @@
 Page({
   data: {
     address: '',
-    isHide: false
+    isHide: false,
+    codeArr: require('./md.js')
   },
   selectAddress(e) {
     this.setData({

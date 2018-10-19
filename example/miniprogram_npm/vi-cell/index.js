@@ -141,6 +141,7 @@ Component({
   },
   methods: {
     triggerToNavigateTo: function triggerToNavigateTo() {
+      this.triggerEvent('click');
       if (typeof this.data.link !== 'string' || !this.data.link) {
         return false;
       }
@@ -162,7 +163,6 @@ Component({
       }
     },
     updateIsLastCell: function updateIsLastCell(isLastCell) {
-      console.log('isLastCell', isLastCell);
       this.setData({ isLastCell: isLastCell, isHaveCellGroup: true });
     }
   }

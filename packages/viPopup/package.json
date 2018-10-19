@@ -1,6 +1,6 @@
 {
   "name": "vi-popup",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "微信小程序组件popup",
   "main": "miniprogram_dist/index.js",
   "scripts": {

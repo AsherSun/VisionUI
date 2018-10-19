@@ -1,4 +1,19 @@
-<view wx:if="{{exterior}}" class="switch-wrap">
+
+<view 
+  wx:if="{{exterior}}"
+  class="switch switch--inside {{checked ? 'switch_checked' : ''}} {{disable ? 'switch_disable' : ''}}" 
+  bindtap="triggerToChange">
+  <view class="switch__inside"></view>
+  <view wx:if="{{checked}}" class="switch__indicate switch__indicate-open">
+    <block wx:if="{{activeText}}">{{activeText}}</block>
+    <slot wx:else name="activeText"></slot>
+  </view>
+  <view wx:else class="switch__indicate  switch__indicate-close">
+    <block wx:if="{{inactiveText}}">{{inactiveText}}</block>
+    <slot wx:else name="inactiveText"></slot>
+  </view>
+</view>
+<view wx:else class="switch-wrap">
   <view 
     class="switch {{checked ? 'switch_checked' : ''}} {{disable ? 'switch_disable' : ''}}" 
     bindtap="triggerToChange">
@@ -8,19 +23,6 @@
     <slot wx:else name="activeText"></slot>
   </view>
   <view class="switch-warp__indicate-close {{checked ? '' : 'switch-warp__indicate_active'}}">
-    <block wx:if="{{inactiveText}}">{{inactiveText}}</block>
-    <slot wx:else name="inactiveText"></slot>
-  </view>
-</view>
-<view 
-  wx:else
-  class="switch {{checked ? 'switch_checked' : ''}} {{disable ? 'switch_disable' : ''}}" 
-  bindtap="triggerToChange">
-  <view wx:if="{{checked}}" class="switch__indicate switch__indicate-open">
-    <block wx:if="{{activeText}}">{{activeText}}</block>
-    <slot wx:else name="activeText"></slot>
-  </view>
-  <view wx:else class="switch__indicate  switch__indicate-close">
     <block wx:if="{{inactiveText}}">{{inactiveText}}</block>
     <slot wx:else name="inactiveText"></slot>
   </view>

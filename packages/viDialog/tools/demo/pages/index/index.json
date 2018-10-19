@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "vi-dialog": "../../components/index"
+  }
+}

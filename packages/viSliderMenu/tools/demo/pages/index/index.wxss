@@ -1,0 +1,14 @@
+page {
+  background: #f8f8f8;
+}
+
+.section, .menu{
+  height: 100px;
+  margin-top: 10px;
+  width: 100%;
+  background: #FFF;
+}
+
+.menu {
+  border-left: 1px solid #d9d9d9;
+}

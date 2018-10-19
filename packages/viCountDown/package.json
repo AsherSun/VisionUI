@@ -1,6 +1,6 @@
 {
   "name": "vi-count-down",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "微信小程序倒计时组件",
   "main": "miniprogram_dist/index.js",
   "scripts": {
