@@ -6,7 +6,8 @@
 <vi-paragraph tips="tips">animate.css github: https://github.com/daneden/animate.css</vi-paragraph>
 
 <component-exhibition code="{{codeArr[0]}}">
-  <view class="animate-demo-area font14">
+  <vi-paragraph tips="tips">请选择下面的运动方式方可看到效果 </vi-paragraph>
+  <view class="animate-demo-area font14" style="background:#FFF;">
     <picker bindchange="bindPickerChange" value="{{index}}" range="{{animateNameList}}">
       <view class="picker">
         运动方式：{{animateNameList[index]}}

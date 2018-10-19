@@ -24,11 +24,15 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "组件库"
+        "text": "组件库",
+        "iconPath": "images/tabBar/component.png",
+        "selectedIconPath": "./images/tabBar/selectComponent.png"
       },
       {
         "pagePath": "pages/aboult/index",
-        "text": "About"
+        "text": "About",
+        "iconPath": "images/tabBar/about.png",
+        "selectedIconPath": "./images/tabBar/selectAbout.png"
       }
     ]
   }
