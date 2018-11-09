@@ -1,0 +1,34 @@
+.sticker-footer {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.sticker-footer__warp {
+  height: auto;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.sticker-footer__main {
+  width: 100%;
+  padding-bottom: 50px;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.clearfix {
+  display: inline-block;
+}
+
+.sticker-footer__footer {
+  position: relative;
+  margin-top: -50px;
+  height: 50px;
+  clear: both;
+}
