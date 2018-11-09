@@ -1,4 +1,4 @@
-const animateNameList = [
+const enterAnimateNameList = [
   'bounce',
   'flash',
   'pulse',
@@ -44,7 +44,7 @@ const animateNameList = [
   'slideInUp'
 ]
 
-let out = [
+let outAnimateNameList = [
   'hinge',
   'bounceOut',
   'bounceOutDown',
@@ -82,23 +82,55 @@ let out = [
 
 Page({
   data: {
-    showMotion: false,
-    animateNameList,
-    animateName: '',
-    index: 0,
+    mask: {
+      showMaskMotion: false,
+      enterAnimateName: 'rotateIn',
+      outAnimateName: 'rotateOut'
+    },
+    animateList: {
+      showMotion: false,
+      enterAnimateNameList,
+      outAnimateNameList,
+      enterAnimateName: '',
+      enterIndex: 0,
+      outIndex: 0,
+      outAnimateName: 'hinge'
+    },
+    hideNotAnimate: {
+      showMotion: false,
+      enterAnimateName: 'bounceInUp',
+      outAnimateName: 'bounceOutUp'
+    }
   },
   onLoad() {
   },
-  bindPickerChange({ detail: { value } }) {
+  enterPickerChange({ detail: { value } }) {
     this.setData({
-      animateName: animateNameList[value],
-      index: value,
-      showMotion: true
+      'animateList.enterAnimateName': enterAnimateNameList[value],
+      'animateList.enterIndex': value,
+      'animateList.showMotion': true
+    })
+  },
+  outPickerChange({ detail: { value } }) {
+    this.setData({
+      'animateList.outAnimateName': outAnimateNameList[value],
+      'animateList.outIndex': value,
+      'animateList.showMotion': false
     })
   },
   triggerToHideDialog() {
     this.setData({
-      showMotion: false
+      'animateList.showMotion': false
     })
   },
+  triggerToMaskAnimateName() {
+    this.setData({
+      'mask.showMaskMotion': !this.data.mask.showMaskMotion
+    })
+  },
+  triggerToHideNotAnimate() {
+    this.setData({
+      'hideNotAnimate.showMotion': !this.data.hideNotAnimate.showMotion
+    })
+  }
 })

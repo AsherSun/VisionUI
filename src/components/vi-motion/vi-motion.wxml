@@ -1,6 +1,6 @@
 <view wx:if="{{isShow}}" class="vi-dialog">
   <view class="vi-dialog-mask" data-sign="mask" capture-catch:tap="triggerToHide"></view>
-  <view class="vi-dialog-content animated {{ishide ? enterAnimateName : outAnimateName}}" style="animation-duration: {{animationDuration}}s">
+  <view class="animated {{ishide ? enterAnimateName : outAnimateName}} container-calss" style="animation-duration: {{animationDuration}}s">
     <slot></slot>
   </view>
 </view>

@@ -44,12 +44,14 @@ Component({
       value: 1
     }
   },
+  externalClasses: ['container-calss'],
   methods: {
     triggerToHide(e) {
       if (this.data.isMaskHide) return false;
       this.triggerEvent('hide', this.data.ishide)
     }
   },
+  
   data: {
     isShow: false
   }
