@@ -51,7 +51,6 @@ Component({
       this.triggerEvent('hide', this.data.ishide)
     }
   },
-  
   data: {
     isShow: false
   }

@@ -1,19 +1,62 @@
 <view class="font12">
-  <view>vi-dialog-motion 虽然名字与 vi-dialog 相似，但它们处理的是不同的业务</view>
-  <view>vi-dialog-motion 只提供运动方式不会订制弹窗内容。它处理更加复杂化的弹窗业务。</view>
+  <view>vi-motion 虽然名字与 vi-dialog 相似，但它们处理的是不同的业务</view>
+  <view>vi-motion 只提供运动方式不会订制弹窗内容。它处理更加复杂化的弹窗业务。</view>
+  <view>vi-motion 组件的内部运动是css3的transform 所以在自定义 content盒子的样式时候，请不要使用transform，即使用了也不会生效</view>
 </view>
 
+<button bindtap="triggerToMaskAnimateName">点击遮罩层不消失</button>
+
 <view class="animate-demo-area font14">
-  <picker bindchange="bindPickerChange" value="{{index}}" range="{{animateNameList}}">
+  <picker bindchange="enterPickerChange" value="{{index}}" range="{{animateList.enterAnimateNameList}}">
     <view class="picker">
-      当前选择：{{animateNameList[index]}}
+      选择当前出现的运动方式：{{enterAnimateNameList[index]}}
     </view>
   </picker>
 </view>
 
-<vi-dialog-motion ishide="{{showMotion}}" animate-name="{{animateName}}" catch:hide="triggerToHideDialog">
-  <view 
-    style="margin:50vh auto;background:#FFF;transform:translateY(-50%);width: 300px;height: 30vh;border-radius:5px;text-align: center;line-height: 30vh;">
-    弹窗运动方式为：<text style="color:aquamarine;">{{animateName}}</text>
+<button bindtap="triggerToHideNotAnimate">消失时没有动画</button>
+
+<vi-dialog-motion
+  ishide="{{animateList.showMotion}}" 
+  enter-animate-name="{{animateList.enterAnimateName}}" 
+  out-animate-name="{{animateList.outAnimateName}}" 
+  catch:hide="triggerToHideDialog"
+  container-calss="section">
+  <view>
+   <view class="animate-demo-area font14">
+    <picker bindchange="outPickerChange" value="{{index}}" range="{{animateList.outAnimateNameList}}">
+      <view class="picker">
+        选择消失的运动方式：{{outAnimateNameList[index]}}
+      </view>
+    </picker>
+  </view>
+  </view>
+</vi-dialog-motion>
+
+<vi-dialog-motion 
+  ishide="{{mask.showMaskMotion}}" 
+  enter-animate-name="{{mask.enterAnimateName}}" 
+  out-animate-name="{{mask.outAnimateName}}" 
+  bind:hide="triggerToMaskAnimateName"
+  container-calss="section"
+  is-mask-hide
+  animation-duration="{{0.5}}">
+  <view>
+    弹窗运动方式为：<text style="color:aquamarine;">{{mask.enterAnimateName}} && {{mask.outAnimateName}}</text>
+    <button bindtap="triggerToMaskAnimateName">点我关闭</button>
+  </view>
+</vi-dialog-motion>
+
+<vi-dialog-motion 
+  ishide="{{hideNotAnimate.showMotion}}" 
+  enter-animate-name="{{hideNotAnimate.enterAnimateName}}"
+  out-animate-name="{{hideNotAnimate.outAnimateName}}" 
+  bind:hide="triggerToHideNotAnimate"
+  container-calss="section"
+  out-has-animate="{{false}}"
+  animation-duration="{{0.5}}">
+  <view>
+    弹窗运动方式为：<text style="color:aquamarine;">{{hideNotAnimate.enterAnimateName}} && {{hideNotAnimate.outAnimateName}}</text>
+    <button bindtap="triggerToHideNotAnimate">点我关闭</button>
   </view>
 </vi-dialog-motion>
