@@ -1,0 +1,8 @@
+<sticker-footer footer-height="{{50}}">
+  <view slot="main" style="text-align: center;padding: 30px 0;background-color: #f9f9f9;">
+    我是页面主体内容
+  </view>
+  <view slot="footer" style="height: 50px;text-align: center;background-color: #333;color: #FFF;">
+    我是页脚，专门用来处理页面主题内容高度不够，而页脚顶上去的布局
+  </view>
+</sticker-footer>

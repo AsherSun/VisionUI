@@ -9,6 +9,16 @@
   width: 100%;
   z-index: 10000;
 }
+
+.vi-motion__hide {
+  transform: translate3d(0, 100%, 0);
+}
+
+.vi-motion__animated {
+  transition-property: transform;
+  transition-delay: 0.5s;
+}
+
 .vi-dialog-mask {
   background-color: rgba(0, 0, 0, 0.3);
   position: fixed;
