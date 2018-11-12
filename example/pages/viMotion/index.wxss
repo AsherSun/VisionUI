@@ -22,4 +22,5 @@
   border-radius: 5px;
   text-align: center;
   line-height: 4;
+  box-shadow: 1 0 1 rgba(0, 0, 0, 0.4);
 }

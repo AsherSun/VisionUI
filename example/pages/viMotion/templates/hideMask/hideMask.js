@@ -5,9 +5,9 @@ const data = {
 }
 
 const methods = {
-  triggerToHideNotAnimate() {
+  triggerToHideMask() {
     this.setData({
-      'hideNotAnimateData.isShow': !this.data.hideNotAnimateData.isShow
+      'hideMaskData.isShow': !this.data.hideMaskData.isShow
     })
   }
 }

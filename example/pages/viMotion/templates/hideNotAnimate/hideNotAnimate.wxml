@@ -8,6 +8,7 @@
     out-animate-name="{{hideNotAnimateData.outAnimateName}}"
     enter-animate-name="{{hideNotAnimateData.enterAnimateName}}"
     animation-duration="{{0.5}}"
+    out-has-animate="{{false}}"
     catch:hide="triggerToHideNotAnimate">
     <view>进入的动画为：<text style="color:aquamarine;">{{hideNotAnimateData.enterAnimateName}}</text></view>
     <view>消失的动画为：<text style="color:aquamarine;">{{hideNotAnimateData.outAnimateName}}</text></view>

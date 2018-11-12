@@ -1,0 +1,18 @@
+<template name="hideMask">
+  <component-exhibition code="{{codeArr[0]}}">
+    <vi-cell title="隐藏遮罩层" line link bind:click="triggerToHideMask"></vi-cell>
+  </component-exhibition>
+  <vi-motion 
+    ishide="{{hideMaskData.isShow}}"
+    container-class="vi-motion__container"
+    out-animate-name="{{hideMaskData.outAnimateName}}"
+    enter-animate-name="{{hideMaskData.enterAnimateName}}"
+    animation-duration="{{0.5}}"
+    mask-is-hide
+    mask-color="rgba(255, 0, 0, 0.8)"
+    catch:hide="triggerToHideMask">
+    <view>进入的动画为：<text style="color:aquamarine;">{{hideMaskData.enterAnimateName}}</text></view>
+    <view>消失的动画为：<text style="color:aquamarine;">{{hideMaskData.outAnimateName}}</text></view>
+    <button bindtap="triggerToHideMask">点击我关闭</button>
+  </vi-motion>
+</template>

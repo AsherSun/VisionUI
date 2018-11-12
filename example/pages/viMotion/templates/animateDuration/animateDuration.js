@@ -5,9 +5,9 @@ const data = {
 }
 
 const methods = {
-  triggerToHideNotAnimate() {
+  triggerToAnimateDuration() {
     this.setData({
-      'hideNotAnimateData.isShow': !this.data.hideNotAnimateData.isShow
+      'animateDurationData.isShow': !this.data.animateDurationData.isShow
     })
   }
 }

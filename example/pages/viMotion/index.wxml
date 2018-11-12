@@ -1,5 +1,10 @@
 <import src="./templates/maskNotHide/maskNotHide" />
 <import src="./templates/hideNotAnimate/hideNotAnimate" />
+<import src="./templates/changeMaskColor/changeMaskColor" />
+<import src="./templates/hideMask/hideMask" />
+<import src="./templates/animateDuration/animateDuration" />
+<import src="./templates/selectAnimate/selectAnimate" />
+
 <vi-title>VI-MOTION</vi-title>
 
 <vi-paragraph tips="tips">vi-motion只提供盒子的运动方式不会订制盒子中的内容</vi-paragraph>
@@ -7,25 +12,15 @@
 <vi-paragraph tips="tips">vi-motion盒子运动的核心代码使用animate.css动画库</vi-paragraph>
 <vi-paragraph tips="tips">animate.css github: https://github.com/daneden/animate.css</vi-paragraph>
 
-<template is="maskNotHide" data="{{maskNotHideData, codeArr}}"/>
-<template is="hideNotAnimate" />
+<template is="maskNotHide" data="{{maskNotHideData, codeArr}}" />
+<template is="changeMaskColor" data="{{changeMaskColorData, codeArr}}" />
+<template is="hideMask" data="{{hideMaskData, codeArr}}"/>
+<template is="selectAnimate" data="{{selectAnimateData, codeArr}}" />
+<template is="hideNotAnimate" data="{{hideNotAnimateData, codeArr}}" />
+<template is="animateDuration" data="{{animateDurationData, codeArr}}" />
 
-<component-exhibition code="{{codeArr[0]}}">
-  <vi-paragraph tips="tips">请选择下面的运动方式方可看到效果 </vi-paragraph>
-  <view class="animate-demo-area font14" style="background:#FFF;">
-    <picker bindchange="bindPickerChange" value="{{index}}" range="{{animateNameList}}">
-      <view class="picker">
-        运动方式：{{animateNameList[index]}}
-      </view>
-    </picker>
-  </view>
-</component-exhibition>
+
 
 <component-exhibition show-code='' code="{{codeArr[1]}}"></component-exhibition>
 
-<vi-motion ishide="{{showMotion}}" animate-name="{{animateName}}" catch:hide="triggerToHideDialog">
-  <view 
-    style="margin:50vh auto;background:#FFF;transform:translateY(-50%);width: 300px;height: 30vh;border-radius:5px;text-align: center;line-height: 30vh;">
-    运动方式为：<text style="color:aquamarine;">{{animateName}}</text>
-  </view>
-</vi-motion>
+

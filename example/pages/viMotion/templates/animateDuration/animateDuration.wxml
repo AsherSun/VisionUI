@@ -1,0 +1,22 @@
+<template name="animateDuration">
+  <component-exhibition code="{{codeArr[0]}}">
+    <vi-cell 
+      title="更改动画运动时间为2s" 
+      line 
+      link 
+      bind:click="triggerToAnimateDuration">
+    </vi-cell>
+  </component-exhibition>
+  <vi-motion 
+    ishide="{{animateDurationData.isShow}}"
+    container-class="vi-motion__container"
+    out-animate-name="{{animateDurationData.outAnimateName}}"
+    enter-animate-name="{{animateDurationData.enterAnimateName}}"
+    animation-duration="{{2}}"
+    mask-color="rgba(255, 0, 0, 0.8)"
+    catch:hide="triggerToAnimateDuration">
+    <view>进入的动画为：<text style="color:aquamarine;">{{animateDurationData.enterAnimateName}}</text></view>
+    <view>消失的动画为：<text style="color:aquamarine;">{{animateDurationData.outAnimateName}}</text></view>
+    <button bindtap="triggerToAnimateDuration">点击我关闭</button>
+  </vi-motion>
+</template>
