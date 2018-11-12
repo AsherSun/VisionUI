@@ -4,7 +4,7 @@
   </component-exhibition>
   <vi-motion 
     ishide="{{maskNotHideData.isShow}}"
-    container-calss="vi-motion__container"
+    container-class="vi-motion__container"
     out-animate-name="{{maskNotHideData.outAnimateName}}"
     enter-animate-name="{{maskNotHideData.enterAnimateName}}"
     animation-duration="{{0.5}}"
@@ -12,6 +12,7 @@
     catch:hide="triggerToClickMaskNoHide">
     <view>进入的动画为：<text style="color:aquamarine;">{{maskNotHideData.enterAnimateName}}</text></view>
     <view>消失的动画为：<text style="color:aquamarine;">{{maskNotHideData.outAnimateName}}</text></view>
+    <button bindtap="triggerToClickMaskNoHide">点我关闭</button>
   </vi-motion>
 </template>
 

@@ -1,5 +1,5 @@
 <import src="./templates/maskNotHide/maskNotHide" />
-
+<import src="./templates/hideNotAnimate/hideNotAnimate" />
 <vi-title>VI-MOTION</vi-title>
 
 <vi-paragraph tips="tips">vi-motion只提供盒子的运动方式不会订制盒子中的内容</vi-paragraph>
@@ -8,6 +8,7 @@
 <vi-paragraph tips="tips">animate.css github: https://github.com/daneden/animate.css</vi-paragraph>
 
 <template is="maskNotHide" data="{{maskNotHideData, codeArr}}"/>
+<template is="hideNotAnimate" />
 
 <component-exhibition code="{{codeArr[0]}}">
   <vi-paragraph tips="tips">请选择下面的运动方式方可看到效果 </vi-paragraph>
