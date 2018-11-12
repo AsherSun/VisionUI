@@ -1,14 +1,23 @@
 @charset "UTF-8";
 .vi-dialog {
   top: 0;
-  bottom: 0;
-  right: 0;
   left: 0;
   position: fixed;
   height: 100%;
   width: 100%;
+  box-sizing: border-box;
   z-index: 10000;
 }
+
+.vi-motion__hide {
+  transform: translate3d(0, 100%, 0);
+}
+
+.vi-motion__animated {
+  transition-property: transform;
+  transition-delay: 0.5s;
+}
+
 .vi-dialog-mask {
   background-color: rgba(0, 0, 0, 0.3);
   position: fixed;
@@ -19,11 +28,7 @@
   z-index: 9999;
 }
 
-.vi-dialog-content {
-  position: relative;
-  z-index: 10000;
-  left: 0;
-}
+
 
 /*!
  * animate.css -http://daneden.me/animate

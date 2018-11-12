@@ -1,0 +1,11 @@
+<!-- sticker Footer 布局 -->
+<view class="sticker-footer">
+  <view class="sticker-footer__warp">
+    <view class="sticker-footer__main clearfix" style="padding-bottom: {{footerHeight}}px;">
+      <slot name="main"></slot>
+    </view>
+  </view>
+  <view class="sticker-footer__footer" style="height: {{footerHeight}}px; margin-top: -{{footerHeight}}px">
+    <slot name="footer"></slot>
+  </view> 
+</view>

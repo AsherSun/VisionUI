@@ -10,8 +10,22 @@
   margin: 20px 25px;
   padding: 10px;
 }
- 
+
 .animate-demo-btn {
   width: 130px;
   margin-top: 10rpx;
+}
+
+.section {
+  position: fixed;
+  top: 50%;
+  z-index: 10000;
+  left: 50%;
+  background: #fff;
+  width: 300px;
+  margin: -15vh -150px;
+  height: 30vh;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 4;
 }
