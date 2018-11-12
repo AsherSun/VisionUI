@@ -1,0 +1,17 @@
+<template name="maskNotHide">
+  <component-exhibition code="{{codeArr[0]}}">
+    <vi-cell title="点击遮罩层阻止组件消失" line link bind:click="triggerToClickMaskNoHide"></vi-cell>
+  </component-exhibition>
+  <vi-motion 
+    ishide="{{maskNotHideData.isShow}}"
+    container-calss="vi-motion__container"
+    out-animate-name="{{maskNotHideData.outAnimateName}}"
+    enter-animate-name="{{maskNotHideData.enterAnimateName}}"
+    animation-duration="{{0.5}}"
+    click-mask-hide
+    catch:hide="triggerToClickMaskNoHide">
+    <view>进入的动画为：<text style="color:aquamarine;">{{maskNotHideData.enterAnimateName}}</text></view>
+    <view>消失的动画为：<text style="color:aquamarine;">{{maskNotHideData.outAnimateName}}</text></view>
+  </vi-motion>
+</template>
+

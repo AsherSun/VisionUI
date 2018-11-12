@@ -1,3 +1,5 @@
+const maskNotHide = require('./templates/maskNotHide/maskNotHide.js');
+
 const animateNameList = [
   'bounce',
   'flash',
@@ -81,7 +83,9 @@ let out = [
 ]
 
 Page({
+  ...maskNotHide.methods,
   data: {
+    maskNotHideData: maskNotHide.data,
     codeArr: require('./md.js'),
     showMotion: false,
     animateNameList,

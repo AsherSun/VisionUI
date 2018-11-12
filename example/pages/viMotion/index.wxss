@@ -3,8 +3,23 @@
   margin: 20px 25px;
   padding: 10px;
 }
- 
+
 .animate-demo-btn {
   width: 130px;
   margin-top: 10rpx;
+}
+
+.vi-motion__container {
+  position: absolute;
+  z-index: 100000;
+  top: 50%;
+  left: 50%;
+  margin-top: -15vh;
+  margin-left: -150px;
+  background: #fff;
+  width: 300px;
+  height: 30vh;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 4;
 }

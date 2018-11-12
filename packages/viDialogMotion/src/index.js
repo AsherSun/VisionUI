@@ -52,10 +52,10 @@ Component({
       value: 1
     }
   },
-  externalClasses: ['container-calss'],
+  externalClasses: ['container-class'],
   methods: {
     triggerToHide(e) {
-      if (this.data.isMaskHide) return false;
+      if (this.data.clickMaskHide) return false;
       this.triggerEvent('hide', this.data.ishide)
     }
   },
