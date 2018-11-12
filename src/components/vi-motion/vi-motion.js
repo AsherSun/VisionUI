@@ -31,13 +31,21 @@ Component({
       type: String,
       value: ''
     },
-    isMaskHide: {
+    clickMaskHide: {
+      type: Boolean,
+      value: false
+    },
+    maskIsHide: {
       type: Boolean,
       value: false
     },
     outHasAnimate: {
       type: Boolean,
       value: true
+    },
+    maskColor: {
+      type: String,
+      value: 'rgba(0,0,0, .3)'
     },
     animationDuration: {
       type: Number,

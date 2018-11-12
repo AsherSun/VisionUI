@@ -100,6 +100,14 @@ Page({
       showMotion: false,
       enterAnimateName: 'bounceInUp',
       outAnimateName: 'bounceOutUp'
+    },
+    maskColorAnimate: {
+      showMotion: false,
+      enterAnimateName: 'wobble',
+      outAnimateName: 'rollOut" '
+    },
+    maskIsHideAnimate: {
+      showMotion: false
     }
   },
   onLoad() {
@@ -118,6 +126,11 @@ Page({
       'animateList.showMotion': false
     })
   },
+  triggerToHideMaskColor() {
+    this.setData({
+      'maskColorAnimate.showMotion': !this.data.maskColorAnimate.showMotion
+    })
+  },
   triggerToHideDialog() {
     this.setData({
       'animateList.showMotion': false
@@ -126,6 +139,11 @@ Page({
   triggerToMaskAnimateName() {
     this.setData({
       'mask.showMaskMotion': !this.data.mask.showMaskMotion
+    })
+  },
+  triggerToMaskIsHide() {
+    this.setData({
+      'maskIsHideAnimate.showMotion': !this.data.maskIsHideAnimate.showMotion
     })
   },
   triggerToHideNotAnimate() {

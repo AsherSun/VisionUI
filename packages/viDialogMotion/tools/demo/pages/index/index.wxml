@@ -16,6 +16,9 @@
 
 <button bindtap="triggerToHideNotAnimate">消失时没有动画</button>
 
+<button bindtap="triggerToHideMaskColor">更改遮罩层颜色</button>
+<button bindtap="triggerToMaskIsHide">遮罩层不出现</button>
+
 <vi-dialog-motion
   ishide="{{animateList.showMotion}}" 
   enter-animate-name="{{animateList.enterAnimateName}}" 
@@ -39,7 +42,7 @@
   out-animate-name="{{mask.outAnimateName}}" 
   bind:hide="triggerToMaskAnimateName"
   container-calss="section"
-  is-mask-hide
+  click-mask-hide
   animation-duration="{{0.5}}">
   <view>
     弹窗运动方式为：<text style="color:aquamarine;">{{mask.enterAnimateName}} && {{mask.outAnimateName}}</text>
@@ -57,6 +60,35 @@
   animation-duration="{{0.5}}">
   <view>
     弹窗运动方式为：<text style="color:aquamarine;">{{hideNotAnimate.enterAnimateName}} && {{hideNotAnimate.outAnimateName}}</text>
-    <button bindtap="triggerToHideNotAnimate">点我关闭</button>
+    <vi-button bindtap="triggerToHideNotAnimate">点我关闭</vi-button>
+  </view>
+</vi-dialog-motion>
+
+<vi-dialog-motion 
+  ishide="{{maskColorAnimate.showMotion}}" 
+  enter-animate-name="wobble"
+  out-animate-name="rollOut" 
+  bind:hide="triggerToHideMaskColor"
+  container-calss="section"
+  mask-color="rgba(255, 0, 0, 0.5)"
+  animation-duration="{{0.5}}">
+  <view>
+    弹窗运动方式为：<text style="color:aquamarine;">{{maskColorAnimate.enterAnimateName}} && {{maskColorAnimate.outAnimateName}}</text>
+    <button bindtap="triggerToHideMaskColor">点我关闭</button>
+  </view>
+</vi-dialog-motion>
+
+<vi-dialog-motion 
+  ishide="{{maskIsHideAnimate.showMotion}}" 
+  enter-animate-name="wobble"
+  out-animate-name="rollOut" 
+  bind:hide="triggerToMaskIsHide"
+  container-calss="section"
+  mask-is-hide
+  mask-color="rgba(0, 0, 0, 0.8)"
+  animation-duration="{{0.5}}">
+  <view>
+    弹窗运动方式为：<text style="color:aquamarine;">{{maskColorAnimate.enterAnimateName}} && {{maskColorAnimate.outAnimateName}}</text>
+    <button bindtap="triggerToMaskIsHide">点我关闭</button>
   </view>
 </vi-dialog-motion>

@@ -26,9 +26,17 @@
 | ishide | Boolean | 控制组件的显示隐藏 | 必填 | false | 0.0.1 |
 | enterAnimateName | String | 出现时候的运动方式(原接口名animateName已被废弃) | 选填 | bounce | 0.0.3 |
 | outAnimateName | String | 消失时候的运动方式| 选填 | '' | 0.0.3 |
-| isMaskHide | Boolean | 点击mask遮罩层时，组件是否消失 | 选填 | false | 0.0.3 |
-| outHasAnimate | Boolean | 组件消失的时候是否出现动画 | 选填 | true | 0.0.3 |
+| clickMaskHide | Boolean | 点击mask遮罩层时，组件是否消失(原接口名isMaskHide已被废弃) | 选填 | false | 0.0.3 |
+| outHasAnimate | Boolean | 组件消失的时候是否出现动画 | 选填 | true | 0.0.4 |
 | animationDuration | Number | 运动的时长(单位秒s) | 选填 | 1 | 0.0.3 |
+| maskIsHide | Boolean | 是否隐藏mask遮罩层 | 选填 | false | 0.0.4 |
+| maskColor | String | 更改mask遮罩层颜色 | 选填 | rgba(0,0,0, .3) | 0.0.4 |
+
+## Event name
+
+| name | description | returns | 版本号 |
+| :--: | :--: | :--: |
+| hide | 点击遮罩层是否隐藏 | 组件库的显示或隐藏状态(ishide) | 0.0.1 |
 
 ## enter animate name
 
@@ -70,3 +78,4 @@
 + v0.0.1 初始版本
 + v0.0.2 修改组件名称
 + v0.0.3 新增组件隐藏时可配置动画效果, 点击mask遮罩层可配置是否隐藏组件
++ v0.0.4 新增mask遮罩层颜色修改、隐藏mask遮罩层

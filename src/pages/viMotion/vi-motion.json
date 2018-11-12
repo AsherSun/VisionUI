@@ -1,6 +1,5 @@
 {
   "usingComponents": {
-    "vi-dialog-motion": "/components/vi-motion/vi-motion",
-    "vi-button": "/components/vi_button/vi_button"
+    "vi-dialog-motion": "/components/vi-motion/vi-motion"
   }
 }
