@@ -35,7 +35,7 @@
 ## Event name
 
 | name | description | returns | 版本号 |
-| :--: | :--: | :--: |
+| :--: | :--: | :--: | :--: |
 | hide | 点击遮罩层是否隐藏 | 组件库的显示或隐藏状态(ishide) | 0.0.1 |
 
 ## enter animate name
