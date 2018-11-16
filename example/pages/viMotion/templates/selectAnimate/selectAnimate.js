@@ -16,15 +16,15 @@ const methods = {
   },
   bindPickerChangeEnter({ detail: { value } }) {
     this.setData({
-      enterAnimateNameList: this.data.selectAnimateData.enterAnimateNameList[value],
-      enterIndex: value,
+      'selectAnimateData.enterAnimateName': this.data.selectAnimateData.enterAnimateNameList[value],
+      'selectAnimateData.enterIndex': value,
       'selectAnimateData.isShow': true
     })
   },
   bindPickerChangeOut({ detail: { value } }) {
     this.setData({
-      outAnimateNameList: this.data.selectAnimateData.outAnimateNameList[value],
-      outIndex: value,
+      'selectAnimateData.outAnimateName': this.data.selectAnimateData.outAnimateNameList[value],
+      'selectAnimateData.outIndex': value,
       'selectAnimateData.isShow': false
     })
   },

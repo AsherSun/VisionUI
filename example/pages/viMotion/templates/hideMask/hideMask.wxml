@@ -1,5 +1,5 @@
 <template name="hideMask">
-  <component-exhibition code="{{codeArr[0]}}">
+  <component-exhibition code="{{code}}">
     <vi-cell title="隐藏遮罩层" line link bind:click="triggerToHideMask"></vi-cell>
   </component-exhibition>
   <vi-motion 

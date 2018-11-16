@@ -1,5 +1,5 @@
 <template name="hideNotAnimate">
-  <component-exhibition code="{{codeArr[0]}}">
+  <component-exhibition code="{{code}}">
     <vi-cell title="组件消失时无动画" line link bind:click="triggerToHideNotAnimate"></vi-cell>
   </component-exhibition>
   <vi-motion 

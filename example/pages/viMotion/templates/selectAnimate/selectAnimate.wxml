@@ -1,5 +1,5 @@
 <template name="selectAnimate">
-  <component-exhibition code="{{codeArr[0]}}">
+  <component-exhibition code="{{code}}">
     <view class="animate-demo-area font14" style="background:#FFF;">
       <picker 
         bindchange="bindPickerChangeEnter" 

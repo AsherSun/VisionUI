@@ -12,15 +12,15 @@
 <vi-paragraph tips="tips">vi-motion盒子运动的核心代码使用animate.css动画库</vi-paragraph>
 <vi-paragraph tips="tips">animate.css github: https://github.com/daneden/animate.css</vi-paragraph>
 
-<template is="maskNotHide" data="{{maskNotHideData, codeArr}}" />
-<template is="changeMaskColor" data="{{changeMaskColorData, codeArr}}" />
-<template is="hideMask" data="{{hideMaskData, codeArr}}"/>
-<template is="selectAnimate" data="{{selectAnimateData, codeArr}}" />
-<template is="hideNotAnimate" data="{{hideNotAnimateData, codeArr}}" />
-<template is="animateDuration" data="{{animateDurationData, codeArr}}" />
+<template is="maskNotHide" data="{{maskNotHideData, code: codeArr[0]}}" />
+<template is="changeMaskColor" data="{{changeMaskColorData, code: codeArr[1]}}" />
+<template is="hideMask" data="{{hideMaskData, code: codeArr[2]}}"/>
+<template is="selectAnimate" data="{{selectAnimateData, code: codeArr[3]}}" />
+<template is="hideNotAnimate" data="{{hideNotAnimateData, code: codeArr[4]}}" />
+<template is="animateDuration" data="{{animateDurationData, code: codeArr[5]}}" />
 
 
 
-<component-exhibition show-code='' code="{{codeArr[1]}}"></component-exhibition>
+<component-exhibition show-code='' code="{{codeArr[6]}}"></component-exhibition>
 
 

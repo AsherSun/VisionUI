@@ -1,5 +1,5 @@
 <template name="changeMaskColor">
-  <component-exhibition code="{{codeArr[0]}}">
+  <component-exhibition code="{{code}}">
     <vi-cell title="更改遮罩层颜色" line link bind:click="triggerToChangeMaskColor"></vi-cell>
   </component-exhibition>
   <vi-motion 

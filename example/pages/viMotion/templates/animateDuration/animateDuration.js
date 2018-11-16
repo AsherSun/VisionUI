@@ -1,7 +1,7 @@
 const data = {
   isShow: false,
-  enterAnimateName: 'rotateIn',
-  outAnimateName: 'rotateOut'
+  enterAnimateName: 'tada',
+  outAnimateName: 'fadeOut'
 }
 
 const methods = {

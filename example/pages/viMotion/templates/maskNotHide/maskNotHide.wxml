@@ -1,5 +1,5 @@
 <template name="maskNotHide">
-  <component-exhibition code="{{codeArr[0]}}">
+  <component-exhibition code="{{code}}">
     <vi-cell title="点击遮罩层阻止组件消失" line link bind:click="triggerToClickMaskNoHide"></vi-cell>
   </component-exhibition>
   <vi-motion 
