@@ -1,0 +1,18 @@
+.title {
+  text-align: center;
+  height: 45px;
+  line-height: 45px;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 40px;
+  height: 1px;
+  background: #7AB199;
+  left: 50%;
+  transform: translateX(-50%);
+}

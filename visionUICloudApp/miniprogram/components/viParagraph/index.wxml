@@ -1,0 +1,3 @@
+<view class="paragraph paragraph-{{tips}}">
+  <text class="paragraph__text"><slot></slot></text>
+</view>
