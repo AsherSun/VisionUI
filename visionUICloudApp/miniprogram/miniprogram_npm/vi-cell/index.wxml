@@ -1,0 +1,17 @@
+<view class="cell cell_flex {{isLastCell ? 'cell-group' : ''}} {{line && !isHaveCellGroup ? 'cell-line' : ''}}" bindtap="triggerToNavigateTo">
+  <view class="cell__icon" wx:if="{{iconName}}">
+    <slot name="icon"></slot>
+    <view class="icon icon-{{iconName}}" style="color: {{iconColor}}; font-size: {{iconSize}}px;"></view>
+  </view>
+  <view class="cell-main">
+    <block wx:if="{{title}}">
+      <view class="cell__title">{{title}}</view>
+    </block>
+    <slot name="title"></slot>
+  </view>
+  <view class="cell-right cell-right_flex">
+    <view class="cell__description" wx:if="{{desc}}">{{desc}}</view>
+    <slot name="right"></slot>
+    <view class="cell__direction-link" wx:if="{{link}}"></view>
+  </view>
+</view>

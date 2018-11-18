@@ -1,7 +1,20 @@
-/**app.wxss**/
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-sizing: border-box;
-} 
+@import '/style/iconfont.wxss';
+
+page {
+  font-size: 12px;
+  background: #f9f9f9;
+}
+
+image {
+  display: block;
+  font-size: 0;
+}
+
+button::after {
+  border-radius: 0;
+  border: none;
+}
+
+button {
+  border-radius: 0;
+}
