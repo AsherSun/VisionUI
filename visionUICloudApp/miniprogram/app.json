@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/viMotion/viMotion",
     "pages/index/index",
     "pages/userConsole/userConsole",
     "pages/storageConsole/storageConsole",

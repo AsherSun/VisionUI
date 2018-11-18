@@ -1,0 +1,36 @@
+<template name="selectAnimate">
+  <component-exhibition code="{{code}}">
+    <view class="animate-demo-area font14" style="background:#FFF;">
+      <picker 
+        bindchange="bindPickerChangeEnter" 
+        value="{{selectAnimateData}}" 
+        range="{{selectAnimateData.enterAnimateNameList}}">
+        <view class="picker">
+          请选择出现时运动方式：{{selectAnimateData.enterAnimateNameList[selectAnimateData.enterIndex]}}
+        </view>
+      </picker>
+    </view>
+  </component-exhibition>
+  <vi-motion 
+    ishide="{{selectAnimateData.isShow}}"
+    container-class="vi-motion__container"
+    out-animate-name="{{selectAnimateData.outAnimateName}}"
+    enter-animate-name="{{selectAnimateData.enterAnimateName}}"
+    animation-duration="{{0.5}}"
+    catch:hide="triggerToSelectAnimate">
+    <view>
+      进来时运动方式为：<text style="color:aquamarine;">{{selectAnimateData.enterAnimateName}}</text>
+    </view> 
+    <view>
+      消失时运动方式为：<text style="color:aquamarine;">{{selectAnimateData.outAnimateName}}</text>
+    </view>
+    <picker 
+      bindchange="bindPickerChangeOut" 
+      value="{{outIndex}}" 
+      range="{{selectAnimateData.outAnimateNameList}}">
+      <view class="picker">
+        请选择隐藏时动画：{{selectAnimateData.outAnimateNameList[selectAnimateData.outIndex]}}
+      </view>
+    </picker>
+</vi-motion>
+</template>

@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/AsherSun/VisionUI#readme",
   "dependencies": {
+    "vi-cell": "0.0.5",
     "vi-motion": "0.0.8"
   }
 }
