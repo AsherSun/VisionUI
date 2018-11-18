@@ -1,0 +1,26 @@
+{
+  "name": "vision-ui",
+  "version": "1.0.0",
+  "description": "微信小程序组件库",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AsherSun/VisionUI.git"
+  },
+  "keywords": [
+    "miniprogram",
+    "微信小程序组件库"
+  ],
+  "author": "Asher Sun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AsherSun/VisionUI/issues"
+  },
+  "homepage": "https://github.com/AsherSun/VisionUI#readme",
+  "dependencies": {
+    "vi-motion": "0.0.8"
+  }
+}
