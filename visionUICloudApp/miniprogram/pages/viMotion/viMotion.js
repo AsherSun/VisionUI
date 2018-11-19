@@ -21,4 +21,18 @@ Page({
     hideMaskData: hideMask.data,
     codeArr: [],
   },
+  onLoad() {
+    this.getMarkDown()
+  },
+  getMarkDown() {
+    wx.cloud.callFunction({
+      name: 'docs',
+      success: res => {
+        console.log(res)
+      },
+      fail: err => {
+        console.log(err)
+      }
+    })
+  }
 })
