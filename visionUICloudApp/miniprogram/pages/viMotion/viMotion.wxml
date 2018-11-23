@@ -19,8 +19,10 @@
 <template is="hideNotAnimate" data="{{hideNotAnimateData, code: codeArr[4]}}" />
 <template is="animateDuration" data="{{animateDurationData, code: codeArr[5]}}" />
 
+<textarea class="" style="border:1px solid #ddd;width: 100%;" maxlength="-1" bindblur="triggerToGetTextareaValue">
+  
+</textarea>
 
-
-<component-exhibition show-code='' code="{{codeArr[6]}}"></component-exhibition>
+<component-exhibition show-code='' code="{{docs}}"></component-exhibition>
 
 

@@ -11,5 +11,8 @@ App({
     }
 
     this.globalData = {}
+    wx.cloud.init({
+      env: 'dev-a5cf14'
+    })
   }
 })
