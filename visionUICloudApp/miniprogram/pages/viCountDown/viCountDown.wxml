@@ -1,0 +1,33 @@
+<vi-title>VI-COUNT-DOWN</vi-title>
+
+<component-exhibition code="{{viCountDown.codeExampleList[0]}}">
+  <vi-cell title="字符串日期格式：" line>
+    <vi-count-down slot="right" end-time="2028/12/01"></vi-count-down>
+  </vi-cell>
+</component-exhibition>
+
+<component-exhibition code="{{viCountDown.codeExampleList[1]}}">
+  <vi-cell title="毫秒数日期格式：" line>
+    <vi-count-down slot="right" end-time="{{1543161952119}}"></vi-count-down>
+  </vi-cell>
+</component-exhibition>
+
+<component-exhibition code="{{viCountDown.codeExampleList[2]}}">
+  <vi-cell title="自定义DOM结构" line>
+    <vi-count-down slot="right" is-slot bind:countdown="triggerToCountdown"  end-time="{{1543593600000}}">
+      <view style="text-align:center;">
+        <text 
+          style="display:inline-block;width:66rpx;height:66rpx;margin-right:8rpx;line-height:66rpx;font-size:30rpx;font-family:PingFangSC-Medium;font-weight:500;background:#F8F8F8;color:#BB4430;border-radius:12rpx;"> {{countDown.days}}</text>
+        <text style="margin-right:22rpx;font-size:20rpx;color:#666666;line-height:66rpx;">天</text>
+        <text style="display:inline-block;width:66rpx;height:66rpx;margin-right:8rpx;line-height:66rpx;font-size:30rpx;font-family:PingFangSC-Medium;font-weight:500;background:#F8F8F8;color:#BB4430;border-radius:12rpx;">{{countDown.hours}}</text>
+        <text style="margin-right:22rpx;font-size:20rpx;color:#666666;line-height:66rpx;">时</text>
+        <text style="display:inline-block;width:66rpx;height:66rpx;margin-right:8rpx;line-height:66rpx;font-size:30rpx;font-family:PingFangSC-Medium;font-weight:500;background:#F8F8F8;color:#BB4430;border-radius:12rpx;">{{countDown.minutes}}</text>
+        <text style="margin-right:22rpx;font-size:20rpx;color:#666666;line-height:66rpx;">分</text>
+        <text style="display:inline-block;width:66rpx;height:66rpx;margin-right:8rpx;line-height:66rpx;font-size:30rpx;font-family:PingFangSC-Medium;font-weight:500;background:#F8F8F8;color:#BB4430;border-radius:12rpx;">{{countDown.seconds}}</text>
+        <text style="margin-right:22rpx;font-size:20rpx;color:#666666;line-height:66rpx;">秒</text>
+      </view>
+    </vi-count-down>
+  </vi-cell>
+</component-exhibition>
+
+<component-exhibition show-code='' code="{{viCountDown.document}}"></component-exhibition>

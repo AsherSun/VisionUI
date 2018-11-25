@@ -8,7 +8,8 @@
     "pages/viPopup/viPopup",
     "pages/viDialog/viDialog",
     "pages/viSliderMenu/viSliderMenu",
-    "pages/viQuantity/viQuantity"
+    "pages/viQuantity/viQuantity",
+    "pages/viCountDown/viCountDown"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
