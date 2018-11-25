@@ -1,1 +1,5 @@
-{}
+{
+  "usingComponents": {
+    "viTitle": "/components/viTitle/index"
+  }
+}
