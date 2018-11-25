@@ -1,4 +1,6 @@
 //app.js
+import * as copyTxt from './mixins/copyTxt'
+
 App({
   onLaunch: function () {
     
@@ -14,5 +16,6 @@ App({
     wx.cloud.init({
       env: 'dev-a5cf14'
     })
-  }
+  },
+  copyTxt: copyTxt.copyTxt,
 })

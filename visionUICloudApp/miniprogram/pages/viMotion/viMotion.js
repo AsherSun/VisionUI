@@ -4,7 +4,8 @@ const changeMaskColor = require('./templates/changeMaskColor/changeMaskColor.js'
 const hideMask = require('./templates/hideMask/hideMask.js');
 const animateDuration = require('./templates/animateDuration/animateDuration.js');
 const selectAnimate = require('./templates/selectAnimate/selectAnimate.js');
-const getMarkDown = require('./../../mixins/getMarkDown');
+const getMarkDown = require('../../mixins/getMarkDown');
+const app = getApp()
 
 Page({
   ...maskNotHide.methods,
@@ -30,5 +31,9 @@ Page({
     return {
       title: "viMotion定制化运动组件"
     }
+  },
+  triggerToLongpress(e) {
+    console.log(e.detail)
+    app.copyTxt('asdfklasdjfl')
   }
 })

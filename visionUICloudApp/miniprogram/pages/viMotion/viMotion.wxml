@@ -10,7 +10,7 @@
 <vi-paragraph tips="tips">vi-motion只提供盒子的运动方式不会订制盒子中的内容</vi-paragraph>
 <vi-paragraph tips="tips">它处理更加复杂化的弹窗之类的业务</vi-paragraph>
 <vi-paragraph tips="tips">vi-motion盒子运动的核心代码使用animate.css动画库</vi-paragraph>
-<vi-paragraph tips="tips">animate.css github: https://github.com/daneden/animate.css</vi-paragraph>
+<vi-paragraph tips="tips" copyContent="animate.css github: https://github.com/daneden/animate.css">animate.css github: https://github.com/daneden/animate.css</vi-paragraph>
 
 <template is="maskNotHide" data="{{maskNotHideData, code: docs.codeExampleList[0]}}" />
 <template is="changeMaskColor" data="{{changeMaskColorData, code: docs.codeExampleList[1]}}" />
