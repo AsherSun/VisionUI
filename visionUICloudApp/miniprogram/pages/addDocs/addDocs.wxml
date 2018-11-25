@@ -1,14 +1,16 @@
 <viTitle>添加文档</viTitle>
 
-<viCellGroup>
-  <viCell title="文档名称：">
-    <input slot="right" placeholder="请输入内容..."></input>
-  </viCell>
-  <viCell title="文档内容："></viCell>
-  <viCell>
-    <textarea placeholder="请输入文档内容" slot="title" style="width: 100%;"/>
-  </viCell>
-</viCellGroup>
+<form report-submit="true" bindsubmit="triggerToSubmitDocs">
+  <viCellGroup>
+    <viCell title="文档名称：">
+      <input slot="right" placeholder="请输入内容..." name="docsName" value="{{docsName}}"></input>
+    </viCell>
+    <viCell title="文档内容："></viCell>
+    <viCell>
+      <textarea placeholder="请输入文档内容" slot="title" name="docsSection" style="width: 100%;" maxlength="-1" value="{{docsSection}}"/>
+    </viCell>
+  </viCellGroup>
+  <button class="vi-button" formType="submit" style="margin-top: 25px;">添加文档</button>
+</form>
 
-<button class="vi-button">添加文档</button>
 

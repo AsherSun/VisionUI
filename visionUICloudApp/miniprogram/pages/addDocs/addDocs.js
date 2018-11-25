@@ -1,65 +1,65 @@
-// pages/addDocs/addDocs.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    docsName: 'vi-motion',
+    docsSection: ''
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
 
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  triggerToSubmitDocs({ detail }) {
+    let resource = {
+      docsSection: '',
+      codeExampleList: []
+    }
+    if (!this.valideDate(detail.value)) return false;
+    resource.docsSection =  this.httpTransformHttps(detail.value.docsSection)
+    resource.codeExampleList = this.getCodeExampleList(detail.value.docsSection)
+    this.insertDocument(Object.assign({}, detail.value, resource))
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  insertDocument(resource) {
+    const DB = wx.cloud.database({
+      env: 'dev-a5cf14'
+    })
+    let collection = DB.collection('docs')
+    collection.doc(resource.docsName).set({
+      data: {
+        'document': resource.docsSection,
+        codeList: resource.codeExampleList
+      }
+    }).then((data) => {
+      console.log(data)
+    }).catch(err => {
+      console.log(err)
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  httpTransformHttps(str) {
+    return str.replace(/http:\/\//gim, 'https://')
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
+  getCodeExampleList(str) {
+    let codeExampleStr = str.split('<!-- visionUI code example -->')[1]
+    return codeExampleStr.split('<!-- code example -->')
   },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
+  valideDate(resource) {
+    if (!resource.docsName) {
+      wx.showToast({
+        title: '请输入文档名称',
+        icon: 'none',
+        duration: 1500,
+        mask: true,
+      });
+      return false
+    }
+    if (!resource.docsSection) {
+      wx.showToast({
+        title: '请输入文档内容',
+        icon: 'none',
+        duration: 1500,
+        mask: true,
+      });
+      return false
+    }
+    return true
   },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
   onShareAppMessage: function () {
 
   }
