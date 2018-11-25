@@ -26,10 +26,6 @@ Page({
         'document': resource.docsSection,
         codeList: resource.codeExampleList
       }
-    }).then((data) => {
-      console.log(data)
-    }).catch(err => {
-      console.log(err)
     })
   },
   httpTransformHttps(str) {
@@ -60,7 +56,4 @@ Page({
     }
     return true
   },
-  onShareAppMessage: function () {
-
-  }
 })

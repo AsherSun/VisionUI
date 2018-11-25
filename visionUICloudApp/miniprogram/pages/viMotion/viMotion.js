@@ -19,7 +19,6 @@ Page({
     selectAnimateData: selectAnimate.data,
     changeMaskColorData: changeMaskColor.data,
     hideMaskData: hideMask.data,
-    codeArr: [],
     docs: {
       name: '',
       document: '',
@@ -44,5 +43,10 @@ Page({
     }).catch(err => {
       console.log(err)
     })
+  },
+  onShareAppMessage: function () {
+    return {
+      title: "viMotion定制化运动租金"
+    }
   }
 })
