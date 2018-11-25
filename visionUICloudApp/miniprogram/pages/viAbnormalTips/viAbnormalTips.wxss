@@ -1,0 +1,7 @@
+.changeIconColor {
+  color: #eee;
+}
+
+.changeTextColor {
+  color: blue;
+}

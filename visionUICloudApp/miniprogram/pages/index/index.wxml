@@ -19,5 +19,5 @@
   <vi-cell title="vi-quantity" desc="计数器" link="/pages/viQuantity/viQuantity"></vi-cell>
   <vi-cell title="vi-count-down" desc="倒计时" link="/pages/viCountDown/viCountDown"></vi-cell>
   <vi-cell title="vi-upload" desc="文件上传插件" link="/pages/viUpload/viUpload"></vi-cell>
-  <vi-cell title="vi-abnormal-tips" desc="异常流信息提示" link="/pages/viAbnormalTips/index"></vi-cell>
+  <vi-cell title="vi-abnormal-tips" desc="异常流信息提示" link="/pages/viAbnormalTips/viAbnormalTips"></vi-cell>
 </vi-cell-group>

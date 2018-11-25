@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/AsherSun/VisionUI#readme",
   "dependencies": {
+    "vi-abnormal-tips": "0.0.3",
     "vi-address": "0.0.1",
     "vi-cell": "0.0.5",
     "vi-cell-group": "0.0.7",
