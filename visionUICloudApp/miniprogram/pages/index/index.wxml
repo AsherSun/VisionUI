@@ -4,7 +4,7 @@
 </view>
 
 <vi-cell-group title="布局组件">
-  <vi-cell title="vi-cell" desc="vi-cell" link="/pages/viCell/index"></vi-cell>
+  <vi-cell title="vi-cell" desc="vi-cell" link="/pages/viCell/viCell"></vi-cell>
 </vi-cell-group>
 
 <vi-cell-group title="操作反馈">
