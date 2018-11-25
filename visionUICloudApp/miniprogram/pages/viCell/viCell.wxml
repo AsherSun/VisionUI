@@ -1,30 +1,30 @@
 <vi-title>VI-CELL</vi-title>
 
-<component-exhibition code="{{codeArr[0]}}">
+<component-exhibition code="{{viCell.codeExampleList[0]}}">
   <vi-cell title="默认 default"></vi-cell>
 </component-exhibition>
 
-<component-exhibition code="{{codeArr[1]}}">
+<component-exhibition code="{{viCell.codeExampleList[1]}}">
   <vi-cell title="显示边框" line></vi-cell>
 </component-exhibition>
 
-<component-exhibition code="{{codeArr[2]}}">
+<component-exhibition code="{{viCell.codeExampleList[2]}}">
   <vi-cell title="带Icon" iconName="setting"></vi-cell>
 </component-exhibition>
 
-<component-exhibition code="{{codeArr[3]}}">
+<component-exhibition code="{{viCell.codeExampleList[3]}}">
   <vi-cell title="显示箭头" iconName="setting" link></vi-cell>
 </component-exhibition>
 
-<component-exhibition code="{{codeArr[4]}}">
+<component-exhibition code="{{viCell.codeExampleList[4]}}">
   <vi-cell title="显示右侧描述信息" iconName="setting" link="{{true}}" desc="我是描述..."></vi-cell>
 </component-exhibition>
 
-<component-exhibition code="{{codeArr[5]}}">
+<component-exhibition code="{{viCell.codeExampleList[5]}}">
   <vi-cell title="跳转到首页" iconName="carame" desc="linkType为:switchTab" linkType="switchTab" link="/pages/index/index"></vi-cell>
 </component-exhibition>
 
-<component-exhibition code="{{codeArr[6]}}">
+<component-exhibition code="{{viCell.codeExampleList[6]}}">
   <vi-cell-group title="cell-group组的使用方式">
     <vi-cell title="带Icon" iconName="setting"></vi-cell>
     <vi-cell title="只显示箭头" iconName="setting" link="{{true}}"></vi-cell>
@@ -36,6 +36,7 @@
   </vi-cell-group>
 </component-exhibition>
 
-<component-exhibition show-code='' code="{{docs.document}}"></component-exhibition>
 
-<component-exhibition show-code='' code="{{codeArr[8]}}"></component-exhibition>
+<component-exhibition show-code='' code="{{viCellGroup.document}}"></component-exhibition>
+
+<component-exhibition show-code='' code="{{viCell.document}}"></component-exhibition>

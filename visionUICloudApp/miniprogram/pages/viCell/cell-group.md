@@ -2,9 +2,11 @@
 
 ## 使用
 
-> **tips: 请和vi-cell组件配合使用**
-> * npm i vi-cell-group
-> * 使用微信开发者工具构建NPM并使用NPM模块
+> **tips: 请和vi-cell组件配合使用** <br>
+
+> npm i vi-cell-group <br>
+
+> 使用微信开发者工具构建NPM并使用NPM模块 <br>
 
 
 ```json

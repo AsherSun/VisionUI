@@ -7,6 +7,7 @@ Page({
   ...getMarkDown.methods,
   onLoad() {
     this.getMarkDown(this, 'viCell')
+    this.getMarkDown(this, 'viCellGroup')
   },
   onShareAppMessage: function () {
     return {

@@ -31,7 +31,7 @@
 ### 显示边框
 
 ```html
-<vi-cell title="默认 default"></vi-cell>
+<vi-cell title="显示边框" line></vi-cell>
 ```
 
 <!-- code example -->
