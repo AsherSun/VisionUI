@@ -5,7 +5,8 @@
     "pages/addDocs/addDocs",
     "pages/viCell/viCell",
     "pages/viAddress/viAddress",
-    "pages/viPopup/viPopup"
+    "pages/viPopup/viPopup",
+    "pages/viDialog/viDialog"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
