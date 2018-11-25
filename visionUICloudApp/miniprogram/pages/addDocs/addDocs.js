@@ -1,6 +1,6 @@
 Page({
   data: {
-    docsName: 'vi-motion',
+    docsName: '',
     docsSection: ''
   },
   onLoad: function (options) {
