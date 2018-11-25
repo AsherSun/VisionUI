@@ -29,6 +29,10 @@ Page({
         duration: 1500,
         mask: true,
       });
+      this.setData({
+        document: '',
+        docsName: ''
+      })
     })
   },
   httpTransformHttps(str) {
