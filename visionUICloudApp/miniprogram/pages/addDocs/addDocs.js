@@ -1,4 +1,4 @@
-// pages/deployFunctions/deployFunctions.js
+// pages/addDocs/addDocs.js
 Page({
 
   /**
