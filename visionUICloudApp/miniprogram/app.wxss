@@ -1,4 +1,5 @@
 @import '/style/iconfont.wxss';
+@import "./style/common.wxss";
 
 page {
   font-size: 12px;

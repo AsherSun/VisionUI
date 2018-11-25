@@ -1,5 +1,7 @@
 {
   "usingComponents": {
-    "viTitle": "/components/viTitle/index"
+    "viTitle": "/components/viTitle/index",
+    "viCellGroup": "vi-cell-group",
+    "viCell": "vi-cell"
   }
 }

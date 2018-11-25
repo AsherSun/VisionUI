@@ -1,4 +1,14 @@
 <viTitle>添加文档</viTitle>
 
+<viCellGroup>
+  <viCell title="文档名称：">
+    <input slot="right" placeholder="请输入内容..."></input>
+  </viCell>
+  <viCell title="文档内容："></viCell>
+  <viCell>
+    <textarea placeholder="请输入文档内容" slot="title" style="width: 100%;"/>
+  </viCell>
+</viCellGroup>
 
- 
+<button class="vi-button">添加文档</button>
+
