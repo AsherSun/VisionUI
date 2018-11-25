@@ -12,17 +12,13 @@
 <vi-paragraph tips="tips">vi-motion盒子运动的核心代码使用animate.css动画库</vi-paragraph>
 <vi-paragraph tips="tips">animate.css github: https://github.com/daneden/animate.css</vi-paragraph>
 
-<template is="maskNotHide" data="{{maskNotHideData, code: codeArr[0]}}" />
-<template is="changeMaskColor" data="{{changeMaskColorData, code: codeArr[1]}}" />
-<template is="hideMask" data="{{hideMaskData, code: codeArr[2]}}"/>
-<template is="selectAnimate" data="{{selectAnimateData, code: codeArr[3]}}" />
-<template is="hideNotAnimate" data="{{hideNotAnimateData, code: codeArr[4]}}" />
-<template is="animateDuration" data="{{animateDurationData, code: codeArr[5]}}" />
+<template is="maskNotHide" data="{{maskNotHideData, code: docs.codeExampleList[0]}}" />
+<template is="changeMaskColor" data="{{changeMaskColorData, code: docs.codeExampleList[1]}}" />
+<template is="hideMask" data="{{hideMaskData, code: docs.codeExampleList[2]}}"/>
+<template is="selectAnimate" data="{{selectAnimateData, code: docs.codeExampleList[3]}}" />
+<template is="hideNotAnimate" data="{{hideNotAnimateData, code: docs.codeExampleList[4]}}" />
+<template is="animateDuration" data="{{animateDurationData, code: docs.codeExampleList[5]}}" />
 
-<textarea class="" style="border:1px solid #ddd;width: 100%;" maxlength="-1" bindblur="triggerToGetTextareaValue">
-  
-</textarea>
-
-<component-exhibition show-code='' code="{{docs}}"></component-exhibition>
+<component-exhibition show-code='' code="{{docs.document}}"></component-exhibition>
 
 

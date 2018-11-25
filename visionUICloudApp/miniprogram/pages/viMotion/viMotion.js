@@ -20,25 +20,14 @@ Page({
     changeMaskColorData: changeMaskColor.data,
     hideMaskData: hideMask.data,
     codeArr: [],
-    docs: {}
+    docs: {
+      name: '',
+      document: '',
+      codeExampleList: []
+    }
   },
   onLoad() {
     this.getMarkDown()
-  },
-  triggerToGetTextareaValue(e) {
-    const DB = wx.cloud.database({
-      env: 'dev-a5cf14'
-    })
-    let collection = DB.collection('docs')
-    collection.doc('viMotion').set({
-      data: {
-        'doc': e.detail.value
-      }
-    }).then((data) => {
-      console.log(data)
-    }).catch(err => {
-      console.log(err)
-    })
   },
   getMarkDown() {
     const DB = wx.cloud.database({
@@ -47,7 +36,9 @@ Page({
     let collection = DB.collection('docs')
     collection.doc('viMotion').get().then(({data}) => {
       this.setData({
-        docs: data.doc
+        'docs.name': data.docsName,
+        'docs.document': data.document,
+        'docs.codeExampleList': data.codeList
       })
       console.log(this.data.docs, data)
     }).catch(err => {
