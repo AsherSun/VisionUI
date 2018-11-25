@@ -29,6 +29,7 @@
     "vi-motion": "0.0.8",
     "vi-popup": "0.0.2",
     "vi-quantity": "0.0.1",
-    "vi-slider-menu": "0.0.3"
+    "vi-slider-menu": "0.0.3",
+    "vi-upload": "0.0.2"
   }
 }
