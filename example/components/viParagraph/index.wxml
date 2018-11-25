@@ -1,3 +1,0 @@
-<view class="paragraph paragraph-{{tips}}" >
-  {{tips}}
-</view>

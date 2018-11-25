@@ -1,8 +1,0 @@
-{
-  "usingComponents": {
-    "vi-address": "vi-address",
-    "vi-cell": "vi-cell",
-    "vi-title": "/components/viTitle/index",
-    "component-exhibition": "/components/componentExhibition/index"
-  }
-}

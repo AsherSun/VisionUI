@@ -1,8 +1,0 @@
-{
-  "usingComponents": {
-    "vi-count-down": "vi-count-down",
-    "component-exhibition": "/components/componentExhibition/index",
-    "vi-cell": "vi-cell",
-    "vi-title": "/components/viTitle/index"
-  }
-}

@@ -1,6 +1,0 @@
-<view class="vi-popup  {{ ishide ? ' ' : 'vi-popup_hide vi-popup_animated' }}">
-  <view class="vi-popup-mask" bindtap='hide'></view> 
-  <view class="vi-popup-content {{direction ? 'row-direction' : 'column-direction'}}  {{animation ? 'animated' : '' }} {{ ishide ? popupShow : popupHide }}" style="{{ position }}:0;">
-    <slot></slot>
-  </view>
-</view>
