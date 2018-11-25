@@ -49,6 +49,7 @@ Page({
       this.setData({
         docs: data.doc
       })
+      console.log(this.data.docs, data)
     }).catch(err => {
       console.log(err)
     })
