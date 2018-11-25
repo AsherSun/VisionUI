@@ -11,7 +11,8 @@
     "pages/viQuantity/viQuantity",
     "pages/viCountDown/viCountDown",
     "pages/viUpload/viUpload",
-    "pages/viAbnormalTips/viAbnormalTips"
+    "pages/viAbnormalTips/viAbnormalTips",
+    "pages/aboult/aboult"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -19,5 +20,22 @@
     "navigationBarBackgroundColor": "#F6F6F6",
     "navigationBarTitleText": "云开发 QuickStart",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#333",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "组件库",
+        "iconPath": "images/tabBar/component.png",
+        "selectedIconPath": "./images/tabBar/selectComponent.png"
+      },
+      {
+        "pagePath": "pages/aboult/aboult",
+        "text": "About",
+        "iconPath": "images/tabBar/about.png",
+        "selectedIconPath": "./images/tabBar/selectAbout.png"
+      }
+    ]
   }
 }

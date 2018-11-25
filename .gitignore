@@ -9,3 +9,4 @@ package-lock.json
 .tea/
 .DS_Store
 .idea/*
+.vscode

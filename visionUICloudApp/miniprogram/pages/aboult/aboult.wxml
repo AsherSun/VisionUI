@@ -1,0 +1,86 @@
+<view class="header">
+  <image class="header__logo" src="/images/logo.jpg"></image>
+  <view class="header__desc">魔法孵化实验室 - 大前端团队</view>
+</view>
+
+<view class="section">
+  <view class="section__title">
+    <text class="section__title__tips"></text>
+    <text class="section__title__txt">关于我们</text>
+  </view>
+  <view class="article">
+    <view class="article__p">
+      <view>我们是魔法孵化实验室大前端团队</view>
+      <view>一个蹒跚学步</view>
+      <view>逐渐成长的团队</view>
+    </view>
+    <view class="article__p">
+      <view>我们相信技术和知识的力量</view>
+      <view>勇于拥抱这个快速变化发展的时代</view>
+      <view>磨砺自身</view>
+      <view>一起创造属于我们的价值</view>
+    </view>
+    <view class="article__p">
+      <view>途长路远, 望诸博学之</view>
+      <view>审问之，慎思之</view>
+      <view>明辨之，笃行之</view>
+    </view>
+  </view>
+</view>
+
+<view class="section">
+  <view class="section__title">
+    <text class="section__title__tips"></text>
+    <text class="section__title__txt">Github or Issues</text>
+  </view>
+  <view class="article" bind:tap="triggerToCopyLink" data-copy="https://github.com/AsherSun/VisionUI">
+    <view class="article__p" >
+      https://github.com/AsherSun/VisionUI
+    </view>
+  </view>
+</view>
+<view class="section">
+  <view class="section__title">
+    <text class="section__title__tips"></text>
+    <text class="section__title__txt">简历投递</text>
+  </view>
+  <view class="article">
+    <view class="article__p">敬请期待 ^ _ ^</view>
+  </view>
+</view>
+
+<view class="section">
+  <view class="section__title">
+    <text class="section__title__tips"></text>
+    <text class="section__title__txt">VisionUI 交流群</text>
+  </view>
+  <view class="article">
+    <view class="article__p article__p--left">请添加群助手: Asher_AAA 好友或者扫下面二维码加好友。添加好友暗号：修仙。添加好友之后按照指引进群</view>
+    <image bind:tap="triggerToImgClick" data-src="https://img.maison-huis.com/2018/10/12/10/12/21/768/20181016202637572616069.jpg" class="article__img--code" src="/images/weChatContan.jpg"></image>
+  </view>
+</view>
+
+<view class="section">
+  <view class="section__title">
+    <text class="section__title__tips"></text>
+    <text class="section__title__txt">小程序展示</text>
+  </view>
+  <view class="article__img">
+    <view class="article__img-wrap">
+      <view class="img__itme">
+        <image bind:tap="triggerToImgClick" data-src="https://img.maison-huis.com/2018/10/12/10/12/21/768/20181016205409569402806.jpg" src="/images/miniprogramQRcode/U_select.jpg"></image>
+        <text>U你选</text>
+      </view>
+      <view class="img__itme">
+        <image bind:tap="triggerToImgClick" data-src="https://img.maison-huis.com/2018/10/12/10/12/21/768/20181016205431570857089.jpg" src="/images/miniprogramQRcode/man.jpg"></image>
+        <text>曼容豪世</text>
+      </view>
+    </view>
+    <view class="article__img-wrap">
+      <view class="img__itme">
+        <image bind:tap="triggerToImgClick" data-src="https://img.maison-huis.com/2018/10/12/10/12/21/768/20181016205448584614678.jpg" src="/images/miniprogramQRcode/man_U.jpg"></image>
+        <text>曼生活家</text>
+      </view>
+    </view>
+  </view>
+</view>
