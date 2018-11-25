@@ -1,0 +1,35 @@
+<vi-title>VI-POPUP</vi-title>
+
+<component-exhibition code="{{viPopup.codeExampleList[0]}}">
+  <vi-cell bind:click="popupBottom" title="底部出现" line></vi-cell>
+</component-exhibition>
+
+<component-exhibition code="{{viPopup.codeExampleList[1]}}">
+  <vi-cell bind:click="popupTop" title="顶部出现" line></vi-cell>
+</component-exhibition>
+
+<component-exhibition code="{{viPopup.codeExampleList[2]}}">
+  <vi-cell bind:click="popupLeft" title="左侧出现" line></vi-cell>
+</component-exhibition>
+
+<component-exhibition code="{{viPopup.codeExampleList[3]}}">
+  <vi-cell bind:click="popupRight" title="右侧出现" line></vi-cell>
+</component-exhibition>
+
+<component-exhibition show-code='' code="{{viPopup.document}}"></component-exhibition>
+
+<vi-popup ishide="{{popupHide_bottom}}" bindpopuphide="popupBottom">
+  <view class="popup-bottom"></view>
+</vi-popup>
+
+<vi-popup ishide="{{popupHide_top}}" position="top" bindpopuphide="popupTop">
+  <view class="popup-top"></view>
+</vi-popup>
+
+<vi-popup ishide="{{popupHide_left}}" position="left" bindpopuphide="popupLeft">
+  <view class="popup-left"></view>
+</vi-popup>
+
+<vi-popup ishide="{{popupHide_right}}" position="right" bindpopuphide="popupRight">
+  <view class="popup-right"></view>
+</vi-popup>
