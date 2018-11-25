@@ -1,0 +1,40 @@
+<vi-title>VI-SILDER-MENU</vi-title>
+
+<vi-paragraph tips="tips">slider-menu 适用场景多数为购物列表页面</vi-paragraph>
+<vi-paragraph tips="tips">slider-menu 菜单在右侧</vi-paragraph>
+<vi-paragraph tips="tips">slider-menu 菜单并没有适配左边</vi-paragraph>
+
+<component-exhibition code="{{viSliderMenu.codeExampleList[0]}}">
+  <view style="text-align: center;font-size: 16px;line-height: 40px;background:#FFF;">购物车</view>
+  <checkbox-group>
+    <vi-slider-menu
+      bind:touchStart="triggerToTap"
+      data-i="{{index}}"
+      wx:key="{{index}}"
+      animation-timing-fn="linear"
+      wx:for="{{shoppingCart}}"
+      sliderNum="{{item.sliderNum}}"
+      menu-width="{{item.menuWidth}}" 
+      line="bottomLine">
+      <view slot="section" class="shopping__section">
+        <checkbox value="{{item.cartId}}" checked='{{item.checked}}'></checkbox>
+        <navigator url="/pages/index/index" class="section__wrap">
+          <image class="section__img" src="{{item.img}}"></image>
+          <view class="section__goodsInfo">
+            <view class="goodsInfo__name">{{item.name}}</view>
+            <view class="goodsInfo__skuDesc">{{item.skuDesc}}</view>
+            <view class="goodsInfo__info">
+              <text class="price__info">￥ {{item.price}}</text>
+              <text class="number__info">x {{item.number}}</text>
+            </view>
+          </view>
+        </navigator>
+      </view>
+      <view slot="menu" class="shopping__menu">
+        <view class="menu__delete-btn icon icon-delete"></view>
+      </view>
+    </vi-slider-menu>
+  </checkbox-group>
+</component-exhibition>
+
+<component-exhibition show-code="" code="{{viSliderMenu.document}}"></component-exhibition>

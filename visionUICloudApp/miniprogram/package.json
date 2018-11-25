@@ -26,6 +26,7 @@
     "vi-cell-group": "0.0.7",
     "vi-dialog": "0.0.6",
     "vi-motion": "0.0.8",
-    "vi-popup": "0.0.2"
+    "vi-popup": "0.0.2",
+    "vi-slider-menu": "0.0.3"
   }
 }
