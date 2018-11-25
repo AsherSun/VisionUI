@@ -40,7 +40,9 @@ Page({
   },
   getCodeExampleList(str) {
     let codeExampleStr = str.split('<!-- visionUI code example -->')[1]
-    return codeExampleStr.split('<!-- code example -->')
+    return codeExampleStr.split('<!-- code example -->').filter(item => {
+      return item.length > 20
+    })
   },
   valideDate(resource) {
     if (!resource.docsName) {
