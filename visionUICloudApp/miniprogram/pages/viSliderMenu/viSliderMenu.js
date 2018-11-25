@@ -37,5 +37,10 @@ Page({
     }).catch(err => {
       console.log(err)
     })
+  },
+  onShareAppMessage() {
+    return {
+      title: '微信小程序滑动菜单组件'
+    }
   }
 })
