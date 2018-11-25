@@ -1,19 +1,19 @@
 Page({
   data: {
     docsName: '',
-    docsSection: ''
+    document: ''
   },
   onLoad: function (options) {
 
   },
   triggerToSubmitDocs({ detail }) {
     let resource = {
-      docsSection: '',
+      document: '',
       codeExampleList: []
     }
     if (!this.valideDate(detail.value)) return false;
-    resource.docsSection =  this.httpTransformHttps(detail.value.docsSection)
-    resource.codeExampleList = this.getCodeExampleList(detail.value.docsSection)
+    resource.document =  this.httpTransformHttps(detail.value.document)
+    resource.codeExampleList = this.getCodeExampleList(detail.value.document)
     this.insertDocument(Object.assign({}, detail.value, resource))
   },
   insertDocument(resource) {
@@ -22,10 +22,13 @@ Page({
     })
     let collection = DB.collection('docs')
     collection.doc(resource.docsName).set({
-      data: {
-        'document': resource.docsSection,
-        codeList: resource.codeExampleList
-      }
+      data: resource
+    }).then(data => {
+      wx.showToast({
+        title: '文档添加成功',
+        duration: 1500,
+        mask: true,
+      });
     })
   },
   httpTransformHttps(str) {
@@ -45,7 +48,7 @@ Page({
       });
       return false
     }
-    if (!resource.docsSection) {
+    if (!resource.document) {
       wx.showToast({
         title: '请输入文档内容',
         icon: 'none',

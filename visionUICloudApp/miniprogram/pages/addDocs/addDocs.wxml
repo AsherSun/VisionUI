@@ -7,7 +7,7 @@
     </viCell>
     <viCell title="文档内容："></viCell>
     <viCell>
-      <textarea placeholder="请输入文档内容" slot="title" name="docsSection" style="width: 100%;" maxlength="-1" value="{{docsSection}}"/>
+      <textarea placeholder="请输入文档内容" slot="title" name="document" style="width: 100%;" maxlength="-1" value="{{document}}"/>
     </viCell>
   </viCellGroup>
   <button class="vi-button" formType="submit" style="margin-top: 25px;">添加文档</button>
