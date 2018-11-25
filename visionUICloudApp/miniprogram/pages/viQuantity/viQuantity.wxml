@@ -1,0 +1,30 @@
+<vi-title>VI-QUANTITY</vi-title>
+<vi-paragraph tips='tips'>该组件的适用场景多数为电商网站的商品数量编辑，没有做其他场景适配</vi-paragraph>
+<vi-paragraph tips='tips'>该组件内部触发的提示框为微信小程序内置的 wx.showToast, 提示的文本多数为电商场景中的文案。</vi-paragraph>
+<vi-paragraph tips='tips'>该组件没有对触发的提示内容做额外接口，如果组件的使用场景不是电商网站，可以自行更改内部的提示文案</vi-paragraph>
+<component-exhibition code="{{viQuantity.codeExampleList[0]}}">
+  <view class="quantity-demo">
+    <view class="font16">情景一：商品详情页</view>
+    <view class="font12 quantity-demo-title">请选择商品数量</view>
+    <vi-quantity goodsnumber="{{buyDetailNum}}" quantity="{{100}}" bindchange="detailNumChange"></vi-quantity>
+    <view class="font12" style="margin-top: 14px;">你已选择<text class="quantity-demo-tips">{{buyDetailNum}}</text>件商品</view>
+  </view>
+</component-exhibition>
+
+<component-exhibition code="{{viQuantity.codeExampleList[1]}}">
+  <view class="quantity-demo">
+    <view class="font16">情景二：购物车列表，对商品数量进行编辑</view>
+    <block wx:for="{{goodsList}}" wx:key="{{index}}">
+      <view class="font12 quantity-demo-goodsList quantity-demo-title">购物车商品 -- {{index + 1}}</view>
+      <vi-quantity bindchange="numChange" editindex="{{index}}" goodsnumber="{{item.num}}" quantity="{{item.stock}}"></vi-quantity>
+    </block>
+  </view>
+  <view wx:if="{{isEdit}}" class="quantity-demo font12">
+    您正在对购物车中的第 
+    <text class="quantity-demo-tips">{{ editIndex + 1}}</text> 件商品编辑, 你准备要购买     
+    <text class="quantity-demo-tips">{{buyNum}}</text> 件 该商品的最大库存为 
+    <text class="quantity-demo-tips">{{stock}}</text>件
+  </view>
+</component-exhibition>
+
+<component-exhibition show-code="" code="{{viQuantity.document}}"></component-exhibition>

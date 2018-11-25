@@ -93,102 +93,103 @@ module.exports =
 
 
 Component({
-  options: {
-    multipleSlots: true
-  },
   properties: {
-    animationDuration: {
+    goodsnumber: {
       type: Number,
-      value: 0.5
+      value: 1
     },
-    animationTimingFn: {
-      type: String,
-      value: 'ease-in'
-    },
-    menuWidth: { // 单位rpx
-      type: Number,
+    quantity: {
+      type: [String, Number],
       value: 0
     },
-    triggerSliderNum: {
-      type: Number,
-      value: 30
-    },
-    sliderNum: {
+    editindex: {
       type: Number,
       value: 0
-    },
-    line: {
-      type: String,
-      value: ''
     }
   },
-  data: {
-    startX: 0,
-    moveX: 0,
-    endX: 0
-  },
+  externalClasses: ['quantity-class'],
   methods: {
-    triggerToTouchStart: function triggerToTouchStart(_ref) {
-      var changedTouches = _ref.changedTouches;
-
-      if (changedTouches.length > 1) {
-        return false;
-      }
-      var clientX = changedTouches[0].clientX;
-
-      this.triggerEvent("touchStart", clientX);
-      this.getXcoordinate('startX', clientX);
-    },
-    triggerToTouchMove: function triggerToTouchMove(_ref2) {
-      var changedTouches = _ref2.changedTouches;
-
-      if (changedTouches.length > 1) {
-        return false;
-      }
-      var clientX = changedTouches[0].clientX;
-
-      this.triggerEvent("touchMove", clientX);
-      this.getXcoordinate('moveX', clientX);
-      var sliderNum = this.data.startX - this.data.moveX;
-      if (sliderNum >= this.data.menuWidth) {
-        this.setData({
-          sliderNum: this.data.menuWidth
-        });
-        return false;
-      }
+    add: function add() {
+      if (this._maxNumber()) return false;
       this.setData({
-        sliderNum: sliderNum
+        goodsnumber: ++this.data.goodsnumber
       });
-      if (sliderNum > this.data.maxSliderNum) {
-        // 开始滑动
-        this.setData({
-          sliderNum: this.data.menuWidth
+      this.triggerEvent('change', { num: this.data.goodsnumber, i: this.data.editindex });
+    },
+    reduce: function reduce() {
+      if (this._minNumber()) return false;
+      this.setData({
+        goodsnumber: --this.data.goodsnumber
+      });
+      this.triggerEvent('change', { num: this.data.goodsnumber, i: this.data.editindex });
+    },
+    changeValue: function changeValue(e) {
+      var detail = e.detail;
+      if (detail.value === '0') {
+        wx.showToast({
+          title: '亲爱的顾客，最少购买一件商品哦',
+          icon: 'none'
         });
+        this.triggerEvent('change', { num: 1, i: this.data.editindex });
+        return 1;
+      }
+      if (detail.value !== '' && !(detail.value * 1)) {
+        wx.showToast({
+          title: '亲爱的顾客，请您输入数字',
+          icon: 'none'
+        });
+        this.triggerEvent('change', { num: 1, i: this.data.editindex });
+        return 1;
+      }
+      var num = detail.value || null;
+      if (detail.value * 1 > this.data.quantity) {
+        wx.showToast({
+          title: '\u4EB2\u7231\u7684\u987E\u5BA2\uFF0C\u5B9D\u8D1D\u7684\u6700\u5927\u5E93\u5B58\u4E3A' + this.data.quantity,
+          icon: 'none'
+        });
+        num = this.data.quantity;
+        this.triggerEvent('change', { num: num, i: this.data.editindex });
+        return this.data.quantity;
+      }
+      this.triggerEvent('change', { num: num, i: this.data.editindex });
+    },
+    blurFn: function blurFn(e) {
+      var num = e.detail.value * 1;
+      this._blurAndConfirm(num);
+    },
+    confirmValue: function confirmValue(e) {
+      var num = e.detail.value * 1;
+      this._blurAndConfirm(num);
+    },
+    _blurAndConfirm: function _blurAndConfirm(num) {
+      if (!num) {
+        this.setData({
+          goodsnumber: 1
+        });
+        this.triggerEvent('change', { num: 1, i: this.data.editindex });
       }
     },
-    triggerToTouchEnd: function triggerToTouchEnd(_ref3) {
-      var changedTouches = _ref3.changedTouches;
-
-      if (changedTouches.length > 1) {
-        return false;
-      }
-      var clientX = changedTouches[0].clientX;
-
-      this.triggerEvent("touchEnd", clientX);
-      this.getXcoordinate('endX', clientX);
-      var sliderNum = this.data.startX - this.data.endX;
-      if (sliderNum < this.data.triggerSliderNum) {
-        this.setData({
-          sliderNum: 0
+    _maxNumber: function _maxNumber() {
+      // 最大商品购买量判断
+      if (this.data.goodsnumber >= this.data.quantity) {
+        wx.showToast({
+          title: '亲爱的顾客，您购买的数量请不要超过最大库存哦',
+          icon: 'none'
         });
-      } else {
-        this.setData({
-          sliderNum: this.data.menuWidth
-        });
+        return true;
       }
+      return false;
     },
-    getXcoordinate: function getXcoordinate(name, clientX) {
-      this.data[name] = clientX;
+    _minNumber: function _minNumber() {
+      // 最小商品购买量判断
+      if (this.data.goodsnumber <= 1) {
+        wx.showToast({
+          title: '亲爱的顾客，最少购买一件商品哦',
+          icon: 'none'
+        });
+        return true;
+      }
+      return false;
     }
   }
 });
