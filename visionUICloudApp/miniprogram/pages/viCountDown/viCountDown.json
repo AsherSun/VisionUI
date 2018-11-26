@@ -1,4 +1,5 @@
 {
+  "navigationBarTitleText": "倒计时组件",
   "usingComponents": {
     "vi-count-down": "vi-count-down",
     "component-exhibition": "/components/componentExhibition/index",

@@ -1,4 +1,5 @@
 {
+  "navigationBarTitleText": "运动会话窗组件",
   "usingComponents": {
     "vi-title": "/components/viTitle/index",
     "component-exhibition": "/components/componentExhibition/index",

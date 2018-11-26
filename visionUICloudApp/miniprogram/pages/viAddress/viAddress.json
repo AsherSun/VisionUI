@@ -1,4 +1,5 @@
 {
+  "navigationBarTitleText": "地址选择组件",
   "usingComponents": {
     "vi-address": "vi-address",
     "vi-cell": "vi-cell",

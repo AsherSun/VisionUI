@@ -1,4 +1,5 @@
 {
+  "navigationBarTitleText": "上传组件",
   "usingComponents": {
     "vi-title": "/components/viTitle/index",
     "component-exhibition": "/components/componentExhibition/index",

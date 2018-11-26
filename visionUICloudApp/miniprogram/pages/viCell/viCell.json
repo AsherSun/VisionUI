@@ -1,4 +1,5 @@
 {
+  "navigationBarTitleText": "列表布局组件",
   "usingComponents": {
     "vi-cell-group": "vi-cell-group",
     "component-exhibition": "/components/componentExhibition/index",

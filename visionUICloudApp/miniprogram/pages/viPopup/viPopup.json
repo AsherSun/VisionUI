@@ -1,4 +1,5 @@
 {
+  "navigationBarTitleText": "抽屉组件",
   "usingComponents": {
     "vi-popup": "vi-popup",
     "vi-cell": "vi-cell",

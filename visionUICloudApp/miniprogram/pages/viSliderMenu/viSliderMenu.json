@@ -1,4 +1,5 @@
 {
+  "navigationBarTitleText": "滑动菜单组件",
   "usingComponents": {
     "vi-slider-menu": "vi-slider-menu",
     "vi-title": "/components/viTitle/index",

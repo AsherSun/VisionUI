@@ -1,4 +1,5 @@
 {
+  "navigationBarTitleText": "文档编辑页面",
   "usingComponents": {
     "viTitle": "/components/viTitle/index",
     "viCellGroup": "vi-cell-group",
