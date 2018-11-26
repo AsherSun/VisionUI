@@ -1,2 +1,1 @@
-<!--pages/viCalendar/viCalendar.wxml-->
-<text>pages/viCalendar/viCalendar.wxml</text>
+<ViCalendar selectedList="{{[8,9,10,11,16,17]}}" selected-class="calendar__day--selected"></ViCalendar>

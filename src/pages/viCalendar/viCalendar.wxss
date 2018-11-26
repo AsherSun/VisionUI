@@ -1,1 +1,4 @@
-/* pages/viCalendar/viCalendar.wxss */
+.calendar__day--selected {
+  background-color: #FDE9A8;
+  border-radius: 8px;
+}

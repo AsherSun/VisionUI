@@ -1,21 +1,9 @@
-/*
-* 打卡页面的日历组件
-* author：Asher Sun
-* email: sunxl@cnjiang.com
-*
-* @param { Array } properties 当前选中的日期列表
-* @param { Class Name } selected-class 选中的样式扩展
-*
-**/
 Component({
   properties: {
     selectedList: {
       type: Array,
       value: [],
       observer(newValue) {
-        this.setData({
-          datesList: []
-        })
         this.init()
       }
     }
@@ -28,10 +16,12 @@ Component({
     prevMonthDates: 0,                  // 获取上个月的天数
     nowMonthDates: 0,                   // 获取当前月的天数
     datesList: [],                      // 页面渲染的数据
+    weekList: ['日', '一', '二', '三', '四', '五', '六'],
   },
   externalClasses: ['selected-class'],
   lifetimes: {
     attached() {
+      this.init()
       this.setData({
         month: this.data.month1
       })
@@ -105,6 +95,9 @@ Component({
       return monthDay
     },
     addDays() {
+      this.setData({
+        datesList: []
+      })
       let i = 0;
       let j = 0;
       let h = 0;
@@ -119,11 +112,12 @@ Component({
         });
         j++;
       }
-      this.data.datesList = this.data.datesList.concat(prevMonthDatesList)
+      this.data.datesList = this.data.datesList.concat(prevMonthDatesList.reverse())
       for (; i < this.data.nowMonthDates; i++) {
         this.selectedComputed(i + 1)
       }
-      while (h < datesListLength - this.data.nowMonthDates) {
+      surplus = datesListLength - this.data.datesList.length;
+      while (h < surplus) {
         this.data.datesList.push({
           value: h + 1,
           isSelected: false,

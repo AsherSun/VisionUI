@@ -1,5 +1,7 @@
 <view class="calendar">
-  <view class="calendar__title">{{month}}月打卡一览</view>
+  <view class="calendar__week">
+    <view wx:for="{{weekList}}" class="calendar__week-item" wx:key="{{item + index}}">{{item}}</view>
+  </view>
   <view class="calendar__body">
     <view class="calendar__day">
       <view 
