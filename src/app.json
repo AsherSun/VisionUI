@@ -20,7 +20,8 @@
     "pages/vi_checkbox/vi_checkbox",
     "pages/vi_cell_group/vi_cell_group",
     "pages/viSliderMenu/index",
-    "pages/stickerFooter/stickerFooter"
+    "pages/stickerFooter/stickerFooter",
+    "pages/viCalendar/viCalendar"
   ],
   "window": {
     "backgroundTextStyle": "light",

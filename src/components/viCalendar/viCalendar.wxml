@@ -1,2 +1,14 @@
-<!--components/viCalendar/viCalendar.wxml-->
-<text>components/viCalendar/viCalendar.wxml</text>
+<view class="calendar">
+  <view class="calendar__title">{{month}}月打卡一览</view>
+  <view class="calendar__body">
+    <view class="calendar__day">
+      <view 
+        class="calendar__day__item {{item.isInvalid ? 'calendar__day__item--invalid' : '' }} {{item.isSelected ? 'selected-class' : ''}}"
+        wx:for="{{datesList}}"
+        wx:key="{{index}}">
+        {{item.value}}
+        <image class="calendar__selected" src="https://cdn.hhdd.com/frontend/production/wxapp-story/v1.0.0/selected.png" wx:if="{{item.isSelected}}"></image>
+      </view>
+    </view>
+  </view>
+</view>

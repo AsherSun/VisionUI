@@ -1,1 +1,55 @@
-/* components/viCalendar/viCalendar.wxss */
+.calendar {
+  width: 710rpx;
+  height: 648rpx;
+  background-color: #FFF;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.calendar__title {
+  color: #49D6EB;
+  font-size: 18px;
+  text-align: center;
+  margin: 72rpx auto 26rpx;
+}
+
+.calendar__body {
+  border-top: 1rpx solid #DFE4E8;
+  padding-top: 1px;
+  width: 666rpx;
+  margin: 0 auto;
+}
+
+.calendar__day {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.calendar__day__item {
+  width: 90rpx;
+  height: 96rpx;
+  text-align: center;
+  flex-shrink: 0;
+  line-height: 96rpx;
+  color: #212B35;
+  margin:0 1px 1px;
+  position: relative;
+}
+
+.calendar__day__item--invalid {
+  color: #C4CDD5;
+}
+
+.calendar__day--selected {
+  background-color: #FDE9A8;
+  border-radius: 8px;
+  position: relative;
+}
+
+.calendar__selected {
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  bottom: 0;
+  right: 2px;
+}
