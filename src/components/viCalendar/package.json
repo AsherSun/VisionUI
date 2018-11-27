@@ -1,0 +1,29 @@
+{
+  "name": "vi-calendar",
+  "version": "0.0.1",
+  "description": "微信小程序万年历组件",
+  "main": "miniprogram_dist/index",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AsherSun/VisionUI.git"
+  },
+  "miniprogram": "miniprogram_dist",
+  "keywords": [
+    "miniprogram",
+    "calendar",
+    "vi-calendar",
+    "weChat",
+    "微信小程序",
+    "万年历",
+    "日历"
+  ],
+  "author": "asher sun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AsherSun/VisionUI/issues"
+  },
+  "homepage": "https://github.com/AsherSun/VisionUI#readme"
+}
