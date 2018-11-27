@@ -1,3 +1,5 @@
+import calendarHandle from './calendarHandle.js'
+
 Component({
   properties: {
     selectedList: {
@@ -10,9 +12,17 @@ Component({
     customHeader: {
       type: Boolean,
       value: false
+    },
+    direction: {
+      type: String,
+      value: '', // vertical,
+      observer(newValue) {
+        this.directionHandle(newValue)
+      }
     }
   },
   data: {
+    calendarSet: calendarHandle.data,
     month: 0,                           // 获取计算器中的月份
     month1: 0,                          // 获取现实中的月份
     monthFirstDay: 0,                   // 获取每月的第一天是周几
@@ -34,12 +44,13 @@ Component({
     }
   },
   methods: {
+    ...calendarHandle.methods,
     init() {
-      this.data.month = this.getMonth();
+      this.data.month = this.getMonth() || 12;
       this.data.month1 = this.data.month + 1;
       this.data.year = this.getFullYear();
-      this.data.prevMonthDates = this.showCalendar(this.data.month);
-      this.data.nowMonthDates = this.showCalendar(this.data.month1);
+      this.data.prevMonthDates = this.getNowMonthDates(this.data.year, this.data.month);
+      this.data.nowMonthDates = this.getNowMonthDates(this.data.year, this.data.month1);
       this.data.monthFirstDay = this.getFirstDay(this.data.year, this.data.month1);
       this.addDays()
     },
@@ -79,7 +90,7 @@ Component({
       }
       return allDay % 7;
     },
-    showCalendar(_month) {
+    getNowMonthDates(_year, _month) {
       var monthDay = 0; //月份的天数
       switch (_month) {
         case 1: monthDay = 31; break;
@@ -107,7 +118,7 @@ Component({
       let i = 0;
       let j = 0;
       let h = 0;
-      let datesListLength = 35;
+      let datesListLength = 42;
       let surplus = 0;
       let prevMonthDatesList = [];
       let nowMonthDatesList = [];
@@ -141,13 +152,13 @@ Component({
       this.recursionDatesList(nowMonthDatesList, 1)
     },
     recursionDatesList(source, count) {
-      let i = (count - 1)* 7
+      let i = (count - 1) * 7
       let len = count * 7
       let arr = []
-      if (count > 5) {
+      if (count > 6) {
         return true
       } else {
-        for (;i < len;i++) {
+        for (; i < len; i++) {
           arr.push(source[i])
         }
         this.data.datesList.push(arr)
@@ -156,6 +167,13 @@ Component({
         })
         this.recursionDatesList(source, ++count)
       }
+    },
+    directionHandle(newValue) {
+      // if (newValue === 'vertical') {
+
+      // } else {
+
+      // }
     }
   }
 })
