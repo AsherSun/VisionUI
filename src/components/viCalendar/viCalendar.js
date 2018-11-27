@@ -6,6 +6,10 @@ Component({
       observer(newValue) {
         this.init()
       }
+    },
+    customHeader: {
+      type: Boolean,
+      value: false
     }
   },
   data: {
@@ -23,7 +27,9 @@ Component({
     attached() {
       this.init()
       this.setData({
-        month: this.data.month1
+        month1: this.data.month1,
+        month: this.data.month,
+        year: this.data.year,
       })
     }
   },
@@ -104,6 +110,8 @@ Component({
       let datesListLength = 35;
       let surplus = 0;
       let prevMonthDatesList = [];
+      let nowMonthDatesList = [];
+      let nextMonthDatesList = [];
       while (j < this.data.monthFirstDay) {
         prevMonthDatesList.push({
           value: this.data.prevMonthDates - j,
@@ -112,30 +120,42 @@ Component({
         });
         j++;
       }
-      this.data.datesList = this.data.datesList.concat(prevMonthDatesList.reverse())
+      nowMonthDatesList = nowMonthDatesList.concat(prevMonthDatesList.reverse())
       for (; i < this.data.nowMonthDates; i++) {
-        this.selectedComputed(i + 1)
+        nowMonthDatesList.push({
+          value: i + 1,
+          isSelected: this.data.selectedList.includes(i + 1),
+          isInvalid: false
+        })
       }
-      surplus = datesListLength - this.data.datesList.length;
+      surplus = datesListLength - nowMonthDatesList.length;
       while (h < surplus) {
-        this.data.datesList.push({
+        nextMonthDatesList.push({
           value: h + 1,
           isSelected: false,
           isInvalid: true
         })
         h++
       }
-      this.setData({
-        datesList: this.data.datesList
-      })
+      nowMonthDatesList = nowMonthDatesList.concat(nextMonthDatesList)
+      this.recursionDatesList(nowMonthDatesList, 1)
     },
-    selectedComputed(date) { // 计算选中的日期
-      if (!date) return false;
-      this.data.datesList.push({
-        value: date,
-        isSelected: this.data.selectedList.includes(date),
-        isInvalid: false
-      })
+    recursionDatesList(source, count) {
+      let i = (count - 1)* 7
+      let len = count * 7
+      let arr = []
+      if (count > 5) {
+        return true
+      } else {
+        for (;i < len;i++) {
+          arr.push(source[i])
+        }
+        this.data.datesList.push(arr)
+        this.setData({
+          datesList: this.data.datesList
+        })
+        this.recursionDatesList(source, ++count)
+      }
     }
   }
 })
