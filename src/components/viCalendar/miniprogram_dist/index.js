@@ -13,13 +13,13 @@ Component({
       type: Boolean,
       value: false
     },
-    direction: {
-      type: String,
-      value: '', // vertical,
-      observer(newValue) {
-        this.directionHandle(newValue)
-      }
-    }
+    // direction: {
+    //   type: String,
+    //   value: '', // vertical,
+    //   observer(newValue) {
+    //     this.directionHandle(newValue)
+    //   }
+    // }
   },
   data: {
     calendarSet: calendarHandle.data,
@@ -49,9 +49,9 @@ Component({
       this.data.month = this.getMonth() || 12;
       this.data.month1 = this.data.month + 1;
       this.data.year = this.getFullYear();
-      this.data.prevMonthDates = this.getNowMonthDates(this.data.year, this.data.month);
-      this.data.nowMonthDates = this.getNowMonthDates(this.data.year, this.data.month1);
-      this.data.monthFirstDay = this.getFirstDay(this.data.year, this.data.month1);
+      this.data.prevMonthDates = this.getNowMonthDates(this.data.month);
+      this.data.nowMonthDates = this.getNowMonthDates(this.data.month1);
+      this.data.monthFirstDay = this.getFirstDay(this.data.month1);
       this.addDays()
     },
     getMonth() {
@@ -66,14 +66,14 @@ Component({
       }
       else { return false; }
     },
-    getFirstDay(_year, _month) {
+    getFirstDay(_month, _year = this.data.year) {
       var allDay = 0, y = _year - 1, i = 1;
       allDay = y + Math.floor(y / 4) - Math.floor(y / 100) + Math.floor(y / 400) + 1;
       for (; i < _month; i++) {
         switch (i) {
           case 1: allDay += 31; break;
           case 2:
-            if (this.runNian(_year)) { allDay += 29; }
+            if (this.runNian(this.data.year)) { allDay += 29; }
             else { allDay += 28; }
             break;
           case 3: allDay += 31; break;
@@ -90,7 +90,7 @@ Component({
       }
       return allDay % 7;
     },
-    getNowMonthDates(_year, _month) {
+    getNowMonthDates(_month, _year = this.data.year) {
       var monthDay = 0; //月份的天数
       switch (_month) {
         case 1: monthDay = 31; break;
