@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "ViCalendar": "../../components/viCalendar/miniprogram_dist/index"
+    "ViCalendar": "../../components/viCalendar/miniprogram_dist/index",
+    "viTitle": "../../components/viTitle/viTitle"
   }
 }

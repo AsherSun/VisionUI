@@ -1,1 +1,12 @@
-<ViCalendar selectedList="{{[8,9,10,11,16,17]}}" selected-class="calendar__day--selected" direction="vertical"></ViCalendar>
+<viTitle>VI-CALENDAR</viTitle>
+
+<view class="signIn-card">
+  <ViCalendar></ViCalendar>
+</view>
+
+<view class="signIn-card">
+  <ViCalendar customHeader hideWeek selectedList="{{[12,15,6,8,4]}}" >
+    <view class="calendar-header">11月打卡一览</view>
+  </ViCalendar>
+</view>
+

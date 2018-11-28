@@ -16,7 +16,7 @@
     </block>
     <block wx:else><slot></slot></block>
   </view>
-  <view class="calendar__week">
+  <view class="calendar__week" wx:if="{{!hideWeek}}">
     <view wx:for="{{weekList}}" class="calendar__week-item" wx:key="{{item + index}}">{{item}}</view>
   </view>
   <view class="calendar__body">

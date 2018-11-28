@@ -13,6 +13,10 @@ Component({
       type: Boolean,
       value: false
     },
+    hideWeek: {
+      type: Boolean,
+      value: false
+    }
     // direction: {
     //   type: String,
     //   value: '', // vertical,
@@ -67,13 +71,14 @@ Component({
       else { return false; }
     },
     getFirstDay(_month, _year = this.data.year) {
+      console.log('getFirstDay', _month, _year)
       var allDay = 0, y = _year - 1, i = 1;
       allDay = y + Math.floor(y / 4) - Math.floor(y / 100) + Math.floor(y / 400) + 1;
       for (; i < _month; i++) {
         switch (i) {
           case 1: allDay += 31; break;
           case 2:
-            if (this.runNian(this.data.year)) { allDay += 29; }
+            if (this.runNian(_year)) { allDay += 29; }
             else { allDay += 28; }
             break;
           case 3: allDay += 31; break;
