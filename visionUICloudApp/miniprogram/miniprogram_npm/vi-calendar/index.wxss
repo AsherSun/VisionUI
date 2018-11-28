@@ -1,0 +1,120 @@
+.calendar {
+  width: 100%;
+  background-color: #FFF;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.calendar__header-wrap {
+  height: 80rpx;
+  line-height: 80rpx;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.calendar__header__item {
+  flex: 1;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0 20rpx;
+  align-items: center;
+}
+
+.calendar__header__input {
+  text-align: center;
+}
+
+.calendar__header__prev-button, .calendar__header__next-button{
+  width: 40rpx;
+  height: 80rpx;
+  position: relative;
+}
+ 
+.calendar__header__prev-button::before, .calendar__header__next-button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  margin: -4px 0 0 -4px;
+  border: 1px solid transparent;
+}
+
+.calendar__header__next-button::before {
+  border-top: 1px solid #666;
+  border-right: 1px solid #666;
+  transform: rotate(45deg);
+}
+
+.calendar__header__prev-button::before{
+  border-top: 1px solid #666;
+  border-left: 1px solid #666;
+  transform: rotate(-45deg);
+}
+
+.calendar__week {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.calendar__week-item {
+  flex: 1;
+  text-align: center;
+  color: #999;
+  font-size: 12px;
+}
+
+.calendar__body {
+  border-top: 1rpx solid #DFE4E8;
+  padding-top: 1px;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.calendar__day-wrap {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.calendar__day {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+}
+
+.calendar__day ~ .calendar__day {
+  margin-top: 5px;
+}
+
+.calendar__day__item {
+  text-align: center;
+  flex-shrink: 0;
+  width: 66rpx;
+  line-height: 56rpx;
+  color: #212B35;
+  position: relative;
+}
+
+.calendar__day__item--invalid {
+  color: #C4CDD5;
+}
+
+.calendar__day--selected {
+  background-color: #FDE9A8;
+  border-radius: 8px;
+  position: relative;
+}
+
+.calendar__selected {
+  width: 20rpx;
+  height: 20rpx;
+  position: absolute;
+  bottom: 0;
+  right: 2px;
+}

@@ -1,0 +1,37 @@
+<view class="calendar">
+  <view class="calendar__header">
+    <block wx:if="{{!customHeader}}">
+      <view class="calendar__header-wrap">
+        <view class="calendar__header__year calendar__header__item">
+          <view class="calendar__header__prev-button" bindtap="triggerToPrevYear"></view>
+          <input value="{{year}}" disabled  class="calendar__header__input"></input>
+          <view class="calendar__header__next-button" bindtap="triggerToNextYear"></view>
+        </view>
+        <view class="calendar__header__month1 calendar__header__item">
+          <view class="calendar__header__prev-button" bindtap="triggerToPrevMonth"></view>
+          <input value="{{month1 + '月'}}" disabled class="calendar__header__input"></input>
+          <view class="calendar__header__next-button" bindtap="triggerToNextMont"></view>
+        </view>
+      </view>
+    </block>
+    <block wx:else><slot></slot></block>
+  </view>
+  <view class="calendar__week" wx:if="{{!hideWeek}}">
+    <view wx:for="{{weekList}}" class="calendar__week-item" wx:key="{{item + index}}">{{item}}</view>
+  </view>
+  <view class="calendar__body">
+    <view class="calendar__day-wrap">
+      <view class="calendar__day" wx:for="{{datesList}}" wx:key="{{index}}">
+        <view 
+          class="calendar__day__item {{date.isInvalid ? 'calendar__day__item--invalid' : '' }} {{date.isSelected ? 'selected-class' : ''}}"
+          wx:for="{{item}}"
+          wx:for-item="date"
+          wx:for-index="{{dateIndex}}"
+          wx:key="{{date.value}}">
+          {{date.value}}
+          <image class="calendar__selected" src="https://cdn.hhdd.com/frontend/production/wxapp-story/v1.0.0/selected.png" wx:if="{{date.isSelected}}"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
