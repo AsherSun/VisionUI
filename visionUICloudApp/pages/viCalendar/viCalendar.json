@@ -1,1 +1,9 @@
-{}
+{
+  "navigationBarTitleText": "万年历组件",
+  "usingComponents": {
+    "ViCalendar": "vi-calendar",
+    "ViTitle": "/components/viTitle/index",
+    "ComponentExhibition": "/components/componentExhibition/index",
+    "ViParagraph": "/components/viParagraph/index"
+  }
+}

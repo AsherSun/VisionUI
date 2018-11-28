@@ -1,1 +1,20 @@
-/* pages/viCalendar/viCalendar.wxss */
+.calendar__day--selected {
+  background-color: #FDE9A8;
+  border-radius: 8px;
+}
+
+.signIn-card {
+  box-shadow: 0 0 10px;
+  width:710rpx;
+  border-radius:8px;
+  margin:0 auto 20px;
+  padding-bottom: 10px;
+  background: #FFF;
+}
+
+.calendar-header {
+  color:#49D6EB;
+  font-size:18px;
+  text-align:center;
+  margin:26rpx auto;
+}

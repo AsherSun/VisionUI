@@ -1,2 +1,22 @@
-<!--pages/viCalendar/viCalendar.wxml-->
-<text>pages/viCalendar/viCalendar.wxml</text>
+<ViTitle>VI-CALENDAR</ViTitle>
+
+<ViParagraph>Default</ViParagraph>
+<view class="signIn-card">
+  <ViCalendar></ViCalendar>
+</view>
+
+<ViParagraph>日期选中</ViParagraph>
+<view class="signIn-card">
+  <ViCalendar selectedList="{{[12,15,6,8,4]}}" selected-class="calendar__day--selected"></ViCalendar>
+</view>
+
+<ViParagraph>自定义日历</ViParagraph>
+<view style="background-color:#39d3ef;padding: 20px 0;">
+  <view class="signIn-card">
+    <ViCalendar customHeader hideWeek selectedList="{{[12,15,6,8,4]}}" >
+      <view class="calendar-header">11月打卡一览</view>
+    </ViCalendar>
+  </view>
+</view>
+
+
