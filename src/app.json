@@ -22,7 +22,9 @@
     "pages/viSliderMenu/index",
     "pages/stickerFooter/stickerFooter",
     "pages/viCalendar/viCalendar",
-    "pages/viIcon/viIcon"
+    "pages/viIcon/viIcon",
+    "pages/webView/webView",
+    "pages/contact/contact"
   ],
   "window": {
     "backgroundTextStyle": "light",
