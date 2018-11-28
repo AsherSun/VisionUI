@@ -1,0 +1,28 @@
+{
+  "name": "vi-icon",
+  "version": "0.0.1",
+  "description": "微信小程序图标库组件",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AsherSun/VisionUI.git"
+  },
+  "keywords": [
+    "miniprogram",
+    "icon",
+    "vi-icon",
+    "weChat",
+    "微信小程序",
+    "图标",
+    "iconfont"
+  ],
+  "author": "asher sun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AsherSun/VisionUI/issues"
+  },
+  "homepage": "https://github.com/AsherSun/VisionUI#readme"
+}
