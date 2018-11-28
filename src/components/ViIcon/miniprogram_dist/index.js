@@ -1,23 +1,35 @@
-// components/ViIcon/miniprogram_dist/index.js
 Component({
-  /**
-   * 组件的属性列表
-   */
   properties: {
-
+    iconName: String,
+    fontFamily: {
+      type: String,
+      value: 'custom-font'
+    },
+    setFontFamily: Boolean,
+    fontSource: String,
   },
-
-  /**
-   * 组件的初始数据
-   */
-  data: {
-
+  externalClasses: ['icon-style', 'font-family-style'],
+  lifetimes: {
+    attached() {
+      if (this.data.fontSource) this.loadFontFace();
+    }
   },
-
-  /**
-   * 组件的方法列表
-   */
   methods: {
-
+    triggerToClickIcon() {
+      this.triggerEvent("clickIcon")
+    },
+    loadFontFace() {
+      const _this = this
+      wx.loadFontFace({
+        family: _this.data.fontFamily,
+        source: _this.data.fontSource,
+        success(res) {
+          console.log('icon success', res.status)
+        },
+        fail: function(res) {
+          console.log('icon fail', res.status, _this.data.fontSource)
+        },
+      });
+    }
   }
 })

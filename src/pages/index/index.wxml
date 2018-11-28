@@ -5,6 +5,7 @@
 
 <vi-cell-group title="布局">
   <vi-cell title="vi-cell" line="group" desc="cell" link="/pages/vi_cell/vi_cell"></vi-cell>
+  <vi-cell title="vi-icon" desc="字体图标" link="/pages/viIcon/viIcon"></vi-cell>
   <vi-cell title="no-data-tips" line="group" desc="无数据状态提示" link="/pages/abnormalTips/abnormalTips"></vi-cell>
   <vi-cell title="sticker-footer" line="group" desc="stickerFooter布局 " link="/pages/stickerFooter/stickerFooter"></vi-cell>
   <vi-cell title="animate" line="group" desc="运动动画" link="/pages/animate/animate"></vi-cell>

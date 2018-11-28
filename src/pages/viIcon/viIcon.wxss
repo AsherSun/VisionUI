@@ -1,1 +1,16 @@
-/* pages/viIcon/viIcon.wxss */
+
+.vi-icon-email::before {
+  font-size: 30px;
+  color: red;
+}
+
+.custom-icon-fail::before {
+  content: '\e602';
+}
+
+.custom-family {
+  font-size: 18px;
+  font-family: "viAbnormalTips";
+  font-weight: 500;
+  font-style: normal;
+}

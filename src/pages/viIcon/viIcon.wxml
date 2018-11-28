@@ -1,2 +1,14 @@
-<!--pages/viIcon/viIcon.wxml-->
-<text>pages/viIcon/viIcon.wxml</text>
+<ViIcon iconName="email" icon-style="vi-icon-email"></ViIcon>
+
+<ViIcon 
+  fontSource="url('https://at.alicdn.com/t/font_849474_p1bye6fkj5.woff')" 
+  icon-style="custom-icon-fail"
+  fontFamily="viAbnormalTips"
+  setFontFamily
+  font-family-style="custom-family">
+</ViIcon>
+
+<ViIcon 
+  fontSource="url('https://at.alicdn.com/t/font_629189_c2m154yp2ts.ttf')" 
+  icon-style="custom-icon-fail">
+</ViIcon>
