@@ -114,6 +114,26 @@
 | :--: | :--: |
 | clickIcon | 组件点击事件 |
 
+## Icon Name 内置的图标名
+
+| icon name | icon name | icon name |
+| :--: | :--: | :--: |
+| email | shooping | location |
+| cloud-download | cloud-upload | branch |
+| data | telephone | share |
+| price | full-screen | full-screen-cancel |
+| delete | qrCode | setting |
+| setting-cente | control | return |
+| link | link-cancel | shopping-case |
+| label | print | bluetooth |
+| add | reduce | right |
+| error | refresh | history |
+| bottom-left-arrow | bottom-right-arrow | top-right-arrow |
+| top-left-arrow | right-arrow | left-arrow |
+| bottom-arrow | top-arrow | bottom-arrow-doubl |
+| top-arrow-double | right-arrow-double | right-arrow-double |
+| left-arrow-double | - | - |
+
 ## 版本记录
 
 + v0.0.1 初始版本
