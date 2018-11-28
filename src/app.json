@@ -21,7 +21,8 @@
     "pages/vi_cell_group/vi_cell_group",
     "pages/viSliderMenu/index",
     "pages/stickerFooter/stickerFooter",
-    "pages/viCalendar/viCalendar"
+    "pages/viCalendar/viCalendar",
+    "pages/viIcon/viIcon"
   ],
   "window": {
     "backgroundTextStyle": "light",

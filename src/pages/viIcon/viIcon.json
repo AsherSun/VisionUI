@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "ViIcon": "../../components/ViIcon/miniprogram_dist/index"
+  }
+}
