@@ -1,11 +1,50 @@
 // pages/viIcon/viIcon.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    iconNameList: [
+      'email',
+      'shooping',
+      'location',
+      'cloud-download',
+      'cloud-upload',
+      'branch',
+      'data',
+      'telephone',
+      'share',
+      'price',
+      'full-screen',
+      'full-screen-cancel',
+      'delete',
+      'qrCode',
+      'setting',
+      'setting-center',
+      'control',
+      'return',
+      'link',
+      'link-cancel',
+      'shopping-case',
+      'label',
+      'print',
+      'bluetooth',
+      'add',
+      'reduce',
+      'right',
+      'error',
+      'refresh',
+      'history',
+      'bottom-left-arrow',
+      'bottom-right-arrow',
+      'top-right-arrow',
+      'top-left-arrow',
+      'right-arrow',
+      'left-arrow',
+      'bottom-arrow',
+      'top-arrow',
+      'bottom-arrow-double',
+      'top-arrow-double',
+      'right-arrow-double',
+      'left-arrow-double'
+    ]
   },
   triggerToClickIcon() {
     console.log('1111')

@@ -1,4 +1,12 @@
-<ViIcon bind:clickIcon="triggerToClickIcon" iconName="email" icon-style="vi-icon-email"></ViIcon>
+<view class="icon-wrap">
+  <view class="icon-item" wx:for="{{iconNameList}}" wx:key="{{item}}">
+    <ViIcon 
+      bind:clickIcon="triggerToClickIcon" 
+      iconName="{{item}}" 
+      icon-style="vi-icon-email">
+    </ViIcon>
+  </view>
+</view>
 
 <ViIcon 
   fontSource="url('https://at.alicdn.com/t/font_849474_p1bye6fkj5.woff')" 
