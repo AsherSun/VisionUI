@@ -7,7 +7,9 @@ Page({
   data: {
 
   },
-
+  triggerToClickIcon() {
+    console.log('1111')
+  },
   /**
    * 生命周期函数--监听页面加载
    */

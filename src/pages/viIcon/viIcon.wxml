@@ -1,14 +1,12 @@
-<ViIcon iconName="email" icon-style="vi-icon-email"></ViIcon>
+<ViIcon bind:clickIcon="triggerToClickIcon" iconName="email" icon-style="vi-icon-email"></ViIcon>
 
 <ViIcon 
   fontSource="url('https://at.alicdn.com/t/font_849474_p1bye6fkj5.woff')" 
-  icon-style="custom-icon-fail"
-  fontFamily="viAbnormalTips"
-  setFontFamily
-  font-family-style="custom-family">
+  icon-style="icon-network-error"
+  fontFamily="viAbnormalTips">
 </ViIcon>
 
 <ViIcon 
   fontSource="url('https://at.alicdn.com/t/font_629189_c2m154yp2ts.ttf')" 
-  icon-style="custom-icon-fail">
+  icon-style="icon-local">
 </ViIcon>

@@ -5,10 +5,9 @@ Component({
       type: String,
       value: 'custom-font'
     },
-    setFontFamily: Boolean,
     fontSource: String,
   },
-  externalClasses: ['icon-style', 'font-family-style'],
+  externalClasses: ['icon-style'],
   lifetimes: {
     attached() {
       if (this.data.fontSource) this.loadFontFace();

@@ -4,8 +4,14 @@
   color: red;
 }
 
-.custom-icon-fail::before {
+.icon-network-error::before {
   content: '\e602';
+  font-size: 66px;
+}
+
+.icon-local::before {
+  content: '\e602';
+  font-size: 20px;
 }
 
 .custom-family {
